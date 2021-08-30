@@ -1,2 +1,19 @@
 Purpose: To assist distressed students in their adventure into a new schedule with new classes and new teachers.
-Visual Thoughts:
+Visual Thoughts: organize with Bootstrap menu, keep the interface simple and easy to navigate, link the Del Norte website, 5 stars (for the purpose of rating classes/teachers),about us section (including pictures and basic information about us)
+Implementation Progress: 
+- project entery point is main.py
+- different tab options of each A through G requirement: A. social science, B. English, C. Math, D. Science, E. World Langage, F. Fine Arts, G. Electives, Non A - G
+WSGI templates
+- social_science.html, english.html, etc.
+- the templates algin with the ones listed on the project entry point main.py
+the main.py is our base template and it includes the WSGI templates
+Bootstrap Navbar Code
+- locates in navbar.html
+List of features
+- Users can choose to be anonymous
+- Rate and comment on Teachers
+- Rate a class in terms of how hard the class was (1 stars to 5 stars)
+- Have classes listed by A-G? List all the APs and regular classes
+- Comment section for like any resources you’d recommend
+Target Audience
+- Del Norte Students, and students who took the class, but graduated
