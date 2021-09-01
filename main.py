@@ -31,8 +31,8 @@ def index():
 
 
 
-
-@app.route('/A_socialscience/')
+@app.route('/A/')
 def A_socialscience():
     return render_template("A.html")
+
 
