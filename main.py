@@ -29,8 +29,8 @@ if __name__ == "__main__":
 def index():
     return render_template("index.html")
 
-
-@app.route('/A_socialscience/')
+@app.route('/A/')
 def A_socialscience():
     return render_template("A.html")
+
 
