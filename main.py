@@ -22,7 +22,12 @@ def greet():
     # submit button has been pushed
     if request.form:
         name = request.form.get("name")
-        if name.__len__() > 0:  # input field has content
+        if name.__len__() != 0:  # input field has content
             return render_template("greet.html", name=name)
     # starting and empty input default
     return render_template("greet.html", name="World")
+
+@app.route('/A_socialscience/')
+def A_socialscience():
+    return render_template("A.html")
+
