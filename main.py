@@ -12,12 +12,12 @@ def greet():
     if request.form:
         name = request.form.get("name")
         if name.__len__() != 0:  # input field has content
-            return render_template("greet.html", name=name)
+            return render_template("aadya.html", name=name)
         else:
             # starting and empty input default
-            return render_template("greet.html", name="World")
+            return render_template("aadya.html", name="World")
     else:
-        return render_template("greet.html")
+        return render_template("aadya.html")
 
 
 # connects default URL to render index.html
