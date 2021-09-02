@@ -5,7 +5,7 @@ from flask import Flask, render_template, request
 # create a Flask instance
 app = Flask(__name__)
 
-#hii
+
 @app.route('/greet', methods=['GET', 'POST'])
 def greet():
     # submit button has been pushed
