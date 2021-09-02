@@ -15,10 +15,6 @@ def aboutus():
     return render_template("aboutus.html")
 
 
-# runs the application on the development server
-if __name__ == "__main__":
-    app.run(debug=True)
-
 @app.route('/greet', methods=['GET', 'POST'])
 def greet():
     # submit button has been pushed
@@ -34,4 +30,6 @@ def greet():
 def A_socialscience():
     return render_template("A.html")
 
-
+# runs the application on the development server
+if __name__ == "__main__":
+    app.run(debug=True)
