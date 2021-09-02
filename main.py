@@ -19,7 +19,7 @@ def greet():
     else:
         return render_template("aadya.html")
 
-
+#hi
 # connects default URL to render index.html
 #@app.route('/')
 #def index():
