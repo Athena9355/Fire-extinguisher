@@ -35,9 +35,7 @@ def aboutus():
     return render_template("aboutus.html")
 
 
-@app.route('/A/')
-def A_socialscience():
-    return render_template("A.html")
+
 
 
 # runs the application on the development server
