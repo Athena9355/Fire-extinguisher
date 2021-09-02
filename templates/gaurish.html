@@ -1,0 +1,70 @@
+athena.html<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About Us</title>
+</head>
+
+<!---this is for the title of the page -->
+<div class="center-block" style="margin: 2% 5% 5%; text-align:left; font-family: Brush Script MT,serif;font-size:45px;">
+    <div class="col-12">
+        <p>Hi, welcome to the about me page! Here, you will find information about the students who made this site!</p>
+    </div>
+</div>
+<!---this is for the background image -->
+<style>
+    body {
+        background-image: url('https://secure.img1-fg.wfcdn.com/im/33953698/resize-h445%5Ecompr-r85/9949/99492922/Plaid+33%2527+L+x+21%2522+W+Wallpaper+Roll.jpg');
+    }
+</style>
+
+<!-- Extending the project layout, as this file will do minor customizations -->
+<div class="center-block" style="margin: 2% 5% 5%; text-align:left; font-family: gilroy,serif;">
+
+    <div class="col-12">
+        <p>Hi {{name}}!</p>
+    </div>
+
+    <div class="col-12">
+        <form action="/greet" id="greet" method="POST" >
+            <label for="name">Type a greeting name?</label>
+            <input name="name" id="name">
+            <input type="submit" value="Greetings!">
+        </form>
+    </div>
+
+</div>
+
+
+
+<body>
+<!---Athena's title -->
+<div class="center-block" style="margin: 2% 2% 2%; text-align:left; font-family: Times New Roman ,serif;font-size:30px;">
+    <div class="col-12">
+        <p> Athena Wu </p>
+    </div>
+</div>
+
+<!---Athena's info -->
+<div class="center-block" style="margin: 2% 5% 2%; text-align:left; font-family: Times New Roman ,serif;font-size:20px;">
+    <div class="col-12">
+        <p>Name: Athena Wu <br>
+            <br>
+            Age: 17 <br>
+            <br>
+            Date of Birth: May 05, 2004<br>
+            <br>
+            Favorite color: Cyan <br>
+            <br>
+            Favorite animal: Shiba Inu <br>
+            <br>
+            Message to user: Hi! I hope you will find the website useful and enjoy using the site! :) <br>
+            <br>
+            Picture of me: <br>
+            <img src="https://drive.google.com/thumbnail?id=" style="height: 300px" >
+        </p>
+    </div>
+</div>
+
+</body>
+</html>

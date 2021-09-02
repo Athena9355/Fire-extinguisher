@@ -4,6 +4,26 @@
     <meta charset="UTF-8">
     <title>About Us</title>
 </head>
+
+<!-- Extending the project layout, as this file will do minor customizations -->
+<div class="center-block" style="margin: 2% 5% 5%; text-align:left; font-family: gilroy,serif;">
+
+    <div class="col-12">
+        <p>Hi {{name}}!</p>
+    </div>
+
+    <div class="col-12">
+        <form action="/greet" id="greet" method="POST" >
+            <label for="name">Type a greeting name?</label>
+            <input name="name" id="name">
+            <input type="submit" value="Greetings!">
+        </form>
+    </div>
+
+</div>
+
+
+
 <body>
 
 <!---this is for the title of the page -->

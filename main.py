@@ -34,6 +34,21 @@ def index():
 def aboutus():
     return render_template("aboutus.html")
 
+@app.route('/athena')
+def athena():
+    return render_template("athena.html")
+
+@app.route('/allison')
+def allison():
+    return render_template("allison.html")
+
+@app.route('/gaurish')
+def gaurish():
+    return render_template("gaurish.html")
+
+@app.route('/aadya')
+def aadya():
+    return render_template("aadya.html")
 
 @app.route('/A/')
 def A_socialscience():
