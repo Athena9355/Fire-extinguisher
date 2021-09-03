@@ -111,6 +111,19 @@ def aadya():
     return render_template("aadya.html")
 
 
+@app.route('/ratingsystem')
+def ratingsystem():
+    return render_template("ratingsystem.html")
+
+@app.route('/classrecommendations')
+def classrecommendations():
+    return render_template("classrecommendations.html")
+
+@app.route('/commentforum')
+def commentforum():
+    return render_template("commentforum.html")
+
+
 @app.route('/A/')
 def A_socialscience():
     return render_template("A.html")
