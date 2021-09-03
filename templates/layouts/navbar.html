@@ -10,6 +10,8 @@
 </html><!-- Navigation Bar from bootstrap
 This HTML is setup as a fragment allowing it to be "included" by other HTML files via Jinja2
 -->
+
+<!-- This is the old NavBar code
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
 fix    <a class="navbar-brand" href="">{{name}}</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -17,7 +19,7 @@ fix    <a class="navbar-brand" href="">{{name}}</a>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-            <!-- url_for is a Jinja2 pre-processor that finds route from function name (def) -->
+            <!-- url_for is a Jinja2 pre-processor that finds route from function name (def)
             <li class="nav-item">
             <a class="nav-link" href={{ url_for('index') }}>Portfolio</a>
             </li>
@@ -38,9 +40,9 @@ fix    <a class="navbar-brand" href="">{{name}}</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href={{ url_for('aadya') }}>Aadya</a>
-            </li>
+            </li> -->
 
-            <!--drop down menu that worked -->
+            <!--drop down menu that worked
             <div class="center-block" style="margin: 1.7% 2% 0%; text-align:left; font-family: Arial,serif;font-size:15px; color:gray;">
             <label for="aboutme">About Me</label>
             <select name="aboutme "onchange="location.href = this.value;">
@@ -51,16 +53,78 @@ fix    <a class="navbar-brand" href="">{{name}}</a>
                 <option value="http://127.0.0.1:5000/athena">Athena</option>
             </select>
 
-
-
-
-
-
-
-
-
-
+                <div class="navbar-nav">
 
         </div>
+    </div>
+</nav>
+
+-->
+
+<!-- Bootstrap Navigation Code -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="http://127.0.0.1:5000/">
+        <img src="https://image.shutterstock.com/image-vector/typography-w-letter-n-combine-260nw-1522772348.jpg" alt="NightWatch Logo" width="30" height=30">
+
+        NightWatch
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+
+    <li class="nav-item">
+        <a class="nav-link" href={{ url_for('index') }}>Portfolio</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href={{ url_for('greet') }}>Mini Project and Video Journal 0</a>
+
+    <!-- Bootstrap menus -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <!--root menu -->
+            <li class="nav-item active">
+                <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarStarters" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    About Us
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="/athena">Athena</a>
+                    <a class="dropdown-item" href="/gaurish">Gaurish</a>
+                    <a class="dropdown-item" href="/allison">Allison</a>
+                    <a class="dropdown-item" href="/aadya">Aadya</a>
+            </li>
+                </div>
+            </li>
+        </ul>
+        <!-- Clock display -->
+        <div class="px-3">
+            <span id="clock"></span>
+        </div>
+        <!-- Dark mode action -->
+        <div class="custom-control custom-switch">
+            <input type="checkbox" onclick="darkFunction()" class="custom-control-input" id="darkSwitch">
+            <label class="custom-control-label" for="darkSwitch"></label>
+        </div>
+        <!-- Navigation bar JavaScript support -->
+        <script>
+            // Dark Mode Toggle
+            function darkFunction() {
+                let element = document.body;
+                element.classList.toggle("dark-mode");
+            }
+            // Clock controller
+            let clockElement = document.getElementById('clock');
+            function clock() {
+                let date = new Date();
+                clockElement.textContent = date.toLocaleString();
+            }
+            // Clock refresh frequency
+            setInterval(clock, 1000);
+        </script>
     </div>
 </nav>
