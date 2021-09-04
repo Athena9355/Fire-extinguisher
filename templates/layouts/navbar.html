@@ -86,12 +86,37 @@ fix    <a class="navbar-brand" href="">{{name}}</a>
                 <a class="nav-link" href={{ url_for('classrecommendations') }}>Class Recommendations</a>
             <li class="nav-item">
                 <a class="nav-link" href={{ url_for('commentforum') }}>Comment Forum</a>
+            <ul class="navbar-nav mr-auto">
+                <!--root menu -->
+                <li class="nav-item active">
+                    <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarStarters" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        About Us
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="/athena">Athena</a>
+                        <a class="dropdown-item" href="/gaurish">Gaurish</a>
+                        <a class="dropdown-item" href="/allison">Allison</a>
+                        <a class="dropdown-item" href="/aadya">Aadya</a>
+                </li>
+        </div>
+    </div>
+    </li>
+    </ul>
 
     <!-- Bootstrap menus -->
+<!--
+            <div class="center-block" style="margin: 0% 0% 0%; text-align:right; font-family: Arial,serif; font-size:15px;top:15px; right:2000px">
+                <div class="col-12">
+                    <p> </p>
+
+
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
+        <ul class="navbar-nav mr-auto"> -->
             <!--root menu -->
-            <li class="nav-item active">
+           <!-- <li class="nav-item active">
                 <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item dropdown">
@@ -105,18 +130,20 @@ fix    <a class="navbar-brand" href="">{{name}}</a>
                     <a class="dropdown-item" href="/aadya">Aadya</a>
             </li>
                 </div>
+            </div>
             </li>
-        </ul>
-        <!-- Clock display -->
+        </ul> -->
+
+        <!-- Clock display
         <div class="px-3">
             <span id="clock"></span>
-        </div>
-        <!-- Dark mode action -->
+        </div> -->
+        <!-- Dark mode action
         <div class="custom-control custom-switch">
             <input type="checkbox" onclick="darkFunction()" class="custom-control-input" id="darkSwitch">
             <label class="custom-control-label" for="darkSwitch"></label>
-        </div>
-        <!-- Navigation bar JavaScript support -->
+        </div> -->
+        <!-- Navigation bar JavaScript support
         <script>
             // Dark Mode Toggle
             function darkFunction() {
@@ -131,6 +158,6 @@ fix    <a class="navbar-brand" href="">{{name}}</a>
             }
             // Clock refresh frequency
             setInterval(clock, 1000);
-        </script>
+        </script> -->
     </div>
 </nav>

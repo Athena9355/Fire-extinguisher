@@ -71,11 +71,11 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
 
         .btn:link,
         .btn:visited {
-            text-transform: uppercase;
+            text-transform: lowercase;
             text-decoration: none;
             padding: 15px 40px;
-            display: inline-block;
-            border-radius: 100px;
+            display: inline;
+            border-radius: 0px;
             transition: all .2s;
             position: absolute;
             color: white;
@@ -83,8 +83,8 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
         }
 
         .btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 20px 40px rgb(181, 186, 250);
+            transform: translateX(10px);
+            box-shadow: 0px 0px 50px rgb(11, 247, 244);
         }
 
         .btn:active {
@@ -118,7 +118,7 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
     </div>
 
     <div class="product" style="margin-top: 2%;">
-        <div class="row" style="padding: 10%; padding-top: 0%; padding-bottom: 5%;">
+        <div class="row" style="padding: 5%; padding-top: 0%; padding-bottom: 5%;">
 
             <div class="col-8" >
                 <h1>{{ project }} Project</h1>
@@ -147,5 +147,11 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
 {% block background %}
 
 {% endblock %}
+<!---this is for the background image -->
+<style>
+    body {
+        background-image: url('https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/rm218-bb-5_1_1.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=663c98924a2425eca31985250191e4b7');
+    }
+</style>
 
 </html>
