@@ -7,40 +7,7 @@
 <body>
 <img src="https://image.shutterstock.com/image-vector/typography-w-letter-n-combine-260nw-1522772348.jpg" alt="NightWatch Logo" width="30" height=30">
 </body>
-</html><!-- Navigation Bar from bootstrap
-This HTML is setup as a fragment allowing it to be "included" by other HTML files via Jinja2
--->
-
-<!-- This is the old NavBar code
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-fix    <a class="navbar-brand" href="">{{name}}</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-            <!-- url_for is a Jinja2 pre-processor that finds route from function name (def)
-            <li class="nav-item">
-            <a class="nav-link" href={{ url_for('index') }}>Portfolio</a>
-            </li>
-            <li class="nav-item">
-            <a class="nav-link" href={{ url_for('greet') }}>Mini Project and Video Journal 0</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href={{ url_for('aboutus') }}>About Us</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href={{ url_for('athena') }}>Athena</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href={{ url_for('allison') }}>Allison</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href={{ url_for('gaurish') }}>Gaurish</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href={{ url_for('aadya') }}>Aadya</a>
-            </li> -->
+</html>
 
             <!--drop down menu that worked
             <div class="center-block" style="margin: 1.7% 2% 0%; text-align:left; font-family: Arial,serif;font-size:15px; color:gray;">
@@ -53,13 +20,7 @@ fix    <a class="navbar-brand" href="">{{name}}</a>
                 <option value="http://127.0.0.1:5000/athena">Athena</option>
             </select>
 
-                <div class="navbar-nav">
-
-        </div>
-    </div>
-</nav>
-
--->
+                <div class="navbar-nav"> -->
 
 <!-- Bootstrap Navigation Code -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -98,54 +59,25 @@ fix    <a class="navbar-brand" href="">{{name}}</a>
                         About Us
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="/team">Team</a>
                         <a class="dropdown-item" href="/athena">Athena</a>
                         <a class="dropdown-item" href="/gaurish">Gaurish</a>
                         <a class="dropdown-item" href="/allison">Allison</a>
                         <a class="dropdown-item" href="/aadya">Aadya</a>
+
                 </li>
         </div>
     </div>
     </li>
     </ul>
 
-    <!-- Bootstrap menus -->
-<!--
-            <div class="center-block" style="margin: 0% 0% 0%; text-align:right; font-family: Arial,serif; font-size:15px;top:15px; right:2000px">
-                <div class="col-12">
-                    <p> </p>
 
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto"> -->
-            <!--root menu -->
-           <!-- <li class="nav-item active">
-                <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarStarters" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    About Us
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="/athena">Athena</a>
-                    <a class="dropdown-item" href="/gaurish">Gaurish</a>
-                    <a class="dropdown-item" href="/allison">Allison</a>
-                    <a class="dropdown-item" href="/aadya">Aadya</a>
-            </li>
-                </div>
-            </div>
-            </li>
-        </ul> -->
-
-        <!-- Clock display
+    <!--Clock display-->
         <div class="px-3">
             <span id="clock"></span>
-        </div> -->
-        <!-- Dark mode action
-        <div class="custom-control custom-switch">
-            <input type="checkbox" onclick="darkFunction()" class="custom-control-input" id="darkSwitch">
-            <label class="custom-control-label" for="darkSwitch"></label>
-        </div> -->
-        <!-- Navigation bar JavaScript support
+        </div>
+
+        <!--Navigation bar JavaScript support-->
         <script>
             // Dark Mode Toggle
             function darkFunction() {
@@ -160,6 +92,6 @@ fix    <a class="navbar-brand" href="">{{name}}</a>
             }
             // Clock refresh frequency
             setInterval(clock, 1000);
-        </script> -->
+        </script>
     </div>
 </nav>
