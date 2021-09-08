@@ -33,6 +33,7 @@ def greet_athena():
     else:
         return render_template("athena.html")
 
+
 @app.route('/greet_gaurish', methods=['GET', 'POST'])
 def greet_gaurish():
     # submit button has been pushed
@@ -45,6 +46,7 @@ def greet_gaurish():
             return render_template("gaurish.html", name="World")
     else:
         return render_template("gaurish.html")
+
 
 @app.route('/greet_allison', methods=['GET', 'POST'])
 def greet_allison():
@@ -115,18 +117,26 @@ def aadya():
 def ratingsystem():
     return render_template("ratingsystem.html")
 
+
 @app.route('/classrecommendations')
 def classrecommendations():
     return render_template("classrecommendations.html")
+
 
 @app.route('/commentforum')
 def commentforum():
     return render_template("commentforum.html")
 
 
+@app.route('/videos')
+def videos():
+    return render_template("videos.html")
+
+
 @app.route('/A/')
 def A_socialscience():
     return render_template("A.html")
+
 
 # runs the application on the development server
 if __name__ == "__main__":
