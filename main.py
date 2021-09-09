@@ -137,6 +137,10 @@ def videos():
 def A_socialscience():
     return render_template("A.html")
 
+@app.route('/team/')
+def team():
+    return render_template("team.html")
+
 
 # runs the application on the development server
 if __name__ == "__main__":
