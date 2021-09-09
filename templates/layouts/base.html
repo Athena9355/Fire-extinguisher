@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <style>
         :root{
-            --white: #b5bafa;
+            --navy: #1A2C5B;
             --black: #00cc5c;
             --grey: #5d3f32;
         }
@@ -31,36 +31,32 @@
             -o-animation: fadein 2s; /* Opera */
             background-color: var(--grey);
             color: var(--white);
+            font-family: Gilroy-Light;
         }
 
 
-        .dark-mode {
-            background-color: var(--white);
-            color: var(--black);
-        }
-
-        h1{
+        h1 {
             font-size: 5em;
+            font-family: Gilroy-Bold
         }
 
         a {
             color: midnightblue;
         }
 
-        .fa{
+        .fa {
             font-size: 3em;
             letter-spacing: 1em;
             transition: all .2s;
             color: white;
         }
 
-        .fa:hover{
+        .fa:hover {
             transform: translateY(10px);
         }
 
 
-
-        .fa-github:hover{
+        .fa-github:hover {
             color: #000000;
         }
 
@@ -75,6 +71,7 @@
             position: absolute;
             color: white;
             font-size: 2.5em;
+            font-family: Gilroy-Regular
         }
 
         .btn:hover {
@@ -87,7 +84,7 @@
             box-shadow: 0 5px 10px rgb(181, 186, 250);
         }
 
-        .row{
+        .row {
             margin: auto;
         }
 
@@ -99,6 +96,7 @@
 
 <body>
 {% include "layouts/navbar.html" %}
+
 
 {% block body %}
 <div class="container-fluid">
@@ -146,7 +144,11 @@
 <!---this is for the background image -->
 <style>
     body {
-        background-image: url('https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/rm218-bb-5_1_1.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=663c98924a2425eca31985250191e4b7');
+        background-image: url('https://drive.google.com/thumbnail?id=1AY2RA5deoIi3yQ2YDoU-5ACbx1szuA-o');
+    height: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
     }
 </style>
 
