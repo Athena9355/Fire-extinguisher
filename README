@@ -1,4 +1,4 @@
-Scrum Team Scores (Out of 4):
+<h3>Scrum Team Scores (Out of 4):</h3>
 4/4: Everyone performed their roles. Scrum masters Allison, Athena,
 and Gaurish defined tasks to be completed and managed the scrum board.
 Everyone was part of the designing and everyone contributed at least one idea onto the design.
@@ -6,7 +6,7 @@ Allison and Athena are the navigators and built the README section. Allison deve
 Gaurish made the Wire Frame menu options. Aadya and Athena integrated greet function into the mini-lab pages.
 Athena integrated journal 0 into the mini lab page.
 
-Table of contents
+<h3>Table of contents</h3>
 - 1.0: READ.ME Creation
 - 1.1: Home page code
 - 1.2: Navbar code and dropdown menu code
