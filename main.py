@@ -113,6 +113,11 @@ def aadya():
     return render_template("aadya.html")
 
 
+@app.route('/binary1')
+def binary1():
+    return render_template("binary1.html")
+
+
 @app.route('/ratingsystem')
 def ratingsystem():
     return render_template("ratingsystem.html")
