@@ -12,12 +12,12 @@ def greet():
     if request.form:
         name = request.form.get("name")
         if name.__len__() != 0:  # input field has content
-            return render_template("greet.html", name=name)
+            return render_template("minilab.html", name=name)
         else:
             # starting and empty input default
-            return render_template("greet.html", name="World")
+            return render_template("minilab.html", name="World")
     else:
-        return render_template("greet.html")
+        return render_template("minilab.html")
 
 
 @app.route('/greet_athena', methods=['GET', 'POST'])
@@ -136,11 +136,6 @@ def commentforum():
 @app.route('/videos')
 def videos():
     return render_template("videos.html")
-
-
-@app.route('/A/')
-def A_socialscience():
-    return render_template("A.html")
 
 @app.route('/team/')
 def team():
