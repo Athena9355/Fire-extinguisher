@@ -12,9 +12,9 @@ Sprint 0 (introduction): https://www.youtube.com/watch?v=cEhrHq4HBoQ
 Sprints 1, 2 (innovation): https://github.com/Athena9355/Fire-extinguisher/projects/1#card-68118584
 Sprints 3, 4 (prototyping): https://github.com/Athena9355/Fire-extinguisher/projects/1#card-68494924
 
-| Person      | Description | Test Text     |
+| Person      | Tasks | Test Text     |
 | :---        | :---        | :---          |
-| Allison     | Title       | Here's this   |
+| Allison     | [Tasks](https://github.com/Athena9355/Fire-extinguisher/issues?q=assignee%3Aallisonthuang+is%3Aopen)       | Here's this   |
 | Gaurish     | Text        | And more      |
 | Athena      | Title       | Here's this   |
 | Aadya       | Text        | And more      |
