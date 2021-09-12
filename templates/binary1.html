@@ -1,27 +1,123 @@
+
 <!DOCTYPE html>
-{% extends "layout.html" %}
+<html lang="en">
+<!-- This page is illustrative and contains ideas about HTML formatting -->
+<!DOCTYPE HTML>
+<html lang="en">
+<!-- Head, think of things that are more meta or format oriented -->
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
-<!-- Search for all the Hack: below for hack-a-thon and mini-lab requirements -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-<!-- Hack: Build form to drive bit size dynamic updates
-           use HTML Input Form in Frontend, ie toward top of Page
-           send initial value and updated values to form via Python render_template -->
-<!-- Hack: use 8 as default -->
-{% set BITS = 8 %}
-{% set MAX = ((2 ** BITS) - 1) %}
+    <!-- Common style for site -->
+    <style>
+        :root{
+            --yellow: #f1d483;
+            --green: #9daf9b;
+            --purple: #a59aaf;
+            --lblue: #6084a3;
+            --dblue: #2b425b;
+            --gray: #363d47;
+            --white: whitesmoke;
+            --black: black;
+            --grey: grey;
+        }
 
-<!-- Hack: Set bulbs and pass as variables via Python render_template
-           add new images (ie PNGs) to project -->
-<!-- use your PNGs as default -->
-{% set imgBulbOn = "/static/assets/bulb_on.gif" %}
-{% set imgBulbOff = "/static/assets/bulb_off.png" %}
-{% set msgTurnOn = "Turn On" %}
-{% set msgTurnOff = "Turn Off" %}
+        html, body{
+            margin: 0;
+            height: 100%;
+            animation: fadein 2s;
+            -moz-animation: fadein 2s; /* Firefox */
+            -webkit-animation: fadein 2s; /* Safari and Chrome */
+            -o-animation: fadein 2s; /* Opera */
+            background-color: var(--purple);
+            color: var(--black);
+        }
 
-{% block meta %}
+        .dark-mode {
+            background-color: var(--white);
+            color: var(--black);
+        }
+
+        h1{
+            font-size: 5em;
+        }
+
+        a {
+            color: midnightblue;
+        }
+
+        .fa{
+            font-size: 3em;
+            letter-spacing: 1em;
+            transition: all .2s;
+            color: white;
+        }
+
+        .fa:hover{
+            transform: translateY(10px);
+        }
+
+        .fa-youtube-play:hover{
+            color: #cc0000;
+        }
+
+        .fa-twitter:hover{
+            color: #1da1f2;
+        }
+
+        .fa-github:hover{
+            color: #000000;
+        }
+
+        .btn:link,
+        .btn:visited {
+            text-transform: uppercase;
+            text-decoration: none;
+            padding: 15px 40px;
+            display: inline-block;
+            border-radius: 100px;
+            transition: all .2s;
+            position: absolute;
+            color: white;
+            font-size: 2.5em;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 20px 40px rgba(255, 255, 255, 0.2);
+        }
+
+        .btn:active {
+            transform: translateY(-1px);
+            box-shadow: 0 5px 10px rgba(255, 255, 255, 0.2);
+        }
+
+        .row{
+            margin: auto;
+        }
+
+        .navbar-custom .navbar-brand,
+        .navbar-custom .navbar-text {
+            color: var(--lblue);
+        }
+
+    </style>
+
+    <!-- Use this block for page specific meta data -->
+
     <title>Binary page</title>
     <script>
-        const BITS = '{{ BITS }}'; let max = '{{ MAX }}'; let MAX = parseInt(max, 10);
+        const BITS = '8'; let max = '255'; let MAX = parseInt(max, 10);
         // return string with current value of each bit
         function getBits() {
             let bits = "";
@@ -39,10 +135,7 @@
             document.getElementById('hexadecimal').innerHTML = parseInt(binary, 2).toString(16);
             // DOM assignment to Decimal conversion
             document.getElementById('decimal').innerHTML = parseInt(binary, 2).toString(10);
-            /* Hack: show ASCII printable character(s) for each 8 bits
-             DOM assignment by converting decimal https://www.w3schools.com/jsref/jsref_fromcharcode.asplook
-             below ASCII for more ideas of where to make changes
-             */
+            <!-- Hack: derive printable character(s) for each 8 bits -->
         }
 
         // algorithm to convert decimal to base using division and remainder
@@ -70,14 +163,14 @@
             const image = document.getElementById('bulb' + i);
             const butt = document.getElementById('butt' + i);
             // Change digit and visual
-            if (image.src.match("{{ imgBulbOn }}")) {
+            if (image.src.match("/static/assets/bulb_on.gif")) {
                 dig.value = 0;
-                image.src = "{{ imgBulbOff }}";
-                butt.innerHTML = "{{ msgTurnOn }}";
+                image.src = "/static/assets/bulb_off.png";
+                butt.innerHTML = "Turn On";
             } else {
                 dig.value = 1;
-                image.src = "{{ imgBulbOn }}";
-                butt.innerHTML = "{{ msgTurnOff }}";
+                image.src = "/static/assets/bulb_on.gif";
+                butt.innerHTML = "Turn Off";
             }
             // Binary numbers
             const binary = getBits();
@@ -102,63 +195,212 @@
                 let digit = binary.substr(i, 1);
                 document.getElementById('digit' + i).value = digit;
                 if (digit === "1") {
-                    document.getElementById('bulb' + i).src = "{{ imgBulbOn }}";
-                    document.getElementById('butt' + i).innerHTML = "{{ msgTurnOff }}";
+                    document.getElementById('bulb' + i).src = "/static/assets/bulb_on.gif";
+                    document.getElementById('butt' + i).innerHTML = "Turn Off";
                 } else {
-                    document.getElementById('bulb' + i).src = "{{ imgBulbOff }}";
-                    document.getElementById('butt' + i).innerHTML = "{{ msgTurnOn }}";
+                    document.getElementById('bulb' + i).src = "/static/assets/bulb_off.png";
+                    document.getElementById('butt' + i).innerHTML = "Turn On";
                 }
             }
         }
     </script>
-{% endblock %}
 
-{% block content %}
-    <h1 class="text-center">Binary Math with Conversions</h1>
-    <div class="container">
-        <div class="row justify-content-md-center">
 
-            <div class="col-8">
-                <table class="table">
-                    <tr id="table">
-                        <th>Plus</th>
-                        <th>Binary</th>
-                        <th>Octal</th>
-                        <th>Hexadecimal</th>
-                        <th>Decimal</th>
-                        <!-- Hack: display ASCII label for printable character(s)  -->
-                        <th>Minus</th>
-                    </tr>
-                    <tr>
-                        <td><button type="button" id="add1" onclick="add(1)">+1</button></td>
-                        <td id="binary">00000000</td>
-                        <td id="octal">0</td>
-                        <td id="hexadecimal">0</td>
-                        <td id="decimal">0</td>
-                        <!-- Hack: display ASCII printable character(s)  -->
-                        <td><button type="button" id="sub1" onclick="add(-1)">-1</button></td>
+</head>
 
-                    </tr>
-                </table>
-            </div>
 
-            <div class="col-12">
-                <table class="table">
-                    <tr>
-                        {% for i in range(BITS) %}
-                            <td><img class="img-responsive py-3" id="bulb{{i}}" src="{{ imgBulbOff }}" alt="" width="40" height="Auto">
-                                <button type="button" id="butt{{i}}" onclick="toggleBit('{{i}}')">{{ msgTurnOn }}</button>
-                            </td>
-                        {% endfor %}
-                    </tr>
-                    <tr>
-                        {% for i in range(BITS) %}
-                            <td><input type='text' id='digit{{i}}' Value="0" size="1" readonly></td>
-                        {% endfor %}
-                    </tr>
-                </table>
-            </div>
+<body style="font-family: gilroyLIGHT,serif; color: var(--gray);" >
+<!-- Bootstrap Navigation Code -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="http://nighthawkcodingsociety.com/">
+        <img src="/static/assets/ncs_logo.png" width="50" height="50" class="d-inline-block align-center" alt="">
 
+        Nighthawk Coders
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <!-- Bootstrap menus -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <!--root menu -->
+            <li class="nav-item active">
+                <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarStarters" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Starters
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="https://portfolio.nighthawkcodingsociety.com/">Flask Portfolio</a>
+                    <a class="dropdown-item" href="/greet">Flask Greetings</a>
+                    <a class="dropdown-item" href="/starter/binary">Binary Math</a>
+                    <a class="dropdown-item" href="/starter/rgb">RGB Intro</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarModel" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Data
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="/restapi/joke">Joke RESTapi</a>
+                    <a class="dropdown-item" href="/restapi/covid19">Covid19 RESTapi</a>
+                    <a class="dropdown-item" href="/recipe/viewer">Recipe Viewer</a>
+                    <a class="dropdown-item" href="/crud/">SQL CRUD</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarLabs" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Algorithms
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="/algorithm/fibonacci">Fibonacci</a>
+                    <a class="dropdown-item" href="/algorithm/palindrome">Palindrome</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarMaterials" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Course-materials
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="/y2022/repos">Repos</a>
+                    <a class="dropdown-item" href="/deploy">Deployment</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="/y2022/padlet">Trimester 1</a>
+                </div>
+            </li>
+        </ul>
+        <!-- Clock display -->
+        <div class="px-3">
+            <span id="clock"></span>
         </div>
+        <!-- Dark mode action -->
+        <div class="custom-control custom-switch">
+            <input type="checkbox" onclick="darkFunction()" class="custom-control-input" id="darkSwitch">
+            <label class="custom-control-label" for="darkSwitch"></label>
+        </div>
+        <!-- Navigation bar JavaScript support -->
+        <script>
+            // Dark Mode Toggle
+            function darkFunction() {
+                let element = document.body;
+                element.classList.toggle("dark-mode");
+            }
+            // Clock controller
+            let clockElement = document.getElementById('clock');
+            function clock() {
+                let date = new Date();
+                clockElement.textContent = date.toLocaleString();
+            }
+            // Clock refresh frequency
+            setInterval(clock, 1000);
+        </script>
     </div>
-{% endblock %}
+</nav>
+
+<!-- CONTENT Block, utilize this block for page specific content  -->
+
+<h1 class="text-center">Binary Math with Conversions</h1>
+<div class="container">
+    <div class="row justify-content-md-center">
+
+        <div class="col-8">
+            <table class="table">
+                <tr id="table">
+                    <th>Plus</th>
+                    <th>Binary</th>
+                    <th>Octal</th>
+                    <th>Hexadecimal</th>
+                    <th>Decimal</th>
+                    <!-- Hack: display label for printable character(s)  -->
+                    <th>Minus</th>
+                </tr>
+                <tr>
+                    <td><button type="button" id="add1" onclick="add(1)">+1</button></td>
+                    <td id="binary">00000000</td>
+                    <td id="octal">0</td>
+                    <td id="hexadecimal">0</td>
+                    <td id="decimal">0</td>
+                    <!-- Hack: display printable character(s)  -->
+                    <td><button type="button" id="sub1" onclick="add(-1)">-1</button></td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="col-12">
+            <table class="table">
+                <tr>
+
+                    <td><img class="img-responsive py-3" id="bulb0" src="/static/assets/bulb_off.png" alt="" width="40" height="Auto">
+                        <button type="button" id="butt0" onclick="toggleBit('0')">Turn On</button>
+                    </td>
+
+                    <td><img class="img-responsive py-3" id="bulb1" src="/static/assets/bulb_off.png" alt="" width="40" height="Auto">
+                        <button type="button" id="butt1" onclick="toggleBit('1')">Turn On</button>
+                    </td>
+
+                    <td><img class="img-responsive py-3" id="bulb2" src="/static/assets/bulb_off.png" alt="" width="40" height="Auto">
+                        <button type="button" id="butt2" onclick="toggleBit('2')">Turn On</button>
+                    </td>
+
+                    <td><img class="img-responsive py-3" id="bulb3" src="/static/assets/bulb_off.png" alt="" width="40" height="Auto">
+                        <button type="button" id="butt3" onclick="toggleBit('3')">Turn On</button>
+                    </td>
+
+                    <td><img class="img-responsive py-3" id="bulb4" src="/static/assets/bulb_off.png" alt="" width="40" height="Auto">
+                        <button type="button" id="butt4" onclick="toggleBit('4')">Turn On</button>
+                    </td>
+
+                    <td><img class="img-responsive py-3" id="bulb5" src="/static/assets/bulb_off.png" alt="" width="40" height="Auto">
+                        <button type="button" id="butt5" onclick="toggleBit('5')">Turn On</button>
+                    </td>
+
+                    <td><img class="img-responsive py-3" id="bulb6" src="/static/assets/bulb_off.png" alt="" width="40" height="Auto">
+                        <button type="button" id="butt6" onclick="toggleBit('6')">Turn On</button>
+                    </td>
+
+                    <td><img class="img-responsive py-3" id="bulb7" src="/static/assets/bulb_off.png" alt="" width="40" height="Auto">
+                        <button type="button" id="butt7" onclick="toggleBit('7')">Turn On</button>
+                    </td>
+
+                </tr>
+                <tr>
+
+                    <td><input type='text' id='digit0' Value="0" size="1" readonly></td>
+
+                    <td><input type='text' id='digit1' Value="0" size="1" readonly></td>
+
+                    <td><input type='text' id='digit2' Value="0" size="1" readonly></td>
+
+                    <td><input type='text' id='digit3' Value="0" size="1" readonly></td>
+
+                    <td><input type='text' id='digit4' Value="0" size="1" readonly></td>
+
+                    <td><input type='text' id='digit5' Value="0" size="1" readonly></td>
+
+                    <td><input type='text' id='digit6' Value="0" size="1" readonly></td>
+
+                    <td><input type='text' id='digit7' Value="0" size="1" readonly></td>
+
+                </tr>
+            </table>
+        </div>
+
+    </div>
+</div>
+
+
+
+<div class="contact" style="height: 35vh;">
+
+    <div class="row justify-content-center" style="margin-top: 2%;">
+        <h3 style="color: var(--black); margin-top: 3%; font-size: 2vw;">Contact Us</h3>
+    </div>
+
+    <div class="row justify-content-center">
+        <h4><a href="mailto: nighthawkcodingsociety@gmail">nighthawkcodingsociety@gmail</a></h4>
+    </div>
+
+</div>
+</body>
+</html>
