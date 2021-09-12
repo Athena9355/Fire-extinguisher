@@ -112,6 +112,13 @@
         }
 
     </style>
+    <style>
+        body {
+            background-image: url('https://lh3.googleusercontent.com/proxy/Sl7kf4Bg1hi598W1J-f9bU1LUO1QDwuVZaF0QY2HyWn7rO4Gn7fN4M3OS8cvNMyG9oCqc_G_JRJ7_YYOcv_nioCS2Og9DymBfWpBLihGzOFkSnxYyrNObxMIoHk8WqLZElMLuAsNDKeGdPEFvzoFSPOhm_UtKQIEMgDhmk8sB8eqH_fNQQ');
+        }
+    </style>
+
+
 
     <!-- Use this block for page specific meta data -->
 
@@ -210,74 +217,62 @@
 
 
 <body style="font-family: gilroyLIGHT,serif; color: var(--gray);" >
-<!-- Bootstrap Navigation Code -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="http://nighthawkcodingsociety.com/">
-        <img src="/static/assets/ncs_logo.png" width="50" height="50" class="d-inline-block align-center" alt="">
+ <!--navbar-->
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            body {
+                margin: 0;
+                font-family: Arial, Helvetica, sans-serif;
+            }
 
-        Nighthawk Coders
-    </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <!-- Bootstrap menus -->
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-            <!--root menu -->
-            <li class="nav-item active">
-                <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarStarters" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Starters
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="https://portfolio.nighthawkcodingsociety.com/">Flask Portfolio</a>
-                    <a class="dropdown-item" href="/greet">Flask Greetings</a>
-                    <a class="dropdown-item" href="/starter/binary">Binary Math</a>
-                    <a class="dropdown-item" href="/starter/rgb">RGB Intro</a>
-                </div>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarModel" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Data
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="/restapi/joke">Joke RESTapi</a>
-                    <a class="dropdown-item" href="/restapi/covid19">Covid19 RESTapi</a>
-                    <a class="dropdown-item" href="/recipe/viewer">Recipe Viewer</a>
-                    <a class="dropdown-item" href="/crud/">SQL CRUD</a>
-                </div>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarLabs" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Algorithms
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="/algorithm/fibonacci">Fibonacci</a>
-                    <a class="dropdown-item" href="/algorithm/palindrome">Palindrome</a>
-                </div>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarMaterials" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Course-materials
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="/y2022/repos">Repos</a>
-                    <a class="dropdown-item" href="/deploy">Deployment</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="/y2022/padlet">Trimester 1</a>
-                </div>
-            </li>
-        </ul>
+            .topnav {
+                overflow: hidden;
+                background-color: #FFFFFF;
+            }
+
+            .topnav a {
+                float: left;
+                color: #897C7C;
+                text-align: center;
+                padding: 20px 12px;
+                text-decoration: none;
+                font-size: 15px;
+            }
+
+            .topnav a:hover {
+                background-color: #ddd;
+                color: black;
+            }
+
+            /*.topnav a.active {
+                background-color: white;
+                color: #897C7C;
+            }*/
+        </style>
+    </head>
+    <body>
+
+    <div class="topnav">
+        <a class="active" href="http://127.0.0.1:5000">Home/Portfolio</a>
+        <a href="http://127.0.0.1:5000/gaurish">Gaurish's About Me</a>
+        <a href="http://127.0.0.1:5000/athena">Athena's About Me</a>
+        <a href="http://127.0.0.1:5000/aadya">Aadya's About Me</a>
+        <a href="http://127.0.0.1:5000/greet">Mini Lab</a>
+        <a href="http://127.0.0.1:5000/binary1">Binary</a>
+        <a href="http://127.0.0.1:5000/videos">Videos</a>
+        <a href="http://127.0.0.1:5000/ratingsystem">Rate a Class</a>
+        <a href="http://127.0.0.1:5000/classrecommendations">Class Recommendations</a>
+        <a href="http://127.0.0.1:5000/commentforum">Comment Forum</a>
+    </div>
+    </body>
+    </html>
+    <!--navbar ends-->
         <!-- Clock display -->
         <div class="px-3">
             <span id="clock"></span>
-        </div>
-        <!-- Dark mode action -->
-        <div class="custom-control custom-switch">
-            <input type="checkbox" onclick="darkFunction()" class="custom-control-input" id="darkSwitch">
-            <label class="custom-control-label" for="darkSwitch"></label>
         </div>
         <!-- Navigation bar JavaScript support -->
         <script>
@@ -300,7 +295,12 @@
 
 <!-- CONTENT Block, utilize this block for page specific content  -->
 
-<h1 class="text-center">Binary Math with Conversions</h1>
+ <div class="center-block" style="margin: 2% 5% 5%; text-align:left; font-family: Monaco,serif;font-size:45px;">
+     <div class="col-12">
+         <p>Binary Conversion</p>
+     </div>
+ </div>
+
 <div class="container">
     <div class="row justify-content-md-center">
 
@@ -397,9 +397,7 @@
         <h3 style="color: var(--black); margin-top: 3%; font-size: 2vw;">Contact Us</h3>
     </div>
 
-    <div class="row justify-content-center">
-        <h4><a href="mailto: nighthawkcodingsociety@gmail">nighthawkcodingsociety@gmail</a></h4>
-    </div>
+
 
 </div>
 </body>
