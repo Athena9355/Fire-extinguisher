@@ -12,12 +12,12 @@ Sprint 0 (introduction): https://www.youtube.com/watch?v=cEhrHq4HBoQ
 Sprints 1, 2 (innovation): https://github.com/Athena9355/Fire-extinguisher/projects/1#card-68118584
 Sprints 3, 4 (prototyping): https://github.com/Athena9355/Fire-extinguisher/projects/1#card-68494924
 
-| Person      | ID   | Tasks       | Scrum Board  | Commits  |  Profile  |
-| :---        | :--- | :---        | :---         |  :---    |           |
-| Allison     | allisonthuang | [Tasks](https://github.com/Athena9355/Fire-extinguisher/issues?q=assignee%3Aallisonthuang+is%3Aopen) | [Scrum Board](https://github.com/Athena9355/Fire-extinguisher/projects/1?card_filter_query=assignee%3Aallisonthuang) | [Commits](https://github.com/Athena9355/Fire-extinguisher/commits?author=allisonthuang) | [Profile](https://github.com/allisonthuang)  |
-| Gaurish     | Gaurish-Gaur  | [Tasks](https://github.com/Athena9355/Fire-extinguisher/issues?q=assignee%3AGaurish-Gaur+is%3Aopen) | [Scrum Board](https://github.com/Athena9355/Fire-extinguisher/projects/1?card_filter_query=assignee%3Agaurish-gaur) | [Commits](https://github.com/Athena9355/Fire-extinguisher/commits?author=Gaurish-Gaur) | [Profile](https://github.com/Gaurish-Gaur)  |
-| Athena      | Athena9355  |  [Tasks](https://github.com/Athena9355/Fire-extinguisher/issues?q=assignee%3AAthena9355+is%3Aopen   ) | [Scrum Board](https://github.com/Athena9355/Fire-extinguisher/projects/1?card_filter_query=assignee%3Aathena9355r)  | [Commits](https://github.com/Athena9355/Fire-extinguisher/commits?author=Athena9355) | [Profile](https://github.com/Athena9355)  |
-| Aadya       | AadyaDaita  | [Tasks](https://github.com/Athena9355/Fire-extinguisher/issues?q=is%3Aopen) | [Scrum Board](https://github.com/Athena9355/Fire-extinguisher/projects/1?card_filter_query=assignee%3Aaadyadaita)  | [Commits](https://github.com/Athena9355/Fire-extinguisher/commits?author=AadyaDaita) | [Profile](https://github.com/AadyaDaita)  |
+| Person      |  ID   | Tasks       | Scrum Board  | Commits  |  Profile  |
+| :---        |  :--- | :---        | :---         |  :---    |           |
+| Allison     | @allisonthuang | [Tasks](https://github.com/Athena9355/Fire-extinguisher/issues?q=assignee%3Aallisonthuang+is%3Aopen) | [Scrum Board](https://github.com/Athena9355/Fire-extinguisher/projects/1?card_filter_query=assignee%3Aallisonthuang) | [Commits](https://github.com/Athena9355/Fire-extinguisher/commits?author=allisonthuang) | [Profile](https://github.com/allisonthuang)  |
+| Gaurish     | @Gaurish-Gaur  | [Tasks](https://github.com/Athena9355/Fire-extinguisher/issues?q=assignee%3AGaurish-Gaur+is%3Aopen) | [Scrum Board](https://github.com/Athena9355/Fire-extinguisher/projects/1?card_filter_query=assignee%3Agaurish-gaur) | [Commits](https://github.com/Athena9355/Fire-extinguisher/commits?author=Gaurish-Gaur) | [Profile](https://github.com/Gaurish-Gaur)  |
+| Athena      | @Athena9355  |  [Tasks](https://github.com/Athena9355/Fire-extinguisher/issues?q=assignee%3AAthena9355+is%3Aopen   ) | [Scrum Board](https://github.com/Athena9355/Fire-extinguisher/projects/1?card_filter_query=assignee%3Aathena9355r)  | [Commits](https://github.com/Athena9355/Fire-extinguisher/commits?author=Athena9355) | [Profile](https://github.com/Athena9355)  |
+| Aadya       | @AadyaDaita  | [Tasks](https://github.com/Athena9355/Fire-extinguisher/issues?q=is%3Aopen) | [Scrum Board](https://github.com/Athena9355/Fire-extinguisher/projects/1?card_filter_query=assignee%3Aaadyadaita)  | [Commits](https://github.com/Athena9355/Fire-extinguisher/commits?author=AadyaDaita) | [Profile](https://github.com/AadyaDaita) |
 
 
 <h3>Scrum Team Scores (Out of 4):</h3>
