@@ -3,7 +3,7 @@ Runtime link: https://portfolio.nighthawkcodingsociety.com/
 
 <h4>Table of Contents</h4>
 [Contributors](https://github.com/Athena9355/Fire-extinguisher/graphs/contributors)
-(https://github.com/Athena9355/Fire-extinguisher/projects/1)
+[Repository](https://github.com/Athena9355/Fire-extinguisher/projects/1)
 Pair Share Journals: https://docs.google.com/document/d/1aSwI7qBKnmvwyLkyffUaa-BpgM00lsl8RINiMVWxSHA/edit and https://docs.google.com/document/d/12fsg1UKn_jaHmgELA5jITQyEVaJ7ZVFesGmUcsMG4zk/edit
 Project Ideation: https://docs.google.com/presentation/d/1UJboee1Pooy2vpqJxhB5FvWtXuExaZHRhhywYRlrPYc/edit#slide=id.geb3ca9e0cb_3_0
 Sprint 0 (introduction): https://www.youtube.com/watch?v=cEhrHq4HBoQ
