@@ -1,3 +1,19 @@
+<img src="static/assets/ncs_logo.png" width="200" height="200">
+
+# Deployment Guide
+
+## Setup Virtual environment and clone code from GitHub
+#### In console/terminal (first time only: setup environment)...
+
+pi@raspberrypi:~ $  ``` sudo apt update; sudo apt upgrade```
+
+pi@raspberrypi:~ $  ``` sudo apt install python3-pip nginx```
+
+pi@raspberrypi:~ $  ``` sudo pip3 install virtualenv```
+
+pi@raspberrypi:~ $  ``` cd ~```
+
+
 <h4>Table of Contents</h4>
 [Contributors](https://github.com/Athena9355/Fire-extinguisher/graphs/contributors)
 [Srcumboard](https://github.com/Athena9355/Fire-extinguisher/projects/1)
