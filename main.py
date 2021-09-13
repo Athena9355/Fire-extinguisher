@@ -113,9 +113,9 @@ def aadya():
     return render_template("aadya.html")
 
 
-@app.route('/binary1')
+@app.route('/minilab')
 def binary1():
-    return render_template("binary1.html")
+    return render_template("minilab.html")
 
 
 @app.route('/ratingsystem')

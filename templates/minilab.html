@@ -68,6 +68,8 @@
 </style>
 
 
+
+
 <!-- Extending the project layout, as this file will do minor customizations -->
 <div class="center-block" style="margin: 2% 5% 5%; text-align:left; font-family: gilroy,serif;">
 
@@ -86,11 +88,37 @@
 </div>
 
     <br>
-    <br>
 
-    <br>
+<br>
+
+
+
+<!--binary video notes-->
 <div style="margin: 2% 2% 5%;">
-<p>  Video #1: What is Binary, Digital Data and Abstraction?<br>
+
+
+
+    <div class="center-block" style="margin: 0% 0% 0%; text-align:left; font-family: Monaco,serif;font-size:55px;">
+        <div class="col-12">
+            <p>Binary Video Notes</p>
+        </div>
+    </div>
+
+
+
+
+<p>
+
+    <div class="center-block" style=" font-family: Monaco,serif;font-size:30px;">
+        <div class="col-12">
+            <p>Video #1: What is Binary, Digital Data and Abstraction?</p>
+        </div>
+    </div>
+
+
+
+
+
     <ul>
    <li>Binary - number system with only 2 numbers: 0 and 1. 1 means on, and 0 means off.</li>
     <br>
@@ -119,25 +147,69 @@
 <br>
     <br>
 
-    Video #2: Rounding and Overflow Errors.
-    <br>
+    <div class="center-block" style=" font-family: Monaco,serif;font-size:30px;">
+        <div class="col-12">
+            <p>Video #2: Rounding and Overflow Errors</p>
+        </div>
+    </div>
+
+
+    <ul>
     <li>If a program encounters a calculation that requires a number larger than what it’s memory will allow to be stored, this can result in an overflow error.</li>
 
     <br>
-    <img src="" style="height: 250px" >
+    <img src="https://i2.paste.pics/6c2bd798766323f690df698983c9482f.png" width="594" height="66" alt="Screenshot">
 
 
+        <br>
+        <br>
+       <li>Rounding errors will happen with infinite numbers. For example, pi will be rounded by the computer, and we will not get <strong> accurate </strong> results. These are called <strong> round-off errors </strong>. The more bits we have, the more numbers we can represent, thus making it more accurate. </li>
+
+        <img src="https://i2.paste.pics/db30867bb7095faaca2b83e6baa80ad4.png" width="311" height="155" alt="Screenshot">
+
+        <br>
+        <br>
+
+        <li>
+
+            The first column is the sign on the integer, and the other three columns represent the actual numbers. Here, it is positive 1. The most we can represent here is 7. Let's say we want to represent 8. The computer will have an <strong> overflow </strong> error as the number might overflow, or it might just show an error.
+        </li>
 
 
-<div>
+    </ul>
+
+    <br>
+    <div class="center-block" style=" font-family: Monaco,serif;font-size:30px;">
+        <div class="col-12">
+            <p>Video #3: Conversions: Decimal to Binary and Vice Versas</p>
+        </div>
+    </div>
+
+    <ul>
+        <li> Multiply by 2 when moving a placeholder.
+        </li>
+        <br>
+        <li>
+            Everytime we add a bit, we are doubling the amount of values you can represent or store.
+        </li>
+
+    </ul>
 
 
 </p>
 
 
 
-    <p>
-        Our Wireframe Design
+
+
+
+
+
+    <div class="center-block" style="margin: 2% 0% 0%; text-align:left; font-family: Monaco,serif;font-size:55px;">
+        <div class="col-12">
+            <p>The Wireframe Design</p>
+        </div>
+    </div>
         <br>
 
         <br>
@@ -152,3 +224,328 @@
 
 </div>
 </div>
+
+
+
+
+<!--binary code illustartion-->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<!-- This page is illustrative and contains ideas about HTML formatting -->
+<!DOCTYPE HTML>
+<html lang="en">
+<!-- Head, think of things that are more meta or format oriented -->
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Common style for site -->
+    <style>
+        :root{
+            --yellow: #f1d483;
+            --green: #9daf9b;
+            --purple: #a59aaf;
+            --lblue: #6084a3;
+            --dblue: #2b425b;
+            --gray: #363d47;
+            --white: whitesmoke;
+            --black: black;
+            --grey: grey;
+        }
+
+        html, body{
+            margin: 0;
+            height: 100%;
+            animation: fadein 2s;
+            -moz-animation: fadein 2s; /* Firefox */
+            -webkit-animation: fadein 2s; /* Safari and Chrome */
+            -o-animation: fadein 2s; /* Opera */
+            background-color: var(--purple);
+            color: var(--black);
+        }
+
+        .dark-mode {
+            background-color: var(--white);
+            color: var(--black);
+        }
+
+        h1{
+            font-size: 5em;
+        }
+
+        a {
+            color: midnightblue;
+        }
+
+        .fa{
+            font-size: 3em;
+            letter-spacing: 1em;
+            transition: all .2s;
+            color: white;
+        }
+
+        .fa:hover{
+            transform: translateY(10px);
+        }
+
+        .fa-youtube-play:hover{
+            color: #cc0000;
+        }
+
+        .fa-twitter:hover{
+            color: #1da1f2;
+        }
+
+        .fa-github:hover{
+            color: #000000;
+        }
+
+        .btn:link,
+        .btn:visited {
+            text-transform: uppercase;
+            text-decoration: none;
+            padding: 15px 40px;
+            display: inline-block;
+            border-radius: 100px;
+            transition: all .2s;
+            position: absolute;
+            color: white;
+            font-size: 2.5em;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 20px 40px rgba(255, 255, 255, 0.2);
+        }
+
+        .btn:active {
+            transform: translateY(-1px);
+            box-shadow: 0 5px 10px rgba(255, 255, 255, 0.2);
+        }
+
+        .row{
+            margin: auto;
+        }
+
+        .navbar-custom .navbar-brand,
+        .navbar-custom .navbar-text {
+            color: var(--lblue);
+        }
+
+    </style>
+    <style>
+        body {
+            background-image: url('https://lh3.googleusercontent.com/proxy/Sl7kf4Bg1hi598W1J-f9bU1LUO1QDwuVZaF0QY2HyWn7rO4Gn7fN4M3OS8cvNMyG9oCqc_G_JRJ7_YYOcv_nioCS2Og9DymBfWpBLihGzOFkSnxYyrNObxMIoHk8WqLZElMLuAsNDKeGdPEFvzoFSPOhm_UtKQIEMgDhmk8sB8eqH_fNQQ');
+        }
+    </style>
+
+
+
+    <!-- Use this block for page specific meta data -->
+
+    <title>Binary page</title>
+    <script>
+        const BITS = '8'; let max = '255'; let MAX = parseInt(max, 10);
+        // return string with current value of each bit
+        function getBits() {
+            let bits = "";
+            for(let i = 0; i < BITS; i++) {
+                bits = bits + document.getElementById('digit' + i).value;
+            }
+            return bits;
+        }
+        // setter for DOM values
+        function setConversions(binary) {
+            document.getElementById('binary').innerHTML = binary;
+            // DOM assignment to Octal conversion
+            document.getElementById('octal').innerHTML = parseInt(binary, 2).toString(8);
+            // DOM assignment to Hexadecimal conversion
+            document.getElementById('hexadecimal').innerHTML = parseInt(binary, 2).toString(16);
+            // DOM assignment to Decimal conversion
+            document.getElementById('decimal').innerHTML = parseInt(binary, 2).toString(10);
+            <!-- Hack: derive printable character(s) for each 8 bits -->
+        }
+
+        // algorithm to convert decimal to base using division and remainder
+        function decimal_2_base(decimal, base) {
+            let conversion = "";
+            // loop to convert to base
+            do {
+                let digit = decimal % base;
+                conversion = "" + digit + conversion; // what does this do?
+                decimal = ~~(decimal / base);         // what does this do?  what is ~~?
+            } while (decimal > 0);                  // why while at the end?
+            // loop to pad with zeros
+            if (base === 2) {                        // only pad for binary conversions
+                for (let i = 0; conversion.length < BITS; i++) {
+                    conversion = "0" + conversion;
+                }
+            }
+            return conversion;
+        }
+
+        // toggle selected bit and recalculate
+        function toggleBit(i) {
+            //alert("Digit action: " + i );
+            const dig = document.getElementById('digit' + i);
+            const image = document.getElementById('bulb' + i);
+            const butt = document.getElementById('butt' + i);
+            // Change digit and visual
+            if (image.src.match("https://toppng.com/uploads/preview/ios-emoji-electric-light-bulb-11536089423qhg73fkoau.png")) {
+                dig.value = 0;
+                image.src = "https://www.pngfind.com/pngs/m/108-1081118_free-png-download-transparent-light-bulb-clipart-png.png";
+                butt.innerHTML = "Turn On";
+            } else {
+                dig.value = 1;
+                image.src = "https://toppng.com/uploads/preview/ios-emoji-electric-light-bulb-11536089423qhg73fkoau.png";
+                butt.innerHTML = "Turn Off";
+            }
+            // Binary numbers
+            const binary = getBits();
+            setConversions(binary);
+        }
+        // add is positive integer, subtract is negative integer
+        function add(n) {
+            let binary = getBits();
+            // convert to decimal and do math
+            let decimal = parseInt(binary, 2);
+            if (n > 0) {  // PLUS
+                decimal = MAX === decimal ? 0 : decimal += n; // OVERFLOW or PLUS
+            } else  {     // MINUS
+                decimal = 0 === decimal ? MAX : decimal += n; // OVERFLOW or MINUS
+            }
+            // convert the result back to binary
+            binary = decimal_2_base(decimal, 2);
+            // update conversions
+            setConversions(binary);
+            // update bits
+            for (let i = 0; i < binary.length; i++) {
+                let digit = binary.substr(i, 1);
+                document.getElementById('digit' + i).value = digit;
+                if (digit === "1") {
+                    document.getElementById('bulb' + i).src = "https://toppng.com/uploads/preview/ios-emoji-electric-light-bulb-11536089423qhg73fkoau.png";
+                    document.getElementById('butt' + i).innerHTML = "Turn Off";
+                } else {
+                    document.getElementById('bulb' + i).src = "https://www.pngfind.com/pngs/m/108-1081118_free-png-download-transparent-light-bulb-clipart-png.png";
+                    document.getElementById('butt' + i).innerHTML = "Turn On";
+                }
+            }
+        }
+    </script>
+
+
+</head>
+
+
+<body style="font-family: gilroyLIGHT,serif; color: var(--gray);" >
+
+
+<!-- CONTENT Block, utilize this block for page specific content  -->
+
+<div class="center-block" style="margin: 2% 3% 0%; text-align:left; font-family: Monaco,serif;font-size:55px;">
+    <div class="col-12">
+        <p>Binary Conversion</p>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row justify-content-md-center">
+
+        <div class="col-8">
+            <table class="table">
+                <tr id="table">
+                    <th>Plus</th>
+                    <th>Binary</th>
+                    <th>Octal</th>
+                    <th>Hexadecimal</th>
+                    <th>Decimal</th>
+                    <!-- Hack: display label for printable character(s)  -->
+                    <th>Minus</th>
+                </tr>
+                <tr>
+                    <td><button type="button" id="add1" onclick="add(1)">+1</button></td>
+                    <td id="binary">00000000</td>
+                    <td id="octal">0</td>
+                    <td id="hexadecimal">0</td>
+                    <td id="decimal">0</td>
+                    <!-- Hack: display printable character(s)  -->
+                    <td><button type="button" id="sub1" onclick="add(-1)">-1</button></td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="col-12">
+            <table class="table">
+                <tr>
+
+                    <td><img class="img-responsive py-3" id="bulb0" src="https://www.pngfind.com/pngs/m/108-1081118_free-png-download-transparent-light-bulb-clipart-png.png" alt="" width="40" height="Auto">
+                        <button type="button" id="butt0" onclick="toggleBit('0')">Turn On</button>
+                    </td>
+
+                    <td><img class="img-responsive py-3" id="bulb1" src="https://www.pngfind.com/pngs/m/108-1081118_free-png-download-transparent-light-bulb-clipart-png.png" alt="" width="40" height="Auto">
+                        <button type="button" id="butt1" onclick="toggleBit('1')">Turn On</button>
+                    </td>
+
+                    <td><img class="img-responsive py-3" id="bulb2" src="https://www.pngfind.com/pngs/m/108-1081118_free-png-download-transparent-light-bulb-clipart-png.png" alt="" width="40" height="Auto">
+                        <button type="button" id="butt2" onclick="toggleBit('2')">Turn On</button>
+                    </td>
+
+                    <td><img class="img-responsive py-3" id="bulb3" src="https://www.pngfind.com/pngs/m/108-1081118_free-png-download-transparent-light-bulb-clipart-png.png" alt="" width="40" height="Auto">
+                        <button type="button" id="butt3" onclick="toggleBit('3')">Turn On</button>
+                    </td>
+
+                    <td><img class="img-responsive py-3" id="bulb4" src="https://www.pngfind.com/pngs/m/108-1081118_free-png-download-transparent-light-bulb-clipart-png.png" alt="" width="40" height="Auto">
+                        <button type="button" id="butt4" onclick="toggleBit('4')">Turn On</button>
+                    </td>
+
+                    <td><img class="img-responsive py-3" id="bulb5" src="https://www.pngfind.com/pngs/m/108-1081118_free-png-download-transparent-light-bulb-clipart-png.png" alt="" width="40" height="Auto">
+                        <button type="button" id="butt5" onclick="toggleBit('5')">Turn On</button>
+                    </td>
+
+                    <td><img class="img-responsive py-3" id="bulb6" src="https://www.pngfind.com/pngs/m/108-1081118_free-png-download-transparent-light-bulb-clipart-png.png" alt="" width="40" height="Auto">
+                        <button type="button" id="butt6" onclick="toggleBit('6')">Turn On</button>
+                    </td>
+
+                    <td><img class="img-responsive py-3" id="bulb7" src="https://www.pngfind.com/pngs/m/108-1081118_free-png-download-transparent-light-bulb-clipart-png.png" alt="" width="40" height="Auto">
+                        <button type="button" id="butt7" onclick="toggleBit('7')">Turn On</button>
+                    </td>
+
+                </tr>
+                <tr>
+
+                    <td><input type='text' id='digit0' Value="0" size="1" readonly></td>
+
+                    <td><input type='text' id='digit1' Value="0" size="1" readonly></td>
+
+                    <td><input type='text' id='digit2' Value="0" size="1" readonly></td>
+
+                    <td><input type='text' id='digit3' Value="0" size="1" readonly></td>
+
+                    <td><input type='text' id='digit4' Value="0" size="1" readonly></td>
+
+                    <td><input type='text' id='digit5' Value="0" size="1" readonly></td>
+
+                    <td><input type='text' id='digit6' Value="0" size="1" readonly></td>
+
+                    <td><input type='text' id='digit7' Value="0" size="1" readonly></td>
+
+                </tr>
+            </table>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>
