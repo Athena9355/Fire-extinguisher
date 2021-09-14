@@ -98,45 +98,45 @@
 
 
 {% block body %}
-<div class="container-fluid">
-    <div class="row justify-content-end" style="padding: 2%;">
-        <div class="col-2" style="text-align: right;">
-            {% block info %}
+    <div class="container-fluid">
+        <div class="row justify-content-end" style="padding: 2%;">
+            <div class="col-2" style="text-align: right;">
+                {% block info %}
 
-            <a><h5>{{name}}</h5></a>
-            <a href={{github}} target="_blank"><i class="fa fa-github"></i></a>
-            {% endblock %}
-        </div>
-    </div>
-
-    <div class="product" style="margin-top: 2%;">
-        <div class="row" style="padding: 5%; padding-top: 0%; padding-bottom: 5%;">
-
-            <div class="col-8" >
-                <h1>{{ project }} Project</h1>
+                    <a><h5>{{name}}</h5></a>
+                    <a href={{github}} target="_blank"><i class="fa fa-github"></i></a>
+                {% endblock %}
             </div>
-
         </div>
 
-        <div class="row" style="padding-left: 10%;">
-            {% block links %}
-            <div class="col-3">
-                <a href="{{ overview }}" class="btn">Overview</a>
-            </div>
+        <div class="product" style="margin-top: 2%;">
+            <div class="row" style="padding: 5%; padding-top: 0%; padding-bottom: 5%;">
 
-            <div class="col-3">
-                <a href="{{ repo }}" class="btn">Repository</a>
-            </div>
-
-                <div class="col-3">
-                    <a href="https://docs.google.com/presentation/d/1UJboee1Pooy2vpqJxhB5FvWtXuExaZHRhhywYRlrPYc/edit?usp=sharing" class="btn">Wireframe</a>
+                <div class="col-8" >
+                    <h1>{{ project }} Project</h1>
                 </div>
 
-            {% endblock %}
-        </div>
+            </div>
 
+            <div class="row" style="padding-left: 10%;">
+                {% block links %}
+                    <div class="col-3">
+                        <a href="{{ overview }}" class="btn">Overview</a>
+                    </div>
+
+                    <div class="col-3">
+                        <a href="{{ repo }}" class="btn">Repository</a>
+                    </div>
+
+                    <div class="col-3">
+                        <a href="https://docs.google.com/presentation/d/1UJboee1Pooy2vpqJxhB5FvWtXuExaZHRhhywYRlrPYc/edit?usp=sharing" class="btn">Wireframe</a>
+                    </div>
+
+                {% endblock %}
+            </div>
+
+        </div>
     </div>
-</div>
 {% endblock %}
 
 </body>
@@ -149,7 +149,7 @@
 <style>
     body {
         background-image: url('https://wallpaperaccess.com/full/1567665.png');
-    height: 100%;
+        height: 100%;
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;

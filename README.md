@@ -1,8 +1,4 @@
-## [Flask Portfolio Starter](https://nighthawkcodingsociety.com/projectsearch/details/Flask%20Portfolio%20Starter)
-Runtime link: https://portfolio.nighthawkcodingsociety.com/
-
-
-<h4>Table of Contents</h4>
+<h3>Table of Contents</h3>
 
 [Contributors](https://github.com/Athena9355/Fire-extinguisher/graphs/contributors)<br>
 [Repository](https://github.com/Athena9355/Fire-extinguisher/projects/1) <br>
@@ -22,7 +18,8 @@ Prototyping: [Sprints 3, 4](https://github.com/Athena9355/Fire-extinguisher/proj
 | Aadya       | @AadyaDaita  | [Tasks](https://github.com/Athena9355/Fire-extinguisher/issues?q=is%3Aopen) | [Scrum Board](https://github.com/Athena9355/Fire-extinguisher/projects/1?card_filter_query=assignee%3Aaadyadaita)  | [Commits](https://github.com/Athena9355/Fire-extinguisher/commits?author=AadyaDaita) | [Profile](https://github.com/AadyaDaita) |
 
 
-<h3>Scrum Team Scores (Out of 4):</h3>
+
+<h3>Week 1, 2 Scrum Team Scores (Out of 4):</h3>
 4/4: Everyone performed their roles. Scrum masters Allison, Athena,
 and Gaurish defined tasks to be completed and managed the scrum board.
 Everyone was part of the designing and everyone contributed at least one idea onto the design.
