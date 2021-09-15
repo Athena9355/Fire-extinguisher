@@ -1,14 +1,25 @@
 <!DOCTYPE html>
 
 
-{% extends "layouts/base.html" %}
-
 <!-- Search for all the Hack: below for hack-a-thon and mini-lab requirements -->
 <!-- need to adjust Templates to start -->
 
 <!-- Hack: Build form to drive bit size dynamic updates
            use HTML Input Form in Frontend, ie toward top of Page
            send initial value and updated values to form via Python render_template -->
+
+<div class="col-12">
+    <p>The number of the bits in the mini lab is: {{BITS}}!</p>
+</div>
+
+<div class="col-12">
+    <form action="/greet_binary" id="greet_binary" method="POST" >
+        <label for="bitNumber">How many bits do you want?</label>
+        <input name="bitNumber" id="bitNumber">
+        <input type="submit" value="BITS!">
+    </form>
+</div>
+
 <!-- Hack: use 8 as default -->
 {% set BITS = 8 %}
 {% set MAX = ((2 ** BITS) - 1) %}
