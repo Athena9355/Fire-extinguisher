@@ -24,12 +24,12 @@ def greet():
 def greet_binary():
     # submit button has been pushed
     if request.form:
-        bitcount = request.form.get("bitcount")
-        if bitcount.__len__() != 0:  # input field has content
-            return render_template("binary.html", bitcount=bitcount)
+        BITS = request.form.get("BITS")
+        if BITS.__len__() != 0:  # input field has content
+            return render_template("binary.html", BITS=BITS)
         else:
             # starting and empty input default
-            return render_template("binary.html", bitcount="8")
+            return render_template("binary.html", BITS="8")
     else:
         return render_template("binary.html")
 
