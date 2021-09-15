@@ -20,6 +20,20 @@ def greet():
         return render_template("minilab.html")
 
 
+@app.route('/greet_binary', methods=['GET', 'POST'])
+def greet_binary():
+    # submit button has been pushed
+    if request.form:
+        BITS = request.form.get("BITS")
+        if BITS.__len__() != 0:  # input field has content
+            return render_template("binary.html", BITS=BITS)
+        else:
+            # starting and empty input default
+            return render_template("binary.html", BITS="8")
+    else:
+        return render_template("binary.html")
+
+
 @app.route('/greet_athena', methods=['GET', 'POST'])
 def greet_athena():
     # submit button has been pushed
