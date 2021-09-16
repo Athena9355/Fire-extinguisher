@@ -21,8 +21,13 @@ Prototyping: [Sprints 3, 4](https://github.com/Athena9355/Fire-extinguisher/proj
 Week 3,4
 <h3>Table of contents</h3>
 - 3.0 Binary Hacks
-  a. Hack 1
-  b. Hack 2
+- 3.0 a. Hack 1
+- 3.0 b. Hack 2
+- 3.0 c. Hack 3
+- 3.0 c. Hack 4
+- 3.0 c. Hack 5
+- 3.0 c. Hack 6
+- 
 
 
 <h3>Week 1, 2 Scrum Team Scores (Out of 4):</h3>
