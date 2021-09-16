@@ -17,6 +17,12 @@ Prototyping: [Sprints 3, 4](https://github.com/Athena9355/Fire-extinguisher/proj
 | Athena      | @Athena9355  |  [Tasks](https://github.com/Athena9355/Fire-extinguisher/issues?q=assignee%3AAthena9355+is%3Aopen   ) | [Scrum Board](https://github.com/Athena9355/Fire-extinguisher/projects/1?card_filter_query=assignee%3Aathena9355r)  | [Commits](https://github.com/Athena9355/Fire-extinguisher/commits?author=Athena9355) | [Profile](https://github.com/Athena9355) |
 | Aadya       | @AadyaDaita  | [Tasks](https://github.com/Athena9355/Fire-extinguisher/issues?q=is%3Aopen) | [Scrum Board](https://github.com/Athena9355/Fire-extinguisher/projects/1?card_filter_query=assignee%3Aaadyadaita)  | [Commits](https://github.com/Athena9355/Fire-extinguisher/commits?author=AadyaDaita) | [Profile](https://github.com/AadyaDaita) |
 
+***
+Week 3,4
+<h3>Table of contents</h3>
+- 3.0 Binary Hacks
+  a. Hack 1
+  b. Hack 2
 
 
 <h3>Week 1, 2 Scrum Team Scores (Out of 4):</h3>
@@ -27,6 +33,7 @@ Allison and Athena are the navigators and built the README section. Allison deve
 Gaurish made the Wire Frame menu options. Aadya and Athena integrated greet function into the mini-lab pages.
 Athena integrated journal 0 into the mini lab page.
 
+***
 Week 1, 2
 <h3>Table of contents</h3>
 - 1.0: READ.ME Creation
