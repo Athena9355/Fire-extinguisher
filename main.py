@@ -28,6 +28,8 @@ def greet():
                 return render_template("aadya.html", name=name)
             if name == "Aadya":  # input field has content
                 return render_template("aadya.html", name=name)
+            else:
+                return render_template("minilab.html", name=name)
         else:
             # starting and empty input default
             return render_template("minilab.html", name="World")
