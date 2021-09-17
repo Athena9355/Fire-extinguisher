@@ -29,7 +29,10 @@
 
 
 
+<!-- Extending the predefined project layout -->
 {% extends "layouts/base.html" %}
+{% block body %}
+
 <html lang="en">
 
 <!-- Search for all the Hack: below for hack-a-thon and mini-lab requirements -->
@@ -62,7 +65,6 @@
 
 
 
-{% block meta %}
     <title>Binary page</title>
     <script>
         const BITS = '{{ BITS }}'; let max = '{{ MAX }}'; let MAX = parseInt(max, 10);
@@ -92,7 +94,6 @@
              below ASCII for more ideas of where to make changes
              */
         }
-
 
 
 
@@ -164,11 +165,8 @@
             }
         }
     </script>
-{% endblock %}
 
 
-
-{% block body %}
     <h1 class="text-center">Binary Math with Conversions</h1>
 
     <!--getting input: number of bits -->
@@ -234,9 +232,6 @@
 
     <!-- ASCII -->
 
-
-
 {% endblock %}
 
-{% block background%}
-{% endblock %}
+</html>
