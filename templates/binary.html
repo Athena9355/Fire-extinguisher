@@ -1,4 +1,10 @@
 <!DOCTYPE html>
+
+
+
+
+
+
 {% extends "layouts/base.html" %}
 <html lang="en">
 
@@ -8,10 +14,47 @@
 <!-- Hack: Build form to drive bit size dynamic updates
            use HTML Input Form in Frontend, ie toward top of Page
            send initial value and updated values to form via Python render_template -->
+
+<!--getting an input from user -->
+    <html>
+    <body>
+
+    <h1>The input element</h1>
+
+    <form action="/action_page.php">
+        <label for="fname">First name:</label>
+        <input type="text" id="fname" name="fname"><br><br>
+        <label for="lname">Last name:</label>
+        <input type="text" id="lname" name="lname"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <p>Click the "Submit" button and the form-data will be sent to a page on the
+        server called "action_page.php".</p>
+
+    </body>
+    </html>
+
+
 <!-- Hack: use 8 as default -->
-{% set BITS = 8 %}
+{% set BITS = 8%}
 {% set MAX = ((2 ** BITS) - 1) %}
 
+<!--get input from user and store as variable for # of bits-->
+<html>
+<body>
+
+<!--<h1>Display a Number Field</h1>
+
+<form action="/action_page.php">
+    <label for="bits">Number of bits (between 1 and 100):</label>
+    <input type="number" id="bits" name="bits" min="1" max="100">
+    <input type="submit">
+</form>
+<p> Your number: <span id = "bits"></p> -->
+
+</body>
+</html>
 
 <!-- Hack: Set bulbs and pass as variables via Python render_template
            add new images (ie PNGs) to project.-->
@@ -51,6 +94,11 @@
              below ASCII for more ideas of where to make changes
              */
         }
+
+
+
+
+
 
         // algorithm to convert decimal to base using division and remainder
         function decimal_2_base(decimal, base) {
@@ -172,6 +220,30 @@
 
         </div>
     </div>
+
+    <!-- ASCII -->
+    <!DOCTYPE html>
+
+    <html>
+    <body>
+
+    <h2>JavaScript Strings</h2>
+
+    <p>The String.fromCharCode() method converts Unicode values to characters.</p>
+
+    <p id="demo"></p>
+
+
+    <script>
+        let number ="digit";
+        let text = String.fromCharCode("number");
+        document.getElementById("demo").innerHTML = text;
+    </script>
+
+    </body>
+    </html>
+
+
 {% endblock %}
 
 {% block background%}
