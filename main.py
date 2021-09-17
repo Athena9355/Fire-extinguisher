@@ -58,12 +58,12 @@ def greet_commentforum1():
 def greet_athena():
     # submit button has been pushed
     if request.form:
-        name = request.form.get("name")
-        if name.__len__() != 0:  # input field has content
-            return render_template("athena.html", name=name)
+        name1 = request.form.get("name1")
+        if name1.__len__() != 0:  # input field has content
+            return render_template("athena.html", name1=name1)
         else:
             # starting and empty input default
-            return render_template("athena.html", name="World")
+            return render_template("athena.html", name1="World")
     else:
         return render_template("athena.html")
 
@@ -100,12 +100,12 @@ def greet_allison():
 def greet_aadya():
     # submit button has been pushed
     if request.form:
-        name = request.form.get("name")
-        if name.__len__() != 0:  # input field has content
-            return render_template("aadya.html", name=name)
+        name1 = request.form.get("name1")
+        if name1.__len__() != 0:  # input field has content
+            return render_template("aadya.html", name1=name1)
         else:
             # starting and empty input default
-            return render_template("aadya.html", name="World")
+            return render_template("aadya.html", name1="World")
     else:
         return render_template("aadya.html")
 

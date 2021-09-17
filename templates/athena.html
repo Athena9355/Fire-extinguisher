@@ -5,7 +5,12 @@
     <meta charset="UTF-8">
     <title>About Us</title>
 </head>
-<!--navbar-->
+
+<!-- Extending the predefined project layout -->
+{% extends "layouts/base.html" %}
+{% block body %}
+
+<!--navbar
 <!DOCTYPE html>
 <html>
 <head>
@@ -130,13 +135,13 @@
 <div class="center-block" style="margin: 2% 5% 5%; text-align:left; font-family: gilroy,serif;">
 
     <div class="col-12">
-        <p>Hi {{name}}!</p>
+        <p>Hi {{name1}}!</p>
     </div>
 
     <div class="col-12">
         <form action="/greet_athena" id="greet_athena" method="POST" >
-            <label for="name">Type a greeting name?</label>
-            <input name="name" id="name">
+            <label for="name1">Type a greeting name?</label>
+            <input name="name1" id="name1">
             <input type="submit" value="Greetings!">
         </form>
     </div>
@@ -175,6 +180,8 @@
 </div>
 
 <p><iframe width="850" height="1100" src="https://docs.google.com/document/d/12fsg1UKn_jaHmgELA5jITQyEVaJ7ZVFesGmUcsMG4zk/edit?usp=sharing"></iframe></p>
+
+{% endblock %}
 
 </body>
 </html>
