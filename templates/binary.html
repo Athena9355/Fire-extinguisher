@@ -1,6 +1,48 @@
 <!DOCTYPE html>
 
+<html>
+<body>
 
+
+<!--getting input: number of bits -->
+<div class="col-12">
+    <p>The number of bits is {{name}}</p>
+</div>
+
+
+<div class="col-12">
+    <form action="/bits" id="binary" method="POST" >
+        <label for="number">Number of Bits!</label>
+        <input name="number" id="number">
+        <input type="submit" value="Submit">
+    </form>
+</div>
+
+
+
+
+<!--
+<div class="center-block" style="margin: 2% 5% 5%; text-align:left; font-family: gilroy,serif;">
+
+    <div class="col-12">
+        <p>Hi {{number}}!</p>
+    </div>
+
+    <div class="col-12">
+        <form action="/bits" id="bits" method="POST" >
+            <label for="number">Type a greeting name?</label>
+            <input name="number" id="number">
+            <input type="submit" value="Greetings!">
+        </form>
+    </div>
+
+</div>
+-->
+
+<!-- input code ends here -->
+
+</body>
+</html>
 
 
 
@@ -16,24 +58,7 @@
            send initial value and updated values to form via Python render_template -->
 
 <!--getting an input from user -->
-    <html>
-    <body>
 
-    <h1>The input element</h1>
-
-    <form action="/action_page.php">
-        <label for="fname">First name:</label>
-        <input type="text" id="fname" name="fname"><br><br>
-        <label for="lname">Last name:</label>
-        <input type="text" id="lname" name="lname"><br><br>
-        <input type="submit" value="Submit">
-    </form>
-
-    <p>Click the "Submit" button and the form-data will be sent to a page on the
-        server called "action_page.php".</p>
-
-    </body>
-    </html>
 
 
 <!-- Hack: use 8 as default -->

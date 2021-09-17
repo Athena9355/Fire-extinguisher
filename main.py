@@ -93,6 +93,22 @@ def greet_aadya():
 # def index():
 #   return render_template("greet.html")
 
+#for binary input
+@app.route('/bits', methods=['GET', 'POST'])
+def bits():
+    if request.form:
+        name = request.form.get("number")
+        if name.__len__() != 0:  # input field has content
+            return render_template("binary.html", name=name)
+        else:
+            # starting and empty input default
+            return render_template("binary.html", name="World")
+    else:
+        return render_template("binary.html")
+
+#binary input ends
+
+
 
 @app.route('/')
 def index():
@@ -153,6 +169,20 @@ def team():
     return render_template("team.html")
 
 
+@app.route('/binarywithinput')
+def binarywithinput():
+    return render_template("binarywithinput.html")
+
+
+#to display variable
+
+
+
+
+
 # runs the application on the development server
 if __name__ == "__main__":
     app.run(debug=True)
+
+
+
