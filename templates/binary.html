@@ -1,26 +1,3 @@
-<!DOCTYPE html>
-
-<html>
-<body>
-
-
-<!--getting input: number of bits -->
-<div class="col-12">
-    <p>The number of bits is {{name}}</p>
-</div>
-
-
-<div class="col-12">
-    <form action="/bits" id="binary" method="POST" >
-        <label for="number">Number of Bits!</label>
-        <input type = "number" name="number" id="number">
-        <input type="submit" value="Submit">
-    </form>
-</div>
-
-
-
-
 <!--
 <div class="center-block" style="margin: 2% 5% 5%; text-align:left; font-family: gilroy,serif;">
 
@@ -41,8 +18,7 @@
 
 <!-- input code ends here -->
 
-</body>
-</html>
+
 
 
 
@@ -62,7 +38,7 @@
 
 
 <!-- Hack: use 8 as default -->
-{% set BITS = 8%}
+{#% set BITS = 8%#}
 {% set MAX = ((2 ** BITS) - 1) %}
 
 
@@ -188,6 +164,19 @@
 
 {% block body %}
     <h1 class="text-center">Binary Math with Conversions</h1>
+
+    <!--getting input: number of bits -->
+
+
+
+    <div class="col-12">
+        <form action="/bits" id="bits" method="POST" >
+            <label for="number">Number of Bits!</label>
+            <input type = "number" type = "text" name="BITS" id="number" value={{ BITS }}>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
     <div class="container">
         <div class="row justify-content-md-center">
 
@@ -238,15 +227,7 @@
     </div>
 
     <!-- ASCII -->
-    <!DOCTYPE html>
 
-    <html>
-    <body>
-
-
-
-    </body>
-    </html>
 
 
 {% endblock %}

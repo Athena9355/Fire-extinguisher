@@ -100,20 +100,6 @@ def greet_aadya():
 #   return render_template("greet.html")
 
 
-# for input on binary
-@app.route('/bits', methods=['GET', 'POST'])
-def bits():
-    if request.form:
-        name = request.form.get("number")
-        if name.__len__() != 0:  # input field has content
-            return render_template("binary.html", name=name)
-        if name.__len__() != 0:
-            return render_template("binary.html", BITS=name)  # do not need int because the user can only input integers
-        else:
-            # starting and empty input default
-            return render_template("binary.html", BITS=8)
-
-
 # binary inputs end
 
 # @app.route('/input_binary', methods=['GET', 'POST'])
@@ -160,7 +146,11 @@ def aadya():
 
 @app.route('/binary')
 def binary():
-    return render_template("binary.html")
+    BITS=4
+    if request.method == 'POST':
+        BITS = int(request.form['BITS'])
+        print(BITS)
+    return render_template("binary.html", BITS=BITS)
 
 
 @app.route('/ratingsystem')
