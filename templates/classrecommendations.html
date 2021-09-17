@@ -2,66 +2,82 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Class Recommendations</title>
+    <title>Comment Forum</title>
 </head>
+<!DOCTYPE html>
 
 <!-- Extending the predefined project layout -->
 {% extends "layouts/base.html" %}
 {% block body %}
 
-<!--navbar-
-<!DOCTYPE html>
-<html>
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-        }
 
-        .topnav {
-            overflow: hidden;
-            background-color: #FFFFFF;
-        }
+    <title>Binary page</title>
 
-        .topnav a {
-            float: left;
-            color: #897C7C;
-            text-align: center;
-            padding: 20px 12px;
-            text-decoration: none;
-            font-size: 15px;
-        }
 
-        .topnav a:hover {
-            background-color: #ddd;
-            color: black;
-        }
+    <body style="font-family: Helvetica,serif; color: var(--gray);" >
 
-        /*.topnav a.active {
-            background-color: white;
-            color: #897C7C;
-        }*/
-    </style>
-</head>
-<body>
 
-<div class="topnav">
-    <a class="active" href="http://127.0.0.1:5000">Home/Portfolio</a>
-    <a href="http://127.0.0.1:5000/gaurish">Gaurish's About Me</a>
-    <a href="http://127.0.0.1:5000/allison">Allison's About Me</a>
-    <a href="http://127.0.0.1:5000/athena">Athena's About Me</a>
-    <a href="http://127.0.0.1:5000/aadya">Aadya's About Me</a>
-    <a href="http://127.0.0.1:5000/greet">Mini Lab</a>
+    <!-- CONTENT Block, utilize this block for page specific content  -->
 
-    <a href="http://127.0.0.1:5000/videos">Videos</a>
-    <a href="http://127.0.0.1:5000/ratingsystem">Rate a Class</a>
-    <a href="http://127.0.0.1:5000/commentforum">Comment Forum</a>
-</div>
-</body>
-</html>
-<!--navbar ends-->
+    <body>
+    <!---Athena's title-->
+    <div class="center-block" style="margin: 2% 2% 2%; text-align:left; font-family: Helvetica ;font-size:30px;">
+        <div class="col-12">
+            <p> Have a discussion!! </p>
+        </div>
+    </div>
+
+    <!---Athena's info-->
+    <div class="center-block" style="margin: 2% 5% 2%; text-align:left; font-family: Helvetica ;font-size:20px;">
+        <div class="col-12">
+            <p>Stub. In this page will go the comment forum features, where students can discuss any concerns. Below is our wireframing of our potential product on google slides. <br>
+            </p>
+        </div>
+    </div>
+
+    <div class="col-12">
+        <form action="/greet_commentforum3" id="greet_commentforum3" method="POST" >
+            <label for="comment3">What classes do you like?</label>
+            <input name="comment3" id="comment3">
+            <input type="submit" value="Reccomend!">
+        </form>
+    </div>
+
+    <div class="d-flex justify-content-left">
+        <div class="col-md-8">
+            <div class="d-flex flex-column comment-section">
+                <div class="bg-white p-2">
+                    <div class="d-flex flex-row user-info"><img class="rounded-circle" img src="https://drive.google.com/thumbnail?id=1JN7v_34trJhFAxzCaVsdssP0-CeTyj5g" width="40">
+                        <div class="d-flex flex-column justify-content-start ml-2"><span class="d-block font-weight-bold name">Allison Huang</span><span class="date text-black-50">Shared publicly - July 2021</span></div>
+                    </div>
+                    <div class="mt-2">
+                        <p>{{ comment3 }}</p>
+                    </div>
+                    <p>{{ comment4 }}</p>
+                </div>
+            </div>
+            <div class="bg-white">
+                <div class="d-flex flex-row fs-12">
+
+                    <div class="like p-2 cursor"><i class="fa fa-thumbs-o-up"></i><span class="ml-1"><input type="submit" value="Like!" button class="btn btn-primary btn-sm shadow-none" type="button"</button></span></div>
+                    <div class="like p-2 cursor"><i class="fa fa-commenting-o"></i><span class="ml-1"><input type="submit" value="Share!" button class="btn btn-primary btn-sm shadow-none" type="button"</button></span></div>
+                    <div class="like p-2 cursor"><i class="fa fa-share"></i><span class="ml-1"><input type="submit" value="Save!" button class="btn btn-primary btn-sm shadow-none" type="button"</button></span></div>
+                </div>
+            </div>
+            <div class="bg-light p-2">
+                <div class="col-12">
+                    <form action="/greet_commentforum4" id="greet_commentforum4" method="POST" >
+                        <label for="comment4">Leave a comment.</label>
+                        <input name="comment4" id="comment4">
+                        <input type="submit" value="Greetings!" button class="btn btn-primary btn-sm shadow-none" type="button"</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+{% endblock %}
 
 
 <!---this is for the title of the page -->
@@ -81,27 +97,3 @@
         background-size: cover;
     }
 </style>
-
-
-<body>
-<!---Athena's title -->
-<div class="center-block" style="margin: 2% 2% 2%; text-align:left; font-family: Times New Roman ,serif;font-size:30px;">
-    <div class="col-12">
-        <p> Reccomend a class!! </p>
-    </div>
-</div>
-
-<!---Athena's info -->
-<div class="center-block" style="margin: 2% 5% 2%; text-align:left; font-family: Times New Roman ,serif;font-size:20px;">
-    <div class="col-12">
-        <p>Stub. In this page will go the class reccomendation features, with classes from math to social studies. Below is our wireframing of our potential product on google slides. <br>
-        </p>
-    </div>
-</div>
-
-<p><iframe width="850" height="1100" src="https://docs.google.com/presentation/d/1UJboee1Pooy2vpqJxhB5FvWtXuExaZHRhhywYRlrPYc/edit?usp=sharing"></iframe></p>
-
-{% endblock %}
-
-</body>
-</html>

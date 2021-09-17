@@ -54,6 +54,32 @@ def greet_commentforum1():
     else:
         return render_template("commentforum.html")
 
+@app.route('/greet_commentforum3', methods=['GET', 'POST'])
+def greet_commentforum3():
+    # submit button has been pushed
+    if request.form:
+        comment3 = request.form.get("comment3")
+        if len(comment3) != 0:  # input field has content
+            return render_template("commentforum.html", comment3=comment3)
+        else:
+            # starting and empty input default
+            return render_template("commentforum.html", comment3="World")
+    else:
+        return render_template("commentforum.html")
+
+@app.route('/greet_commentforum4', methods=['GET', 'POST'])
+def greet_commentforum4():
+    # submit button has been pushed
+    if request.form:
+        comment4 = request.form.get("comment4")
+        if len(comment4) != 0:  # input field has content
+            return render_template("commentforum.html", comment4=comment4)
+        else:
+            # starting and empty input default
+            return render_template("commentforum.html", comment4="World")
+    else:
+        return render_template("commentforum.html")
+
 @app.route('/greet_athena', methods=['GET', 'POST'])
 def greet_athena():
     # submit button has been pushed
