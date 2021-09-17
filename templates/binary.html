@@ -41,6 +41,7 @@
             document.getElementById('hexadecimal').innerHTML = parseInt(binary, 2).toString(16);
             // DOM assignment to Decimal conversion
             document.getElementById('decimal').innerHTML = parseInt(binary, 2).toString(10);
+            document.getElementById('ascii').innerHTML = String.fromCharCode(parseInt(binary, 2));
             /* Hack: show ASCII printable character(s) for each 8 bits
              DOM assignment by converting decimal https://www.w3schools.com/jsref/jsref_fromcharcode.asp
              below ASCII for more ideas of where to make changes
@@ -130,8 +131,10 @@
                         <th>Octal</th>
                         <th>Hexadecimal</th>
                         <th>Decimal</th>
+                        <th>ASCII</th>
                         <!-- Hack: display ASCII label for printable character(s)  -->
                         <th>Minus</th>
+
                     </tr>
                     <tr>
                         <td><button type="button" id="add1" onclick="add(1)">+1</button></td>
@@ -139,8 +142,10 @@
                         <td id="octal">0</td>
                         <td id="hexadecimal">0</td>
                         <td id="decimal">0</td>
+                        <td id="ascii">0</td>
                         <!-- Hack: display ASCII printable character(s)  -->
                         <td><button type="button" id="sub1" onclick="add(-1)">-1</button></td>
+
 
                     </tr>
                 </table>
