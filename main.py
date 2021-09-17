@@ -146,7 +146,7 @@ def aadya():
 
 @app.route('/binary')
 def binary():
-    BITS=4
+    BITS=8
     if request.method == 'POST':
         BITS = int(request.form['BITS'])
         print(BITS)
