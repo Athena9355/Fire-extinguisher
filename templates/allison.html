@@ -6,6 +6,11 @@
 </head>
 <!--navbar-->
 <!DOCTYPE html>
+
+<!-- Extending the predefined project layout -->
+{% extends "layouts/base.html" %}
+{% block body %}
+
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -79,13 +84,13 @@
 <div class="center-block" style="margin: 2% 5% 5%; text-align:left; font-family: gilroy,serif;">
 
     <div class="col-12">
-        <p>Hi {{name}}!</p>
+        <p>Hi {{name1}}!</p>
     </div>
 
     <div class="col-12">
         <form action="/greet_allison" id="greet_allison" method="POST" >
-            <label for="name">Type a greeting name?</label>
-            <input name="name" id="name">
+            <label for="name1">Type a greeting name?</label>
+            <input name="name1" id="name1">
             <input type="submit" value="Greetings!">
         </form>
     </div>
@@ -131,5 +136,8 @@
             </div>
         </div>
     </div>
+
+{% endblock %}
+
 </body>
 </html>
