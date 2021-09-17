@@ -72,12 +72,12 @@ def greet_athena():
 def greet_gaurish():
     # submit button has been pushed
     if request.form:
-        name = request.form.get("name")
-        if name.__len__() != 0:  # input field has content
-            return render_template("gaurish.html", name=name)
+        name1 = request.form.get("name1")
+        if name1.__len__() != 0:  # input field has content
+            return render_template("gaurish.html", name1=name1)
         else:
             # starting and empty input default
-            return render_template("gaurish.html", name="World")
+            return render_template("gaurish.html", name1="World")
     else:
         return render_template("gaurish.html")
 

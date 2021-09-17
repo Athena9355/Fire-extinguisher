@@ -4,7 +4,12 @@
     <meta charset="UTF-8">
     <title>About Us</title>
 </head>
-<!--navbar-->
+
+<!-- Extending the predefined project layout -->
+{% extends "layouts/base.html" %}
+{% block body %}
+
+<!--navbar
 <!DOCTYPE html>
 <html>
 <head>
@@ -63,13 +68,13 @@
 <div class="center-block" style="margin: 2% 5% 5%; text-align:left; font-family: gilroy,serif;">
 
     <div class="col-12">
-        <p>Hi, the amazing, miraculous, wonderful . . . {{name}}!</p>
+        <p>Hi, the amazing, miraculous, wonderful . . . {{name1}}!</p>
     </div>
 
     <div class="col-12">
         <form action="/greet_gaurish" id="greet_gaurish" method="POST" >
-            <label for="name">Type a greeting name?</label>
-            <input name="name" id="name">
+            <label for="name1">Type a greeting name?</label>
+            <input name="name1" id="name1">
             <input type="submit" value="Greetings!">
         </form>
     </div>
@@ -79,7 +84,7 @@
 <!---this is for the title of the page -->
 <div class="center-block" style="margin: 2% 5% 5%; text-align:left; font-family: Brush Script MT,serif;font-size:45px;">
     <div class="col-12">
-        <p>Good to have you here {{name}}!</p>
+        <p>Good to have you here {{name1}}!</p>
     </div>
 </div>
 <!---this is for the background image -->
@@ -128,6 +133,8 @@
 </div>
 <p> Gaurish Gaur</p>
 <p><iframe width="850" height="1100" src="https://docs.google.com/document/d/1aSwI7qBKnmvwyLkyffUaa-BpgM00lsl8RINiMVWxSHA/edit?usp=sharing"></iframe></p>
+
+{% endblock %}
 
 </body>
 </html>
