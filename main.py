@@ -20,16 +20,39 @@ def greet():
         return render_template("minilab.html")
 
 
-@app.route('/greet_binary', methods=['GET', 'POST'])
-def greet_binary():
+#@app.route('/binary', methods=['GET', 'POST'])
+#def binary():
+    #if request.form:
+        #num = int(request.form.get("number"))
+        #if  num >= 0 and num <= 255:  # input field has content
+            #return render_template("binary.html", number1=num)
+    #return render_template("binary.html")
+
+@app.route('/greet_commentforum', methods=['GET', 'POST'])
+def greet_commentforum():
     # submit button has been pushed
     if request.form:
-        bitNumber = request.form.get("bitNumber")
-        if len(bitNumber) != 0:  # input field has content
-            return render_template("binary.html", BITS=int(bitNumber))
-    return render_template("binary.html", BITS=8)
+        comment = request.form.get("comment")
+        if len(comment) != 0:  # input field has content
+            return render_template("commentforum.html", comment=comment)
+        else:
+            # starting and empty input default
+            return render_template("commentforum.html", comment="World")
+    else:
+        return render_template("commentforum.html")
 
-
+@app.route('/greet_commentforum1', methods=['GET', 'POST'])
+def greet_commentforum1():
+    # submit button has been pushed
+    if request.form:
+        comment1 = request.form.get("comment1")
+        if len(comment1) != 0:  # input field has content
+            return render_template("commentforum.html", comment1=comment1)
+        else:
+            # starting and empty input default
+            return render_template("commentforum.html", comment1="World")
+    else:
+        return render_template("commentforum.html")
 
 @app.route('/greet_athena', methods=['GET', 'POST'])
 def greet_athena():

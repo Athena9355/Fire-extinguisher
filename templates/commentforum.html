@@ -4,59 +4,79 @@
     <meta charset="UTF-8">
     <title>Comment Forum</title>
 </head>
-<!--navbar-->
 <!DOCTYPE html>
-<html>
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-        }
 
-        .topnav {
-            overflow: hidden;
-            background-color: #FFFFFF;
-        }
+<!-- Extending the predefined project layout -->
+{% extends "layouts/base.html" %}
+{% block body %}
 
-        .topnav a {
-            float: left;
-            color: #897C7C;
-            text-align: center;
-            padding: 20px 12px;
-            text-decoration: none;
-            font-size: 15px;
-        }
 
-        .topnav a:hover {
-            background-color: #ddd;
-            color: black;
-        }
+        <title>Binary page</title>
 
-        /*.topnav a.active {
-            background-color: white;
-            color: #897C7C;
-        }*/
-    </style>
-</head>
-<body>
 
-<div class="topnav">
-    <a class="active" href="http://127.0.0.1:5000">Home/Portfolio</a>
-    <a href="http://127.0.0.1:5000/gaurish">Gaurish's About Me</a>
-    <a href="http://127.0.0.1:5000/allison">Allison's About Me</a>
-    <a href="http://127.0.0.1:5000/athena">Athena's About Me</a>
-    <a href="http://127.0.0.1:5000/aadya">Aadya's About Me</a>
-    <a href="http://127.0.0.1:5000/greet">Mini Lab</a>
+    <body style="font-family: Helvetica,serif; color: var(--gray);" >
 
-    <a href="http://127.0.0.1:5000/videos">Videos</a>
-    <a href="http://127.0.0.1:5000/ratingsystem">Rate a Class</a>
-    <a href="http://127.0.0.1:5000/classrecommendations">Class Recommendations</a>
+
+    <!-- CONTENT Block, utilize this block for page specific content  -->
+
+    <body>
+    <!---Athena's title-->
+<div class="center-block" style="margin: 2% 2% 2%; text-align:left; font-family: Helvetica ;font-size:30px;">
+    <div class="col-12">
+        <p> Have a discussion!! </p>
+    </div>
 </div>
-</body>
-</html>
-<!--navbar ends-->
+
+<!---Athena's info-->
+<div class="center-block" style="margin: 2% 5% 2%; text-align:left; font-family: Helvetica ;font-size:20px;">
+    <div class="col-12">
+        <p>Stub. In this page will go the comment forum features, where students can discuss any concerns. Below is our wireframing of our potential product on google slides. <br>
+        </p>
+    </div>
+</div>
+
+    <div class="col-12">
+        <form action="/greet_commentforum" id="greet_commentforum" method="POST" >
+            <label for="comment">What's on your mind?</label>
+            <input name="comment" id="comment">
+            <input type="submit" value="Greetings!">
+        </form>
+    </div>
+
+    <div class="d-flex justify-content-left">
+        <div class="col-md-8">
+            <div class="d-flex flex-column comment-section">
+                <div class="bg-white p-2">
+                    <div class="d-flex flex-row user-info"><img class="rounded-circle" img src="https://drive.google.com/thumbnail?id=1JN7v_34trJhFAxzCaVsdssP0-CeTyj5g" width="40">
+                        <div class="d-flex flex-column justify-content-start ml-2"><span class="d-block font-weight-bold name">Allison Huang</span><span class="date text-black-50">Shared publicly - July 2021</span></div>
+                    </div>
+                    <div class="mt-2">
+                        <p>{{ comment }}</p>
+                    </div>
+                        <p>{{ comment1 }}</p>
+                    </div>
+                </div>
+                <div class="bg-white">
+                    <div class="d-flex flex-row fs-12">
+                        <div class="like p-2 cursor"><i class="fa fa-thumbs-o-up"></i><span class="ml-1">Like</span></div>
+                        <div class="like p-2 cursor"><i class="fa fa-commenting-o"></i><span class="ml-1">Comment</span></div>
+                        <div class="like p-2 cursor"><i class="fa fa-share"></i><span class="ml-1">Share</span></div>
+                    </div>
+                </div>
+                <div class="bg-light p-2">
+                    <div class="col-12">
+                        <form action="/greet_commentforum1" id="greet_commentforum1" method="POST" >
+                            <label for="comment1">Leave a comment.</label>
+                            <input name="comment1" id="comment1">
+                            <input type="submit" value="Greetings!" button class="btn btn-primary btn-sm shadow-none" type="button"</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
 
 
 <!---this is for the title of the page -->
@@ -77,16 +97,16 @@
     }
 </style>
 
-
+<!--
 <body>
-<!---Athena's title -->
+<!---Athena's title
 <div class="center-block" style="margin: 2% 2% 2%; text-align:left; font-family: Times New Roman ,serif;font-size:30px;">
     <div class="col-12">
         <p> Have a discussion!! </p>
     </div>
 </div>
 
-<!---Athena's info -->
+<!---Athena's info
 <div class="center-block" style="margin: 2% 5% 2%; text-align:left; font-family: Times New Roman ,serif;font-size:20px;">
     <div class="col-12">
         <p>Stub. In this page will go the comment forum features, where students can discuss any concerns. Below is our wireframing of our potential product on google slides. <br>
