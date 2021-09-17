@@ -62,23 +62,12 @@
 
 
 <!-- Hack: use 8 as default -->
-{% set BITS = 8%}
+{% set BITS = 3%}
 {% set MAX = ((2 ** BITS) - 1) %}
 
+
+
 <!--get input from user and store as variable for # of bits-->
-<html>
-<body>
-
-<!--<h1>Display a Number Field</h1>
-
-<form action="/action_page.php">
-    <label for="bits">Number of bits (between 1 and 100):</label>
-    <input type="number" id="bits" name="bits" min="1" max="100">
-    <input type="submit">
-</form>
-<p> Your number: <span id = "bits"></p> -->
-
-</body>
 </html>
 
 <!-- Hack: Set bulbs and pass as variables via Python render_template
@@ -92,6 +81,14 @@
 {% block meta %}
     <title>Binary page</title>
     <script>
+    var number = document.getElementsByName("number")[0].value;
+/*for determining whether there is an input*/
+        if (number.length !== 0) {
+            {% set BITS = number%};
+
+
+
+
         const BITS = '{{ BITS }}'; let max = '{{ MAX }}'; let MAX = parseInt(max, 10);
         // return string with current value of each bit
         function getBits() {

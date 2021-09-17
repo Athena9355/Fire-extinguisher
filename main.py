@@ -30,7 +30,6 @@ def greet_binary():
     return render_template("binary.html", BITS=8)
 
 
-
 @app.route('/greet_athena', methods=['GET', 'POST'])
 def greet_athena():
     # submit button has been pushed
@@ -93,7 +92,7 @@ def greet_aadya():
 # def index():
 #   return render_template("greet.html")
 
-#for binary input
+# for binary input
 @app.route('/bits', methods=['GET', 'POST'])
 def bits():
     if request.form:
@@ -102,12 +101,15 @@ def bits():
             return render_template("binary.html", name=name)
         else:
             # starting and empty input default
-            return render_template("binary.html", name="World")
+            return render_template("binary.html", name="enter a number!")
     else:
         return render_template("binary.html")
+#setting the variable received from the uesr as "number"
+def number():
+    if request.method == 'POST':
+        number = request.form['number']
 
-#binary input ends
-
+# binary input ends
 
 
 @app.route('/')
@@ -164,6 +166,7 @@ def commentforum():
 def videos():
     return render_template("videos.html")
 
+
 @app.route('/team/')
 def team():
     return render_template("team.html")
@@ -174,15 +177,9 @@ def binarywithinput():
     return render_template("binarywithinput.html")
 
 
-#to display variable
-
-
-
+# to display variable
 
 
 # runs the application on the development server
 if __name__ == "__main__":
     app.run(debug=True)
-
-
-
