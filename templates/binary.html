@@ -13,7 +13,7 @@
 <div class="col-12">
     <form action="/bits" id="binary" method="POST" >
         <label for="number">Number of Bits!</label>
-        <input name="number" id="number">
+        <input type = "number" name="number" id="number">
         <input type="submit" value="Submit">
     </form>
 </div>
@@ -62,7 +62,7 @@
 
 
 <!-- Hack: use 8 as default -->
-{% set BITS = 3%}
+{% set BITS = 8%}
 {% set MAX = ((2 ** BITS) - 1) %}
 
 
@@ -81,14 +81,6 @@
 {% block meta %}
     <title>Binary page</title>
     <script>
-    var number = document.getElementsByName("number")[0].value;
-/*for determining whether there is an input*/
-        if (number.length !== 0) {
-            {% set BITS = number%};
-
-
-
-
         const BITS = '{{ BITS }}'; let max = '{{ MAX }}'; let MAX = parseInt(max, 10);
         // return string with current value of each bit
         function getBits() {

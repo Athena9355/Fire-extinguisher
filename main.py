@@ -20,16 +20,6 @@ def greet():
         return render_template("minilab.html")
 
 
-@app.route('/greet_binary', methods=['GET', 'POST'])
-def greet_binary():
-    # submit button has been pushed
-    if request.form:
-        bitNumber = request.form.get("bitNumber")
-        if len(bitNumber) != 0:  # input field has content
-            return render_template("binary.html", BITS=int(bitNumber))
-    return render_template("binary.html", BITS=8)
-
-
 @app.route('/greet_athena', methods=['GET', 'POST'])
 def greet_athena():
     # submit button has been pushed
@@ -92,22 +82,36 @@ def greet_aadya():
 # def index():
 #   return render_template("greet.html")
 
-# for binary input
-@app.route('/bits', methods=['GET', 'POST'])
+
+# for input
+@app.route('/bits/', methods=['GET', 'POST'])
 def bits():
     if request.form:
         name = request.form.get("number")
         if name.__len__() != 0:  # input field has content
             return render_template("binary.html", name=name)
+        if name.__len__() != 0:
+            return render_template("binary.html", BITS=int(name))
         else:
             # starting and empty input default
-            return render_template("binary.html", name="enter a number!")
-    else:
-        return render_template("binary.html")
-#setting the variable received from the uesr as "number"
-def number():
-    if request.method == 'POST':
-        number = request.form['number']
+            return render_template("binary.html", BITS=8)
+
+
+
+
+
+
+
+# binary inputs end
+
+# @app.route('/input_binary', methods=['GET', 'POST'])
+# def input_binary():
+# submit button has been pushed
+#    if request.form:
+#       bitnumber = request.form.get("number")
+#      if len(bitnumber) != 0:  # input field has content
+#        return render_template("binary.html", BITS=int(bitnumber))
+# return render_template("binary.html", BITS=8)
 
 # binary input ends
 
