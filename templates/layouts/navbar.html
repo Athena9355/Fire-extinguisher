@@ -9,18 +9,18 @@
 </body>
 </html>
 
-            <!--drop down menu that worked
-            <div class="center-block" style="margin: 1.7% 2% 0%; text-align:left; font-family: Arial,serif;font-size:15px; color:gray;">
-            <label for="aboutme">About Me</label>
-            <select name="aboutme "onchange="location.href = this.value;">
-                <option value="blank">Choose</option>
-                <option value="http://127.0.0.1:5000/aadya">Aadya</option>
-                <option value="http://127.0.0.1:5000/gaurish">Gaurish</option>
-                <option value="http://127.0.0.1:5000/allison">Allison</option>
-                <option value="http://127.0.0.1:5000/athena">Athena</option>
-            </select>
+<!--drop down menu that worked
+<div class="center-block" style="margin: 1.7% 2% 0%; text-align:left; font-family: Arial,serif;font-size:15px; color:gray;">
+<label for="aboutme">About Me</label>
+<select name="aboutme "onchange="location.href = this.value;">
+    <option value="blank">Choose</option>
+    <option value="http://127.0.0.1:5000/aadya">Aadya</option>
+    <option value="http://127.0.0.1:5000/gaurish">Gaurish</option>
+    <option value="http://127.0.0.1:5000/allison">Allison</option>
+    <option value="http://127.0.0.1:5000/athena">Athena</option>
+</select>
 
-                <div class="navbar-nav"> -->
+    <div class="navbar-nav"> -->
 
 <!-- Bootstrap Navigation Code -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -36,71 +36,75 @@
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
 
-    <li class="nav-item">
-        <a class="nav-link" href={{ url_for('index') }}>Portfolio</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href={{ url_for('greet') }}>Mini Labs</a>
+            <li class="nav-item">
+                <a class="nav-link" href={{ url_for('index') }}>Portfolio</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href={{ url_for('greet') }}>Mini Labs</a>
             <li class="nav-item">
                 <a class="nav-link" href={{ url_for('binary') }}>Binary Hacks</a>
             <li class="nav-item">
-                 <a class="nav-link" href={{ url_for('videos') }}>Videos</a>
+                <a class="nav-link" href={{ url_for('videos') }}>Videos</a>
             <li class="nav-item">
-
-            <a class="nav-link" href={{ url_for('binary') }}>Binary Lab</a>
+                <a class="nav-link" href={{ url_for('binary') }}>Binary Lab</a>
             <li class="nav-item">
-
                 <a class="nav-link" href={{ url_for('ratingsystem') }}>Rate a Class</a>
+
             <li class="nav-item">
                 <a class="nav-link" href={{ url_for('classrecommendations') }}>Class Recommendations</a>
             <li class="nav-item">
                 <a class="nav-link" href={{ url_for('commentforum') }}>Comment Forum</a>
-            <ul class="navbar-nav mr-auto">
-                <!--root menu -->
-                <li class="nav-item active">
-                    <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarStarters" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        About Us
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="/team">Team</a>
-                        <a class="dropdown-item" href="/athena">Athena</a>
-                        <a class="dropdown-item" href="/gaurish">Gaurish</a>
-                        <a class="dropdown-item" href="/allison">Allison</a>
-                        <a class="dropdown-item" href="/aadya">Aadya</a>
+                <ul class="navbar-nav mr-auto">
+                    <!--root menu -->
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarStarters" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            About Us
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="/team">Team</a>
+                            <a class="dropdown-item" href="/athena">Athena</a>
+                            <a class="dropdown-item" href="/gaurish">Gaurish</a>
+                            <a class="dropdown-item" href="/allison">Allison</a>
+                            <a class="dropdown-item" href="/aadya">Aadya</a>
 
-                </li>
+                    </li>
 
+                </ul>
+        </div>
+        <div>
+            </li>
             </ul>
+
+
+            <!--Clock display-->
+            <div class="px-3">
+
+                <p style="color: #3a75e7">  <span id="clock"></span> </p>
+            </div>
+
+            <!--Navigation bar JavaScript support-->
+            <script>
+                // Dark Mode Toggle
+                function darkFunction() {
+                    let element = document.body;
+                    element.classList.toggle("dark-mode");
+                }
+                // Clock controller
+                let clockElement = document.getElementById('clock');
+                function clock() {
+                    let date = new Date();
+                    clockElement.textContent = date.toLocaleString();
+                }
+                // Clock refresh frequency
+                setInterval(clock, 1000);
+            </script>
         </div>
-    <div>
-    </li>
-    </ul>
-
-
-    <!--Clock display-->
-        <div class="px-3">
-
-            <p style="color: #3a75e7">  <span id="clock"></span> </p>
-        </div>
-
-        <!--Navigation bar JavaScript support-->
-        <script>
-            // Dark Mode Toggle
-            function darkFunction() {
-                let element = document.body;
-                element.classList.toggle("dark-mode");
-            }
-            // Clock controller
-            let clockElement = document.getElementById('clock');
-            function clock() {
-                let date = new Date();
-                clockElement.textContent = date.toLocaleString();
-            }
-            // Clock refresh frequency
-            setInterval(clock, 1000);
-        </script>
-    </div>
 </nav>
+
+
+
+
+
