@@ -37,6 +37,61 @@ def greet():
         return render_template("minilab.html")
 
 
+@app.route('/greet_commentforum', methods=['GET', 'POST'])
+def greet_commentforum():
+    # submit button has been pushed
+    if request.form:
+        comment = request.form.get("comment")
+        if comment.__len__() != 0:  # input field has content
+            return render_template("commentforum.html", comment=comment)
+        else:
+            # starting and empty input default
+            return render_template("commentforum.html", comment="World")
+    else:
+        return render_template("commentforum.html")
+
+
+@app.route('/greet_commentforum1', methods=['GET', 'POST'])
+def greet_commentforum1():
+    # submit button has been pushed
+    if request.form:
+        comment1 = request.form.get("comment1")
+        if comment1.__len__() != 0:  # input field has content
+            return render_template("commentforum.html", comment1=comment1)
+        else:
+            # starting and empty input default
+            return render_template("commentforum.html", comment1="World")
+    else:
+        return render_template("commentforum.html")
+
+@app.route('/greet_commentforum3', methods=['GET', 'POST'])
+def greet_commentforum3():
+    # submit button has been pushed
+    if request.form:
+        comment3 = request.form.get("comment3")
+        if comment3.__len__() != 0:  # input field has content
+            return render_template("classrecommendations.html", comment3=comment3)
+        else:
+            # starting and empty input default
+            return render_template("classrecommendations.html", comment3="World")
+    else:
+        return render_template("classrecommendations.html")
+
+
+@app.route('/greet_commentforum4', methods=['GET', 'POST'])
+def greet_commentforum4():
+    # submit button has been pushed
+    if request.form:
+        comment4 = request.form.get("comment4")
+        if comment4.__len__() != 0:  # input field has content
+            return render_template("classrecommendations.html", comment4=comment4)
+        else:
+            # starting and empty input default
+            return render_template("classrecommendations.html", comment4="World")
+    else:
+        return render_template("classrecommendations.html")
+
+
 @app.route('/greet_athena', methods=['GET', 'POST'])
 def greet_athena():
     # submit button has been pushed
