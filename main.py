@@ -11,8 +11,23 @@ def greet():
     # submit button has been pushed
     if request.form:
         name = request.form.get("name")
-        if name.__len__() != 0:  # input field has content
-            return render_template("minilab.html", name=name)
+        if name.__len__() !=0:
+            if name == "athena":  # input field has content
+                return render_template("athena.html", name=name)
+            if name == "Athena":  # input field has content
+                return render_template("athena.html", name=name)
+            if name == "allison":  # input field has content
+                return render_template("allison.html", name=name)
+            if name == "Allison":  # input field has content
+                return render_template("allison.html", name=name)
+            if name == "gaurish":  # input field has content
+                return render_template("gaurish.html", name=name)
+            if name == "Gaurish":  # input field has content
+                return render_template("gaurish.html", name=name)
+            if name == "aadya":  # input field has content
+                return render_template("aadya.html", name=name)
+            if name == "Aadya":  # input field has content
+                return render_template("aadya.html", name=name)
         else:
             # starting and empty input default
             return render_template("minilab.html", name="World")
