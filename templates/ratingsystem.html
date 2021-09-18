@@ -3,13 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Rate a Class</title>
+    <link href="stylesheets/starsystem.css">
+
 </head>
 
-<!-- Extending the predefined project layout -->
-{% extends "layouts/base.html" %}
-{% block body %}
-
-<!--navbar
 <!DOCTYPE html>
 <html>
 <head>
@@ -63,15 +60,41 @@
 </html>
 <!--navbar ends-->
 
-<!---this is for the title of the page -->
-<div class="center-block" style="margin: 2% 5% 5%; text-align:left; font-family: Brush Script MT,serif;font-size:45px;">
+<body>
+
+<div class="center-block" style="margin: 2% 2% 2%; text-align:left; font-family: Times New Roman ,serif;font-size:30px;">
     <div class="col-12">
-        <p>Hi, welcome to the rating class page!</p>
+        <p>  Rate a Class, </p>
     </div>
 </div>
 
-<!---this is for the background image -->
+<div class="starsystem">
+
+    <input type="radio" name="*" id="1star" value="1" a="1"/>
+    <label for="1star"></label>
+
+    <input type="radio" name="*" id="2star" value="2" b="2"/>
+    <label for="2star"></label>
+
+    <input type="radio" name="*" id="3star" value="3" c="3"/>
+    <label for="3star"></label>
+
+    <input type="radio" name="*" id="4star" value="4" d="4"/>
+    <label for="4star"></label>
+
+    <input type="radio" name="*" id="5star" value="5" e="6"/>
+    <label for="5star"></label>
+
+
+</div>
+
+<div class="center-block" style="margin: 2% 2% 2%; text-align:left; font-family: Times New Roman ,serif;font-size:30px;">
+    <div class="col-12">
+        <p>  The number of stars you have selected is {{radio}}  </p>
+    </div>
+</div>
 <style>
+    p {text-align: center;}
     body {
         background-image: url('https://www.teahub.io/photos/full/126-1262553_free-high-resolution-geometric-backgrounds-free-geometric-pattern.jpg');
         height: 100%;
@@ -79,28 +102,50 @@
         background-repeat: no-repeat;
         background-size: cover;
     }
+
+    .starsystem {
+        display: flex;
+        transition: all 1s;
+        margin: 50px auto;
+        width: 250px;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        print: id;
+    }
+    .starsystem input {
+        display: none;
+    }
+    .starsystem > label {
+        width: 50px;
+        height: 50px;
+        font-size: 50px;
+        transition: 0.2s ease;
+        color: yellow;
+        border-bottom: 3px solid black;
+    }
+    .starsystem label:hover {
+        color: #b8860b;
+        transition: 0.5s ease;
+    }
+
+    .starsystem input:checked ~ label:before {
+        content:'\2605';
+    }
+    .starsystem label:active::before {
+        transform:scale(4);
+    }
+    .starsystem label::before {
+        content: '*';
+        position: absolute;
+        line-height: 26px;
+
+    }
+
+
+
+
 </style>
-
-
-<body>
-<!---Athena's title -->
-<div class="center-block" style="margin: 2% 2% 2%; text-align:left; font-family: Times New Roman ,serif;font-size:30px;">
-    <div class="col-12">
-        <p> Rate a Class! </p>
-    </div>
-</div>
-
-<!---Athena's info -->
-<div class="center-block" style="margin: 2% 5% 2%; text-align:left; font-family: Times New Roman ,serif;font-size:20px;">
-    <div class="col-12">
-        <p>Stub. In this page will go the rating class features, with classes from math to social studies. Below is our wireframing of our potential product on google slides. <br>
-        </p>
-    </div>
-</div>
-
-<p><iframe width="850" style="margin: 2% 2% 5%;" height="1100" src="https://docs.google.com/presentation/d/1UJboee1Pooy2vpqJxhB5FvWtXuExaZHRhhywYRlrPYc/edit?usp=sharing"></iframe></p>
-
-{% endblock %}
-
 </body>
 </html>
