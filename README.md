@@ -5,10 +5,13 @@
 [Scrum Board](https://github.com/Athena9355/Fire-extinguisher/projects/1)<br>
 
 <h3>Pair Share Journals</h3>
+1. [Pair Share Journals: Allison and Gaurish](https://docs.google.com/document/d/1aSwI7qBKnmvwyLkyffUaa-BpgM00lsl8RINiMVWxSHA/edit)<br>
+2. [Pair Share Journals: Athena and Aadya](https://docs.google.com/document/d/12fsg1UKn_jaHmgELA5jITQyEVaJ7ZVFesGmUcsMG4zk/edit)<br>
+[Project Ideation](https://docs.google.com/presentation/d/1UJboee1Pooy2vpqJxhB5FvWtXuExaZHRhhywYRlrPYc/edit#slide=id.geb3ca9e0cb_3_0)<br>
+Introduction: [Sprint 0](https://www.youtube.com/watch?v=cEhrHq4HBoQ)<br>
+Innovation: [Sprints 1, 2](https://github.com/Athena9355/Fire-extinguisher/projects/1#card-68118584)<br>
+Prototyping: [Sprints 3, 4](https://github.com/Athena9355/Fire-extinguisher/projects/1#card-68494924)<br>
 
-[Allison and Gaurish](https://docs.google.com/document/d/1aSwI7qBKnmvwyLkyffUaa-BpgM00lsl8RINiMVWxSHA/edit)<br>
-[Athena and Aadya](https://docs.google.com/document/d/12fsg1UKn_jaHmgELA5jITQyEVaJ7ZVFesGmUcsMG4zk/edit)<br>
-<h3>Team members</h3>
 
 | Person      |  ID   | Tasks  | Scrum Board  | Commits  |  Profile  |
 | :---        |  :--- | :---   | :---         |  :---    | :---      |
@@ -16,19 +19,6 @@
 | Gaurish     | @Gaurish-Gaur  | [Tasks](https://github.com/Athena9355/Fire-extinguisher/issues?q=assignee%3AGaurish-Gaur+is%3Aopen) | [Scrum Board](https://github.com/Athena9355/Fire-extinguisher/projects/1?card_filter_query=assignee%3Agaurish-gaur) | [Commits](https://github.com/Athena9355/Fire-extinguisher/commits?author=Gaurish-Gaur) | [Profile](https://github.com/Gaurish-Gaur) |
 | Athena      | @Athena9355  |  [Tasks](https://github.com/Athena9355/Fire-extinguisher/issues?q=assignee%3AAthena9355+is%3Aopen   ) | [Scrum Board](https://github.com/Athena9355/Fire-extinguisher/projects/1?card_filter_query=assignee%3Aathena9355r)  | [Commits](https://github.com/Athena9355/Fire-extinguisher/commits?author=Athena9355) | [Profile](https://github.com/Athena9355) |
 | Aadya       | @AadyaDaita  | [Tasks](https://github.com/Athena9355/Fire-extinguisher/issues?q=is%3Aopen) | [Scrum Board](https://github.com/Athena9355/Fire-extinguisher/projects/1?card_filter_query=assignee%3Aaadyadaita)  | [Commits](https://github.com/Athena9355/Fire-extinguisher/commits?author=AadyaDaita) | [Profile](https://github.com/AadyaDaita) |
-
-<h3>Roles</h3>
-1. Athena: Scrum Master <br>
-2. Gaurish: Navigator <br>
-3. Allison: Designer <br>
-4. Aadya: Technical Lead <br>
-<br>
-
-Introduction: [Sprint 0](https://www.youtube.com/watch?v=cEhrHq4HBoQ)<br>
-Innovation: [Sprints 1, 2](https://github.com/Athena9355/Fire-extinguisher/projects/1#card-68118584)<br>
-Prototyping: [Sprints 3, 4](https://github.com/Athena9355/Fire-extinguisher/projects/1#card-68494924)<br>
-
-<h3>Objectives</h3>
 
 ***
 Week 3,4
@@ -40,7 +30,6 @@ Week 3,4
 - 3.0 c. Hack 4
 - 3.0 c. Hack 5
 - 3.0 c. Hack 6
-- 
 
 
 <h3>Week 1, 2 Scrum Team Scores (Out of 4):</h3>
@@ -92,3 +81,6 @@ List of features
 
 Target Audience
 - Del Norte Students, and students who took the class, but graduated
+
+
+[RGB Mini Lab](https://github.com/Athena9355/Fire-extinguisher/issues/68) <br>
