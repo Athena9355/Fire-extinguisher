@@ -1,9 +1,12 @@
-<h3>Table of Contents</h3>
+<h3>Team Fire Extinguishers (Aadya Daita, Gaurish Gaur, Allison Huang, Athena Wu)</h3><br>
 
-[Contributors](https://github.com/Athena9355/Fire-extinguisher/graphs/contributors)<br>
-[Repository](https://github.com/Athena9355/Fire-extinguisher/projects/1) <br>
-[Pair Share Journals: Allison and Gaurish](https://docs.google.com/document/d/1aSwI7qBKnmvwyLkyffUaa-BpgM00lsl8RINiMVWxSHA/edit)<br>
-[Pair Share Journals: Athena and Aadya](https://docs.google.com/document/d/12fsg1UKn_jaHmgELA5jITQyEVaJ7ZVFesGmUcsMG4zk/edit)<br>
+[Insights](https://github.com/Athena9355/Fire-extinguisher/graphs/contributors)<br>
+[Our GitHub Repository](https://github.com/Athena9355/Fire-extinguisher/projects/1) <br>
+[Scrum Board](https://github.com/Athena9355/Fire-extinguisher/projects/1)<br>
+
+<h3>Pair Share Journals</h3>
+1. [Pair Share Journals: Allison and Gaurish](https://docs.google.com/document/d/1aSwI7qBKnmvwyLkyffUaa-BpgM00lsl8RINiMVWxSHA/edit)<br>
+2. [Pair Share Journals: Athena and Aadya](https://docs.google.com/document/d/12fsg1UKn_jaHmgELA5jITQyEVaJ7ZVFesGmUcsMG4zk/edit)<br>
 [Project Ideation](https://docs.google.com/presentation/d/1UJboee1Pooy2vpqJxhB5FvWtXuExaZHRhhywYRlrPYc/edit#slide=id.geb3ca9e0cb_3_0)<br>
 Introduction: [Sprint 0](https://www.youtube.com/watch?v=cEhrHq4HBoQ)<br>
 Innovation: [Sprints 1, 2](https://github.com/Athena9355/Fire-extinguisher/projects/1#card-68118584)<br>
