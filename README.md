@@ -84,4 +84,13 @@ Target Audience
 
 
 Mini Lab 
-
+-Integrate HTML
+-Integrate all python (image.py and starter.py)
+-Add to navbar
+-Add greyscale effect
+-RGB Values with an Image, Frontend... how would you change to grey scale dynamically? Look for Hack in code.
+ How to code message to RGB
+-RGB Values with an Image, Backend... how would you write a message into image (Links to an external site.) and transport it to the Web? Look at Pillow Image write in Tester.
+-RGB Values with an Image, New Development. explore and implement a new possibility in manipulating images (Links to an external site.).
+-RGB Values with an Image, Backend... image files are really big, this would make a Programmer consider being efficiency in programming. What are the calculations? Could the image.py function "def image_data" more efficient? There is a science to writing efficient algorithms called Big O notation (Links to an external site.). Write image_data function to be more efficient according to Big O notation.
+-Research/Study sheet/journal. what is base2, base8, base16. what is base64? How is base64 different? what are some ideas from this research that you can use in your PBL project? Add backlog items.
