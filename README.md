@@ -8,7 +8,7 @@
 1. [Allison and Gaurish](https://docs.google.com/document/d/1aSwI7qBKnmvwyLkyffUaa-BpgM00lsl8RINiMVWxSHA/edit)<br>
 2. [Pair Share Journals: Athena and Aadya](https://docs.google.com/document/d/12fsg1UKn_jaHmgELA5jITQyEVaJ7ZVFesGmUcsMG4zk/edit)<br>
 
-<h3>Team Members</h3>
+<h3>Team Members</h3><br>
 | Person      |  ID   | Tasks  | Scrum Board  | Commits  |  Profile  |
 | :---        |  :--- | :---   | :---         |  :---    | :---      |
 | Allison     | @allisonthuang | [Tasks](https://github.com/Athena9355/Fire-extinguisher/issues?q=assignee%3Aallisonthuang+is%3Aopen) | [Scrum Board](https://github.com/Athena9355/Fire-extinguisher/projects/1?card_filter_query=assignee%3Aallisonthuang) | [Commits](https://github.com/Athena9355/Fire-extinguisher/commits?author=allisonthuang) | [Profile](https://github.com/allisonthuang) |
