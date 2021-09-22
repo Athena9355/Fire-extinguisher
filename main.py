@@ -248,6 +248,10 @@ def binarywithinput():
     return render_template("binarywithinput.html")
 
 
+@app.route('/rgb')
+def rgb():
+    return render_template("rgb.html")
+
 # to display variable
 
 
