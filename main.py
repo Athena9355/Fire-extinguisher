@@ -13,28 +13,28 @@ def greet():
         name = request.form.get("name")
         if name.__len__() !=0:
             if name == "athena":  # input field has content
-                return render_template("athena.html", name=name)
+                return render_template("About Me/athena.html", name=name)
             if name == "Athena":  # input field has content
-                return render_template("athena.html", name=name)
+                return render_template("About Me/athena.html", name=name)
             if name == "allison":  # input field has content
-                return render_template("allison.html", name=name)
+                return render_template("About Me/allison.html", name=name)
             if name == "Allison":  # input field has content
-                return render_template("allison.html", name=name)
+                return render_template("About Me/allison.html", name=name)
             if name == "gaurish":  # input field has content
-                return render_template("gaurish.html", name=name)
+                return render_template("About Me/gaurish.html", name=name)
             if name == "Gaurish":  # input field has content
-                return render_template("gaurish.html", name=name)
+                return render_template("About Me/gaurish.html", name=name)
             if name == "aadya":  # input field has content
-                return render_template("aadya.html", name=name)
+                return render_template("About Me/aadya.html", name=name)
             if name == "Aadya":  # input field has content
-                return render_template("aadya.html", name=name)
+                return render_template("About Me/aadya.html", name=name)
             else:
-                return render_template("minilab.html", name=name)
+                return render_template("Labs/minilab.html", name=name)
         else:
             # starting and empty input default
-            return render_template("minilab.html", name="World")
+            return render_template("Labs/minilab.html", name="World")
     else:
-        return render_template("minilab.html")
+        return render_template("Labs/minilab.html")
 
 
 @app.route('/greet_commentforum', methods=['GET', 'POST'])
@@ -43,12 +43,12 @@ def greet_commentforum():
     if request.form:
         comment = request.form.get("comment")
         if comment.__len__() != 0:  # input field has content
-            return render_template("commentforum.html", comment=comment)
+            return render_template("Stubs/commentforum.html", comment=comment)
         else:
             # starting and empty input default
-            return render_template("commentforum.html", comment="World")
+            return render_template("Stubs/commentforum.html", comment="World")
     else:
-        return render_template("commentforum.html")
+        return render_template("Stubs/commentforum.html")
 
 
 @app.route('/greet_commentforum1', methods=['GET', 'POST'])
@@ -57,12 +57,12 @@ def greet_commentforum1():
     if request.form:
         comment1 = request.form.get("comment1")
         if comment1.__len__() != 0:  # input field has content
-            return render_template("commentforum.html", comment1=comment1)
+            return render_template("Stubs/commentforum.html", comment1=comment1)
         else:
             # starting and empty input default
-            return render_template("commentforum.html", comment1="World")
+            return render_template("Stubs/commentforum.html", comment1="World")
     else:
-        return render_template("commentforum.html")
+        return render_template("Stubs/commentforum.html")
 
 @app.route('/greet_commentforum3', methods=['GET', 'POST'])
 def greet_commentforum3():
@@ -70,12 +70,12 @@ def greet_commentforum3():
     if request.form:
         comment3 = request.form.get("comment3")
         if comment3.__len__() != 0:  # input field has content
-            return render_template("classrecommendations.html", comment3=comment3)
+            return render_template("Stubs/classrecommendations.html", comment3=comment3)
         else:
             # starting and empty input default
-            return render_template("classrecommendations.html", comment3="World")
+            return render_template("Stubs/classrecommendations.html", comment3="World")
     else:
-        return render_template("classrecommendations.html")
+        return render_template("Stubs/classrecommendations.html")
 
 
 @app.route('/greet_commentforum4', methods=['GET', 'POST'])
@@ -84,12 +84,12 @@ def greet_commentforum4():
     if request.form:
         comment4 = request.form.get("comment4")
         if comment4.__len__() != 0:  # input field has content
-            return render_template("classrecommendations.html", comment4=comment4)
+            return render_template("Stubs/classrecommendations.html", comment4=comment4)
         else:
             # starting and empty input default
-            return render_template("classrecommendations.html", comment4="World")
+            return render_template("Stubs/classrecommendations.html", comment4="World")
     else:
-        return render_template("classrecommendations.html")
+        return render_template("Stubs/classrecommendations.html")
 
 
 @app.route('/greet_athena', methods=['GET', 'POST'])
@@ -98,12 +98,12 @@ def greet_athena():
     if request.form:
         name = request.form.get("name")
         if name.__len__() != 0:  # input field has content
-            return render_template("athena.html", name=name)
+            return render_template("About Me/athena.html", name=name)
         else:
             # starting and empty input default
-            return render_template("athena.html", name="World")
+            return render_template("About Me/athena.html", name="World")
     else:
-        return render_template("athena.html")
+        return render_template("About Me/athena.html")
 
 
 @app.route('/greet_gaurish', methods=['GET', 'POST'])
@@ -112,12 +112,12 @@ def greet_gaurish():
     if request.form:
         name = request.form.get("name")
         if name.__len__() != 0:  # input field has content
-            return render_template("gaurish.html", name=name)
+            return render_template("About Me/gaurish.html", name=name)
         else:
             # starting and empty input default
-            return render_template("gaurish.html", name="World")
+            return render_template("About Me/gaurish.html", name="World")
     else:
-        return render_template("gaurish.html")
+        return render_template("About Me/gaurish.html")
 
 
 @app.route('/greet_allison', methods=['GET', 'POST'])
@@ -126,12 +126,12 @@ def greet_allison():
     if request.form:
         name = request.form.get("name")
         if name.__len__() != 0:  # input field has content
-            return render_template("allison.html", name=name)
+            return render_template("About Me/allison.html", name=name)
         else:
             # starting and empty input default
-            return render_template("allison.html", name="World")
+            return render_template("About Me/allison.html", name="World")
     else:
-        return render_template("allison.html")
+        return render_template("About Me/allison.html")
 
 
 @app.route('/greet_aadya', methods=['GET', 'POST'])
@@ -140,12 +140,12 @@ def greet_aadya():
     if request.form:
         name = request.form.get("name")
         if name.__len__() != 0:  # input field has content
-            return render_template("aadya.html", name=name)
+            return render_template("About Me/aadya.html", name=name)
         else:
             # starting and empty input default
-            return render_template("aadya.html", name="World")
+            return render_template("About Me/aadya.html", name="World")
     else:
-        return render_template("aadya.html")
+        return render_template("About Me/aadya.html")
 
 
 # hi
@@ -162,7 +162,7 @@ def bits():
     if request.method == 'POST':
         BITS = int(request.form['BITS'])
         print(BITS)
-    return render_template("binary.html", BITS=BITS)
+    return render_template("Labs/Binary/binary.html", BITS=BITS)
 
 
 # binary inputs end
@@ -191,22 +191,22 @@ def aboutus():
 
 @app.route('/athena')
 def athena():
-    return render_template("athena.html")
+    return render_template("About Me/athena.html")
 
 
 @app.route('/allison')
 def allison():
-    return render_template("allison.html")
+    return render_template("About Me/allison.html")
 
 
 @app.route('/gaurish')
 def gaurish():
-    return render_template("gaurish.html")
+    return render_template("About Me/gaurish.html")
 
 
 @app.route('/aadya')
 def aadya():
-    return render_template("aadya.html")
+    return render_template("About Me/aadya.html")
 
 
 @app.route('/binary')
@@ -215,22 +215,22 @@ def binary():
     if request.method == 'POST':
         BITS = int(request.form['BITS'])
         print(BITS)
-    return render_template("binary.html", BITS=BITS)
+    return render_template("Labs/Binary/binary.html", BITS=BITS)
 
 
 @app.route('/ratingsystem')
 def ratingsystem():
-    return render_template("ratingsystem.html")
+    return render_template("Stubs/ratingsystem.html")
 
 
 @app.route('/classrecommendations')
 def classrecommendations():
-    return render_template("classrecommendations.html")
+    return render_template("Stubs/classrecommendations.html")
 
 
 @app.route('/commentforum')
 def commentforum():
-    return render_template("commentforum.html")
+    return render_template("Stubs/commentforum.html")
 
 
 @app.route('/videos')
@@ -240,17 +240,17 @@ def videos():
 
 @app.route('/team/')
 def team():
-    return render_template("team.html")
+    return render_template("About Me/team.html")
 
 
 @app.route('/binarywithinput')
 def binarywithinput():
-    return render_template("binarywithinput.html")
+    return render_template("Labs/Binary/binarywithinput.html")
 
 
 @app.route('/rgb')
 def rgb():
-    return render_template("rgb.html")
+    return render_template("Labs/RGB/rgb.html")
 
 # to display variable
 

@@ -1,9 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
+<!-- Extending the predefined project layout -->
+{% extends "layouts/base.html" %}
+{% block body %}
+
 <head>
     <meta charset="UTF-8">
     <title>Rate a Class</title>
-    <link href="stylesheets/starsystem.css">
+    <link href="../stylesheets/starsystem.css">
 
 </head>
 
@@ -44,21 +49,6 @@
 </head>
 <body>
 
-<div class="topnav">
-    <a class="active" href="http://127.0.0.1:5000">Home/Portfolio</a>
-    <a href="http://127.0.0.1:5000/gaurish">Gaurish's About Me</a>
-    <a href="http://127.0.0.1:5000/allison">Allison's About Me</a>
-    <a href="http://127.0.0.1:5000/athena">Athena's About Me</a>
-    <a href="http://127.0.0.1:5000/aadya">Aadya's About Me</a>
-    <a href="http://127.0.0.1:5000/greet">Mini Lab</a>
-
-    <a href="http://127.0.0.1:5000/videos">Videos</a>
-    <a href="http://127.0.0.1:5000/classrecommendations">Class Recommendations</a>
-    <a href="http://127.0.0.1:5000/commentforum">Comment Forum</a>
-</div>
-</body>
-</html>
-<!--navbar ends-->
 
 <body>
 
@@ -88,11 +78,7 @@
 
 </div>
 
-<div class="center-block" style="margin: 2% 2% 2%; text-align:left; font-family: Times New Roman ,serif;font-size:30px;">
-    <div class="col-12">
-        <p>  The number of stars you have selected is {{radio}}  </p>
-    </div>
-</div>
+
 <style>
     p {text-align: center;}
     body {
@@ -148,4 +134,7 @@
 
 </style>
 </body>
+
+{% endblock %}
+
 </html>
