@@ -1,6 +1,7 @@
 # For Backend Code
 # import "packages" from flask
 from flask import Flask, render_template, request
+from image   import  image_data
 
 # create a Flask instance
 app = Flask(__name__)
@@ -183,6 +184,12 @@ def bits():
 def index():
     return render_template("index.html")
 
+@app.route('/rgb/')
+def rgb():
+    return render_template('rgb.html', images=image_data())
+
+
+
 
 @app.route('/aboutus')
 def aboutus():
@@ -246,11 +253,6 @@ def team():
 @app.route('/binarywithinput')
 def binarywithinput():
     return render_template("binarywithinput.html")
-
-
-@app.route('/rgb')
-def rgb():
-    return render_template("rgb.html")
 
 # to display variable
 
