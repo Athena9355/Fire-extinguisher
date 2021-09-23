@@ -14,7 +14,7 @@ starter_bp = Blueprint('starter', __name__,
 
 @starter_bp.route('/binary/')
 def binary():
-    return render_template("binary.html")
+    return render_template("Labs/Binary/binary.html")
 
 
 @starter_bp.route('/rgb', methods=["GET", "POST"])

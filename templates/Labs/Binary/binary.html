@@ -33,35 +33,35 @@
 {% extends "layouts/base.html" %}
 {% block body %}
 
-<html lang="en">
+    <html lang="en">
 
-<!-- Search for all the Hack: below for hack-a-thon and mini-lab requirements -->
-<!-- need to adjust Templates to start -->
+    <!-- Search for all the Hack: below for hack-a-thon and mini-lab requirements -->
+    <!-- need to adjust Templates to start -->
 
-<!-- Hack: Build form to drive bit size dynamic updates
-           use HTML Input Form in Frontend, ie toward top of Page
-           send initial value and updated values to form via Python render_template -->
+    <!-- Hack: Build form to drive bit size dynamic updates
+               use HTML Input Form in Frontend, ie toward top of Page
+               send initial value and updated values to form via Python render_template -->
 
-<!--getting an input from user -->
-
-
-
-<!-- Hack: use 8 as default -->
-{#% set BITS = 8%#}
-{% set MAX = ((2 ** BITS) - 1) %}
+    <!--getting an input from user -->
 
 
 
-<!--get input from user and store as variable for # of bits-->
-</html>
+    <!-- Hack: use 8 as default -->
+    {#% set BITS = 8%#}
+    {% set MAX = ((2 ** BITS) - 1) %}
 
-<!-- Hack: Set bulbs and pass as variables via Python render_template
-           add new images (ie PNGs) to project.-->
-<!-- use your PNGs as default -->
-{% set imgBulbOn = "https://freepngimg.com/thumb/bulb/35351-5-glowing-bulb-transparent.png" %}
-{% set imgBulbOff = "https://freepngimg.com/thumb/bulb/31669-1-bulb-off-transparent-image.png" %}
-{% set msgTurnOn = "Turn On" %}
-{% set msgTurnOff = "Turn Off" %}
+
+
+    <!--get input from user and store as variable for # of bits-->
+    </html>
+
+    <!-- Hack: Set bulbs and pass as variables via Python render_template
+               add new images (ie PNGs) to project.-->
+    <!-- use your PNGs as default -->
+    {% set imgBulbOn = "https://freepngimg.com/thumb/bulb/35351-5-glowing-bulb-transparent.png" %}
+    {% set imgBulbOff = "https://freepngimg.com/thumb/bulb/31669-1-bulb-off-transparent-image.png" %}
+    {% set msgTurnOn = "Turn On" %}
+    {% set msgTurnOff = "Turn Off" %}
 
 
 
