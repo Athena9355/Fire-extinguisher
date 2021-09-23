@@ -1,18 +1,17 @@
-from flask import Blueprint, render_template
-from PIL import Image, ImageDraw
-import numpy
+# from flask import Blueprint, render_template
+# from PIL import Image, ImageDraw
+# import numpy
 
-starter_bp = Blueprint('starter', __name__,
-                       url_prefix='/starter',
-                       template_folder='templates',
-                       static_folder='static',
-                       static_url_path='assets')
+# starter_bp = Blueprint('starter', __name__,
+# url_prefix='/starter',
+# template_folder='templates',
+# static_folder='static',
+# static_url_path='assets')
 
 
-
-#@starter_bp.route('/rgb', methods=["GET", "POST"])
-#def rgb():
-    #return render_template('Labs/RGB/rgb.html', colors=color_data())
+# @starter_bp.route('/rgb', methods=["GET", "POST"])
+# def rgb():
+# return render_template('Labs/RGB/rgb.html', colors=color_data())
 
 
 def color_data(path="static/assets/", color_dict=None):  # path of blueprint run is default
