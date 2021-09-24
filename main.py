@@ -1,6 +1,7 @@
 # For Backend Code
 # import "packages" from flask
 from flask import Flask, render_template, request
+from image import image_data
 
 # create a Flask instance
 app = Flask(__name__)
@@ -150,10 +151,12 @@ def greet_aadya():
 
 # hi
 # connects default URL to render index.html
-# @app.route('/')
-# def index():
-#   return render_template("greet.html")
 
+
+
+@app.route('/rgb/')
+def rgb():
+    return render_template('Labs/RGB/rgb.html', images=image_data())
 
 # for input on binary
 @app.route('/bits', methods=['GET', 'POST'])
@@ -248,9 +251,6 @@ def binarywithinput():
     return render_template("Labs/Binary/binarywithinput.html")
 
 
-@app.route('/rgb')
-def rgb():
-    return render_template("Labs/RGB/rgb.html")
 
 # to display variable
 
