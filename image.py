@@ -1,9 +1,9 @@
-
-from PIL import Image, ImageDraw
+from PIL import Image, ImageDraw, ImageFont
 import numpy
 import base64
 from io import BytesIO
-from pathlib import Path  # https://medium.com/@ageitgey/python-3-quick-tip-the-easy-way-to-deal-with-file-paths-on-windows-mac-and-linux-11a072b58d5f
+from pathlib import \
+    Path  # https://medium.com/@ageitgey/python-3-quick-tip-the-easy-way-to-deal-with-file-paths-on-windows-mac-and-linux-11a072b58d5f
 
 
 # image (PNG, JPG) to base64 conversion (string), learn about base64 on wikipedia https://en.wikipedia.org/wiki/Base64
@@ -22,7 +22,8 @@ def image_formatter(img, img_type):
 def image_data(path=Path("static/assets/"), img_list=None):  # path of static images is defaulted
     if img_list is None:  # color_dict is defined with defaults
         img_list = [
-            {'source': "Allison Huang", 'label': "Light bulb", 'file': "light-bulb-on-off-png-11553940208oq66nq8jew.png"},
+            {'source': "Allison Huang", 'label': "Light bulb",
+             'file': "light-bulb-on-off-png-11553940208oq66nq8jew.png"},
             {'source': "iconsdb.com", 'label': "Black square", 'file': "black-square-16.png"},
             {'source': "iconsdb.com", 'label': "Red square", 'file': "red-square-16.png"},
             {'source': "iconsdb.com", 'label': "Green square", 'file': "green-square-16.png"},
@@ -35,6 +36,11 @@ def image_data(path=Path("static/assets/"), img_list=None):  # path of static im
         file = path / img_dict['file']  # file with path for local access (backend)
         # Python Image Library operations
         img_reference = Image.open(file)  # PIL
+
+        draw_reference = ImageDraw.Draw(img_reference)
+        font = ImageFont.truetype("times.ttf", 80)
+        draw_reference.text((10, 10), "lets gooo", fill=(255, 5, 5), font=font)
+
         img_data = img_reference.getdata()  # Reference https://www.geeksforgeeks.org/python-pil-image-getdata/
         img_dict['format'] = img_reference.format
         img_dict['mode'] = img_reference.mode
@@ -46,6 +52,7 @@ def image_data(path=Path("static/assets/"), img_list=None):  # path of static im
         img_dict['hex_array'] = []
         img_dict['binary_array'] = []
         # 'data' is a list of RGB data, the list is traversed and hex and binary lists are calculated and formatted
+
         for pixel in img_dict['data']:
             # hexadecimal conversions
             hex_value = hex(pixel[0])[-2:] + hex(pixel[1])[-2:] + hex(pixel[2])[-2:]
@@ -70,6 +77,7 @@ def image_data(path=Path("static/assets/"), img_list=None):  # path of static im
 # run this as standalone tester to see data printed in terminal
 if __name__ == "__main__":
     local_path = Path("../static/img/")
+    out_path = Path("../static/img/out")
     img_test = [
         {'source': "Peter Carolin", 'label': "Lassen Volcano", 'file': "lassen-volcano-256.jpg"},
     ]
@@ -97,8 +105,8 @@ if __name__ == "__main__":
         # display image
         print("----  render and write in image  -----")
         filename = local_path / row['file']
-        image_ref = Image.open(filename)
-        draw = ImageDraw.Draw(image_ref)
-        draw.text((0, 0), "Size is {0} X {1}".format(*row['size']))  # draw in image
-        image_ref.show()
+        # image_ref = Image.open(filename)
+        # draw = ImageDraw.Draw(image_ref)
+        # draw.text((0, 0), "Size is {0} X {1}".format(*row['size']))  # draw in image
+
 print()
