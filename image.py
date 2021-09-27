@@ -37,9 +37,8 @@ def image_data(path=Path("static/assets/"), img_list=None):  # path of static im
         # Python Image Library operations
         img_reference = Image.open(file)  # PIL
 
-        draw_reference = ImageDraw.Draw(img_reference)
-        font = ImageFont.truetype("times.ttf", 80)
-        draw_reference.text((10, 10), "lets gooo", fill=(255, 5, 5), font=font)
+        draw = ImageDraw.Draw(img_reference) #draw allows us to add our secret message by allowing us to add on image
+        draw.text((100, 825), "Well Done!", fill=(170, 170, 170))
 
         img_data = img_reference.getdata()  # Reference https://www.geeksforgeeks.org/python-pil-image-getdata/
         img_dict['format'] = img_reference.format
