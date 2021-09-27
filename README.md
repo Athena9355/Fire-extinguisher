@@ -33,12 +33,12 @@ To assist distressed students in their adventure into a new schedule with new cl
 
 <h2>Sprint 5,6 Week 5: 9/20-9/24</h2>
 <h4>Table of contents</h4>
-1. Complete RGB Project<br>
-2. Complete Pair Share Journal<br>
-3. Unit 3.1 Work<br>
-4. Unit 3.2 work<br>
-5. Edit readme<br>
-6. Overview Video<br>
+1. [Complete RGB Project](https://github.com/Athena9355/Fire-extinguisher/issues/68)<br>
+2. Complete Pair Share Journal: [Athena & Aadya](https://docs.google.com/document/d/12fsg1UKn_jaHmgELA5jITQyEVaJ7ZVFesGmUcsMG4zk/edit), [Allison & Gaurish](https://docs.google.com/document/d/1aSwI7qBKnmvwyLkyffUaa-BpgM00lsl8RINiMVWxSHA/edit)<br>
+4. Unit 3.1 Work<br>
+5. Unit 3.2 work<br>
+6. [Edit readme](https://github.com/Athena9355/Fire-extinguisher#readme)<br>
+7. Overview Video<br>
 
 
 <h2>Sprint 1,2 - Week 1, 2: 8/23-9/3</h2>
