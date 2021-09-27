@@ -34,7 +34,9 @@ def image_data(path=Path("static/assets/"), img_list=None):  # path of static im
         # File to open
         file = path / img_dict['file']  # file with path for local access (backend)
         # Python Image Library operations
-        img_reference = Image.open(file)  # PIL
+        img_reference = Image.open(file)  # PIL, basically opening the image
+        draw = ImageDraw.Draw(img_reference)
+        draw.text((400, 825), "Well Done! ", fill=(30, 30, 30)) #adding draw, able to draw on top of current image to add secret message
         img_data = img_reference.getdata()  # Reference https://www.geeksforgeeks.org/python-pil-image-getdata/
         img_dict['format'] = img_reference.format
         img_dict['mode'] = img_reference.mode
