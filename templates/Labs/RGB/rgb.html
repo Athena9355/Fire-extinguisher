@@ -3,10 +3,18 @@
 
 {% block meta %}
     <script>
-        // Hack: add java script function to toggle image from original to gray and back (toggle)
-        //  document.getElementById("img<n>").src
-        //  document.getElementID("img_gray<n>").innerHTML
-        //  help: https://www.geeksforgeeks.org/how-to-change-the-src-attribute-of-an-img-element-in-javascript-jquery/
+        function setImg(img, base64, base64GRAY, button) {
+            const imgLink = document.getElementById(img)
+            const btn = document.getElementById(button)
+            if (imgLink.src == document.getElementById(base64).innerHTML) {
+                imgLink.src = document.getElementById(base64GRAY).innerHTML;
+                btn.innerHTML = "{{ color }}";
+            }
+            else {
+                imgLink.src = document.getElementById(base64).innerHTML;
+                btn.innerHTML = "{{ greyscale }}";
+            }
+        }
     </script>
     <title>RGB starter</title>
 {% endblock %}
@@ -35,12 +43,8 @@
                             <div>{{image.size}}</div>
                         </td>
                         <td>
-                            <img class="img-responsive py-3" id=img{{loop.index}} alt="" width="256" height="Auto" src="{{image.base64}}" >
-                            <!-- Hack: create button (btn{{loop.index}} to  call java script function
-                               pass index to allow you to toggle images with hidden id's
-                               {{image.base64}}  original image
-                               {{image.base64_GRAY}}  gray scale image
-                            -->
+                            <img class="img-responsive py-3" id=img{{loop.index}} alt="" width="300" height="Auto" src="{{image.base64}}" >
+                            <div class="like p-2 cursor"><i class="fa fa-share"></i><span class="ml-1"><input type="submit" value="Greyscale!" button class="btn btn-primary btn-sm shadow-none" type="button" id="butt{{loop.index}}" onclick="setImg('img{{loop.index}}', 'img_orig{{loop.index}}', 'img_gray{{loop.index}}', 'butt{{loop.index}}')">{{ greyscale }} </button></span></div>
                             <p hidden id="img_orig{{loop.index}}">{{image.base64}}</p>
                             <p hidden id="img_gray{{loop.index}}">{{image.base64_GRAY}}</p>
                         </td>
