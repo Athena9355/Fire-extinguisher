@@ -31,14 +31,23 @@ Prototyping: [Sprints 3, 4](https://github.com/Athena9355/Fire-extinguisher/proj
 <h2>Objectives</h2>
 To assist distressed students in their adventure into a new schedule with new classes and new teachers. <br>
 
-<h2>Sprint 5,6 Week 5 ([9/20-9/24](https://github.com/Athena9355/Fire-extinguisher/projects/1#card-68494924)) UPDATE!!</h2><br>
-Table of contents<br>
-1. Complete RGB Project<br>
-2. Complete Pair Share Journal<br>
-3. Unit 3.1 Work<br>
-4. Unit 3.2 work<br>
-5. Edit readme<br>
-6. Overview Video<br>
+
+
+
+
+
+
+
+<h2>Week 5,6: 9/20 - 10/1</h2>
+Table of Content <br>
+
+1. [Complete RGB Project](https://github.com/Athena9355/Fire-extinguisher/issues/68)<br>
+2. [Complete Pair Share Journal - Allison and Gaurish]()<br>
+3. [Complete Pair Share Journal - Allison and Gaurish]()<br>
+4. Unit 3.1 Work<br>
+5. Unit 3.2 work<br>
+6. Edit readme<br>
+7. Overview Video<br>
 
 
 <h2>Week 1, 2 Scrum Team Scores (Out of 4):</h2><br>
