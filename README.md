@@ -33,13 +33,8 @@ To assist distressed students in their adventure into a new schedule with new cl
 
 
 
-
-
-
-
-
 <h2>Week 5,6: 9/20 - 10/1</h2>
-Table of Content <br>
+Table of Contents <br>
 
 1. [Complete RGB Project](https://github.com/Athena9355/Fire-extinguisher/issues/68)<br>
 2. [Complete Pair Share Journal - Allison and Gaurish](https://docs.google.com/document/d/1aSwI7qBKnmvwyLkyffUaa-BpgM00lsl8RINiMVWxSHA/edit)<br>
@@ -48,8 +43,19 @@ Table of Content <br>
 5. [Edit readme](https://github.com/Athena9355/Fire-extinguisher#readme)<br>
 6. Overview Video<br>
 
+<h2>Week 3,4:</h2>
+Table of Contents <br>
 
-<h2>Week 1, 2 Scrum Team Scores (Out of 4):</h2><br>
+1. Cleaned up [loose ends of code](https://github.com/Athena9355/Fire-extinguisher/commit/f386dd12a6274aa8063eca39c48c772f5e967a34) and linked wireframe to home page
+2. Updated Journals with Binary information, created the start of the Binary Mini-Lab page
+3. Added "team.html" page with a team overview
+4. Added [rating page](https://github.com/Athena9355/Fire-extinguisher/commit/e1a6509c6133f152945858232cc67f678552c160)
+5. Added [class reccomendation page](https://github.com/Athena9355/Fire-extinguisher/commit/c8c0b098ae679aed5f2f6d3e40d865a037592b18)
+6. Added [discussion page](https://github.com/Athena9355/Fire-extinguisher/commit/c8c0b098ae679aed5f2f6d3e40d865a037592b18)
+7. Updated [READ.ME file](https://github.com/Athena9355/Fire-extinguisher#readme) with timestamps, links and markdowns.
+
+
+<h2>Week 1, 2:</h2>
 4/4: Everyone performed their roles. Scrum masters Allison, Athena,
 and Gaurish defined tasks to be completed and managed the scrum board.
 Everyone was part of the designing and everyone contributed at least one idea onto the design.
@@ -57,16 +63,13 @@ Allison and Athena are the navigators and built the README section. Allison deve
 Gaurish made the Wire Frame menu options. Aadya and Athena integrated greet function into the mini-lab pages.
 Athena integrated journal 0 into the mini lab page.
 
-***
-Week 1, 2
-<h2>Table of contents</h2>
-- 1.0: READ.ME Creation
-- 1.1: Home page code
-- 1.2: Navbar code and dropdown menu code
-- 1.3: Explanation of stub code and google slide wireframe
-- 1.4: Team Mini-Lab "Greet.html" Page (With Journal 0 embed)
-- 1.5: About Me Pages
-
-- 2.0: Design-A-Thon completed task
-- 2.1: Individual Technology Agreements
-- 2.2: Individual Pair Share Journals with TPT and Assigned Videos
+<h4>Table of contents</h4>
+- 1.0: READ.ME Creation<br>
+- 1.1: Home page code<br>
+- 1.2: Navbar code and dropdown menu code<br>
+- 1.3: Explanation of stub code and google slide wireframe<br>
+- 1.4: Team Mini-Lab "Greet.html" Page (With Journal 0 embed)<br>
+- 1.5: About Me Pages<br>
+- 2.0: Design-A-Thon completed task<br>
+- 2.1: Individual Technology Agreements<br>
+- 2.2: Individual Pair Share Journals with TPT and Assigned Videos<br>
