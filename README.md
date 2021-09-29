@@ -46,7 +46,7 @@ Table of Content <br>
 3. [Complete Pair Share Journal - Allison and Gaurish]()<br>
 4. Unit 3.1 Work<br>
 5. Unit 3.2 work<br>
-6. Edit readme<br>
+6. [Edit readme](https://github.com/Athena9355/Fire-extinguisher#readme)<br>
 7. Overview Video<br>
 
 
