@@ -24,8 +24,8 @@ def image_data(path=Path("static/assets/"), img_list=None):  # path of static im
         img_list = [
             {'source': "lovethispic.com", 'label': "Light Bulbs with Fence",
              'file': "35108-Pretty-Halloween-Bokeh.jpg"},
-            {'source': "iconsdb.com", 'label': "Black square", 'file': "black-square-16.png"},
-            {'source': "iconsdb.com", 'label': "Red square", 'file': "red-square-16.png"},
+            {'source': "google.com", 'label': "Dark Nature", 'file': "Darknature6.jpg"},
+            {'source': "google.com", 'label': "Rose", 'file': "rose.jpg"},
             {'source': "iconsdb.com", 'label': "Green square", 'file': "green-square-16.png"},
             {'source': "iconsdb.com", 'label': "Blue square", 'file': "blue-square-16.jpg"},
             {'source': "iconsdb.com", 'label': "White square", 'file': "white-square-16.png"},
