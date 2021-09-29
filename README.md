@@ -31,17 +31,31 @@ Prototyping: [Sprints 3, 4](https://github.com/Athena9355/Fire-extinguisher/proj
 <h2>Objectives</h2>
 To assist distressed students in their adventure into a new schedule with new classes and new teachers. <br>
 
-<h2>Sprint 5,6 Week 5: 9/20-9/24</h2>
-<h4>Table of contents</h4>
+
+
+<h2>Week 5,6: 9/20 - 10/1</h2>
+Table of Contents <br>
+
 1. [Complete RGB Project](https://github.com/Athena9355/Fire-extinguisher/issues/68)<br>
-2. Complete Pair Share Journal: [Athena & Aadya](https://docs.google.com/document/d/12fsg1UKn_jaHmgELA5jITQyEVaJ7ZVFesGmUcsMG4zk/edit), [Allison & Gaurish](https://docs.google.com/document/d/1aSwI7qBKnmvwyLkyffUaa-BpgM00lsl8RINiMVWxSHA/edit)<br>
-4. Unit 3.1 Work<br>
-5. Unit 3.2 work<br>
-6. [Edit readme](https://github.com/Athena9355/Fire-extinguisher#readme)<br>
-7. Overview Video<br>
+2. [Complete Pair Share Journal - Allison and Gaurish](https://docs.google.com/document/d/1aSwI7qBKnmvwyLkyffUaa-BpgM00lsl8RINiMVWxSHA/edit)<br>
+3. [Complete Pair Share Journal - Aadya and Athena](https://docs.google.com/document/d/12fsg1UKn_jaHmgELA5jITQyEVaJ7ZVFesGmUcsMG4zk/edit)<br>
+4. [TPT Activities (Unit 3.1-3.4 Notes)](https://github.com/Athena9355/Fire-extinguisher/issues/63)<br>
+5. [Edit readme](https://github.com/Athena9355/Fire-extinguisher#readme)<br>
+6. Overview Video<br>
+
+<h2>Week 3,4:</h2>
+Table of Contents <br>
+
+1. Cleaned up [loose ends of code](https://github.com/Athena9355/Fire-extinguisher/commit/f386dd12a6274aa8063eca39c48c772f5e967a34) and linked wireframe to home page
+2. Updated Journals with Binary information, created the start of the Binary Mini-Lab page
+3. Added "team.html" page with a team overview
+4. Added [rating page](https://github.com/Athena9355/Fire-extinguisher/commit/e1a6509c6133f152945858232cc67f678552c160)
+5. Added [class reccomendation page](https://github.com/Athena9355/Fire-extinguisher/commit/c8c0b098ae679aed5f2f6d3e40d865a037592b18)
+6. Added [discussion page](https://github.com/Athena9355/Fire-extinguisher/commit/c8c0b098ae679aed5f2f6d3e40d865a037592b18)
+7. Updated [READ.ME file](https://github.com/Athena9355/Fire-extinguisher#readme) with timestamps, links and markdowns.
 
 
-<h2>Sprint 1,2 - Week 1, 2: 8/23-9/3</h2>
+<h2>Week 1, 2:</h2>
 4/4: Everyone performed their roles. Scrum masters Allison, Athena,
 and Gaurish defined tasks to be completed and managed the scrum board.
 Everyone was part of the designing and everyone contributed at least one idea onto the design.

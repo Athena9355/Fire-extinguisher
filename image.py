@@ -22,8 +22,8 @@ def image_formatter(img, img_type):
 def image_data(path=Path("static/assets/"), img_list=None):  # path of static images is defaulted
     if img_list is None:  # color_dict is defined with defaults
         img_list = [
-            {'source': "Allison Huang", 'label': "Light bulb",
-             'file': "light-bulb-on-off-png-11553940208oq66nq8jew.png"},
+            {'source': "lovethispic.com", 'label': "Light Bulbs with Fence",
+             'file': "35108-Pretty-Halloween-Bokeh.jpg"},
             {'source': "iconsdb.com", 'label': "Black square", 'file': "black-square-16.png"},
             {'source': "iconsdb.com", 'label': "Red square", 'file': "red-square-16.png"},
             {'source': "iconsdb.com", 'label': "Green square", 'file': "green-square-16.png"},
@@ -37,8 +37,9 @@ def image_data(path=Path("static/assets/"), img_list=None):  # path of static im
         # Python Image Library operations
         img_reference = Image.open(file)  # PIL
 
-        draw = ImageDraw.Draw(img_reference) #draw allows us to add our secret message by allowing us to add on image
-        draw.text((100, 825), "Well Done!", fill=(170, 170, 170))
+        draw_reference = ImageDraw.Draw(img_reference)
+        font = ImageFont.truetype("times.ttf", 50)
+        draw_reference.text((10, 10), "hi!", fill=(255, 255, 255), font=font)
 
         img_data = img_reference.getdata()  # Reference https://www.geeksforgeeks.org/python-pil-image-getdata/
         img_dict['format'] = img_reference.format
