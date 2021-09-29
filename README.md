@@ -42,12 +42,11 @@ To assist distressed students in their adventure into a new schedule with new cl
 Table of Content <br>
 
 1. [Complete RGB Project](https://github.com/Athena9355/Fire-extinguisher/issues/68)<br>
-2. [Complete Pair Share Journal - Allison and Gaurish]()<br>
-3. [Complete Pair Share Journal - Allison and Gaurish]()<br>
-4. Unit 3.1 Work<br>
-5. Unit 3.2 work<br>
-6. Edit readme<br>
-7. Overview Video<br>
+2. [Complete Pair Share Journal - Allison and Gaurish](https://docs.google.com/document/d/1aSwI7qBKnmvwyLkyffUaa-BpgM00lsl8RINiMVWxSHA/edit)<br>
+3. [Complete Pair Share Journal - Aadya and Athena](https://docs.google.com/document/d/12fsg1UKn_jaHmgELA5jITQyEVaJ7ZVFesGmUcsMG4zk/edit)<br>
+4. [TPT Activities (Unit 3.1-3.4 Notes)](https://github.com/Athena9355/Fire-extinguisher/issues/63)<br>
+5. [Edit readme](https://github.com/Athena9355/Fire-extinguisher#readme)<br>
+6. Overview Video<br>
 
 
 <h2>Week 1, 2 Scrum Team Scores (Out of 4):</h2><br>
