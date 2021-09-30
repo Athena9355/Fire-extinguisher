@@ -35,7 +35,32 @@
                 {% for image in images %}
                     <tr>
                         <td>
-                            <div>{{image.label}}</div>
+                            <div>{{image.label}}
+                                <meta name="viewport" content="width=device-width, initial-scale=1">
+                                <style>
+                                    img {
+                                        border: 1px solid #ddd;
+                                        border-radius: 4px;
+                                        padding: 5px;
+                                        width: 150px;
+                                    }
+
+                                    img:hover {
+                                        box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+                                    }
+                                </style>
+                                </head>
+                                <body>
+
+                                <h2>Thumbnail Image</h2>
+                                <p>Click on the image to enlarge it.</p>
+
+                                <a target="_blank" href="{{image.base64}}">
+                                    <img src="{{image.base64}}" alt="Forest" style="width:150px">
+                                </a>
+
+
+                            </div>
                             <div>{{image.source}}</div>
                             <div>{{image.file}}</div>
                             <div>{{image.format}}</div>
