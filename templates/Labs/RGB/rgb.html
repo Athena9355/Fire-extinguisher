@@ -36,6 +36,7 @@
                     <tr>
                         <td>
                             <div>{{image.label}}
+                                <!--thumbnail code 1 starts -->
                                 <meta name="viewport" content="width=device-width, initial-scale=1">
                                 <style>
                                     img {
@@ -51,28 +52,33 @@
                                 </style>
                                 </head>
                                 <body>
-
-                                <h2>Thumbnail Image</h2>
                                 <p>Click on the image to enlarge it.</p>
-
-                                <a target="_blank" href="{{image.base64}}">
-                                    <img src="{{image.base64}}" alt="Forest" style="width:150px">
+                                </body>
+                            </div>
+                                <td>
+                                    <img class="img-responsive py-3" id=img{{loop.index}} alt="" width="225" height="Auto" src="{{image.base64}}" >
+                                    <div class="like p-2 cursor"><i class="fa fa-share"></i><span class="ml-1"><input type="submit" value="Greyscale!" button class="btn btn-primary btn-sm shadow-none" type="button" id="butt{{loop.index}}" onclick="setImg('img{{loop.index}}', 'img_orig{{loop.index}}', 'img_gray{{loop.index}}', 'butt{{loop.index}}')">{{ greyscale }} </span></div>
+                                    <p hidden id="img_orig{{loop.index}}">{{image.base64}}</p>
+                                    <p hidden id="img_gray{{loop.index}}">{{image.base64_GRAY}}</p>
+                                <a target="_blank" href="https://free-url-shortener.rb.gy/open-graph.png">
+                                    <img src="https://free-url-shortener.rb.gy/open-graph.png" alt="{{image.base64}}" style="width:150px">
                                 </a>
-
-
+                                </td>
+                                </body>
+                                <!--thumbnail 1 ends -->
                             </div>
                             <div>{{image.source}}</div>
                             <div>{{image.file}}</div>
                             <div>{{image.format}}</div>
                             <div>{{image.size}}</div>
                         </td>
-                        <td>
+                        <!--<td>
                             <img class="img-responsive py-3" id=img{{loop.index}} alt="" width="225" height="Auto" src="{{image.base64}}" >
                             <div class="like p-2 cursor"><i class="fa fa-share"></i><span class="ml-1"><input type="submit" value="Greyscale!" button class="btn btn-primary btn-sm shadow-none" type="button" id="butt{{loop.index}}" onclick="setImg('img{{loop.index}}', 'img_orig{{loop.index}}', 'img_gray{{loop.index}}', 'butt{{loop.index}}')">{{ greyscale }} </span></div>
                             <p hidden id="img_orig{{loop.index}}">{{image.base64}}</p>
                             <p hidden id="img_gray{{loop.index}}">{{image.base64_GRAY}}</p>
 
-                        </td>
+                        </td> -->
 
                         <td>
                             <div class="overflow-auto" style="height: 256px">
