@@ -1,5 +1,5 @@
 <h1>Team Fire Extinguishers (Aadya Daita, Gaurish Gaur, Allison Huang, Athena Wu)</h1><br>
-
+John was here
 [Insights](https://github.com/Athena9355/Fire-extinguisher/graphs/contributors)<br>
 [Our GitHub Repository](https://github.com/Athena9355/Fire-extinguisher/projects/1) <br>
 [Scrum Board](https://github.com/Athena9355/Fire-extinguisher/projects/1)<br>

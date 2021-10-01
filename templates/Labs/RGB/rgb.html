@@ -77,26 +77,30 @@
                             <div class="like p-2 cursor"><i class="fa fa-share"></i><span class="ml-1"><input type="submit" value="Greyscale!" button class="btn btn-primary btn-sm shadow-none" type="button" id="butt{{loop.index}}" onclick="setImg('img{{loop.index}}', 'img_orig{{loop.index}}', 'img_gray{{loop.index}}', 'butt{{loop.index}}')">{{ greyscale }} </span></div>
                             <p hidden id="img_orig{{loop.index}}">{{image.base64}}</p>
                             <p hidden id="img_gray{{loop.index}}">{{image.base64_GRAY}}</p>
+
+
                             <style>
                                 img {
-                                    border: 1px solid #ddd; /* Gray border */
-                                    border-radius: 4px;  /* Rounded border */
-                                    padding: 5px; /* Some padding */
-                                    width: 150px; /* Set a small width */
+                                    border: 1px solid #ddd;
+                                    border-radius: 4px;
+                                    padding: 5px;
+                                    width: 150px;
                                 }
-
-                                /* Add a hover effect (blue shadow) */
+                                /* hover over effect*/
                                 img:hover {
-                                    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+                                    box-shadow: 0 0 2px 2px rgba(0, 140, 186, 0.5);
                                 }
                             </style>
                             <body>
 
-                            <a target="_blank" href="static/assets/Darknature6.jpg">
-                                <img src="{{image.base64}}" alt="Forest">
+                            <a target="_blank" href= "static/assets/35108-Pretty-Halloween-Bokeh.jpg">
+                                <img src="{{image.base64}}" alt="">
                             </a>
 
                             </body>
+
+
+
 
                         </td>
 
