@@ -154,7 +154,7 @@ def greet_aadya():
 
 
 
-@app.route('/rgb/')
+@app.route('/rgb')
 def rgb():
     return render_template('Labs/RGB/rgb.html', images=image_data())
 
