@@ -35,7 +35,38 @@
                 {% for image in images %}
                     <tr>
                         <td>
-                            <div>{{image.label}}</div>
+                            <div>{{image.label}}
+                                <!--thumbnail code 1 starts
+                                <meta name="viewport" content="width=device-width, initial-scale=1">
+                                <style>
+                                    img {
+                                        border: 1px solid #ddd;
+                                        border-radius: 4px;
+                                        padding: 5px;
+                                        width: 150px;
+                                    }
+
+                                    img:hover {
+                                        box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+                                    }
+                                </style>
+                                </head>
+                                <body>
+                                <p>Click on the image to enlarge it.</p>
+                                </body>
+                            </div>
+                                <td>
+                                    <img class="img-responsive py-3" id=img{{loop.index}} alt="" width="225" height="Auto" src="{{image.base64}}" >
+                                    <div class="like p-2 cursor"><i class="fa fa-share"></i><span class="ml-1"><input type="submit" value="Greyscale!" button class="btn btn-primary btn-sm shadow-none" type="button" id="butt{{loop.index}}" onclick="setImg('img{{loop.index}}', 'img_orig{{loop.index}}', 'img_gray{{loop.index}}', 'butt{{loop.index}}')">{{ greyscale }} </span></div>
+                                    <p hidden id="img_orig{{loop.index}}">{{image.base64}}</p>
+                                    <p hidden id="img_gray{{loop.index}}">{{image.base64_GRAY}}</p>
+                                <a target="_blank" href="https://free-url-shortener.rb.gy/open-graph.png">
+                                    <img src="https://free-url-shortener.rb.gy/open-graph.png" alt="{{image.base64}}" style="width:150px">
+                                </a>
+                                </td>
+                                </body>
+                                thumbnail 1 ends -->
+                            </div>
                             <div>{{image.source}}</div>
                             <div>{{image.file}}</div>
                             <div>{{image.format}}</div>
@@ -43,10 +74,36 @@
                         </td>
                         <td>
                             <img class="img-responsive py-3" id=img{{loop.index}} alt="" width="225" height="Auto" src="{{image.base64}}" >
-                            <div class="like p-2 cursor"><i class="fa fa-share"></i><span class="ml-1"><input type="submit" value="Greyscale!" button class="btn btn-primary btn-sm shadow-none" type="button" id="butt{{loop.index}}" onclick="setImg('img{{loop.index}}', 'img_orig{{loop.index}}', 'img_gray{{loop.index}}', 'butt{{loop.index}}')">{{ greyscale }} </button></span></div>
+                            <div class="like p-2 cursor"><i class="fa fa-share"></i><span class="ml-1"><input type="submit" value="Greyscale!" button class="btn btn-primary btn-sm shadow-none" type="button" id="butt{{loop.index}}" onclick="setImg('img{{loop.index}}', 'img_orig{{loop.index}}', 'img_gray{{loop.index}}', 'butt{{loop.index}}')">{{ greyscale }} </span></div>
                             <p hidden id="img_orig{{loop.index}}">{{image.base64}}</p>
                             <p hidden id="img_gray{{loop.index}}">{{image.base64_GRAY}}</p>
+
+
+                            <style>
+                                img {
+                                    border: 1px solid #ddd;
+                                    border-radius: 4px;
+                                    padding: 5px;
+                                    width: 150px;
+                                }
+                                /* hover over effect*/
+                                img:hover {
+                                    box-shadow: 0 0 2px 2px rgba(0, 140, 186, 0.5);
+                                }
+                            </style>
+                            <body>
+
+                            <a target="_blank" href= "static/assets/35108-Pretty-Halloween-Bokeh.jpg">
+                                <img src="{{image.base64}}" alt="">
+                            </a>
+
+                            </body>
+
+
+
+
                         </td>
+
                         <td>
                             <div class="overflow-auto" style="height: 256px">
                                 <table class="table">
@@ -59,7 +116,7 @@
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    {% for row in image.data[:256+1] %}
+                                    {% for row in image.data[:256 + 1] %}
                                         <tr>
                                             <td>{{loop.index}}</td>
                                             <td>{{row}}</td>

@@ -30,7 +30,11 @@ def image_data(path=Path("static/assets/"), img_list=None):  # path of static im
             {'source': "unsplash.com", 'label': "Flowers", 'file': "flowers.jpg"},
             {'source': "iconsdb.com", 'label': "White square", 'file': "white-square-16.png"},
         ]
+
+
+
     # gather analysis data and meta data for each image, adding attributes to each row in table
+
     for img_dict in img_list:
         # File to open
         file = path / img_dict['file']  # file with path for local access (backend)
@@ -38,8 +42,8 @@ def image_data(path=Path("static/assets/"), img_list=None):  # path of static im
         img_reference = Image.open(file)  # PIL
 
         draw_reference = ImageDraw.Draw(img_reference)
-        font = ImageFont.truetype("times.ttf", 50)
-        draw_reference.text((405, 300), "Well Done!", fill=(0, 0, 200), font=font) #making secret message more 'hidden'
+        # font = ImageFont.truetype("times.ttf", 50)
+        # draw_reference.text((405, 300), "Well Done!", fill=(0, 0, 200), font=font) #making secret message more 'hidden'
 
         img_data = img_reference.getdata()  # Reference https://www.geeksforgeeks.org/python-pil-image-getdata/
         img_dict['format'] = img_reference.format
