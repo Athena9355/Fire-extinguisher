@@ -2,19 +2,25 @@
 {% extends "layouts/base.html" %}
 
 {% block meta %}
+    #We only need one function. If the image displayed is the orginal then clicking the button will make it grayscale. Otherwise, clicking the button wil make non orginial image back into the original image. getElementById is basically a very efficent way to refer to the id names we list later in the hidden p tags and names of the buttons.
     <script>
-        function setImg(img, base64, base64GRAY, button) {
-            const imgLink = document.getElementById(img)
-            const btn = document.getElementById(button)
-            if (imgLink.src == document.getElementById(base64).innerHTML) {
-                imgLink.src = document.getElementById(base64GRAY).innerHTML;
-                btn.innerHTML = "{{ color }}";
-            }
+        function makeGray(){
+            if(document.getElementById("img1").src == document.getElementById("img_orig1").innerHTML){
+                document.getElementById("img1").src = document.getElementById("img_gray1").innerHTML;
+                }
             else {
-                imgLink.src = document.getElementById(base64).innerHTML;
-                btn.innerHTML = "{{ greyscale }}";
+                document.getElementById("img1").src = document.getElementById("img_orig1").innerHTML;
             }
         }
+        /**function makeColor(){
+            if(document.getElementById("img").src = document.getElementById("img_orig").innerHTML){
+                ;
+
+            }
+            else {
+                document.getElementById("img").src = document.getElementById("img_gray").innerHTML;
+          }
+       **/
     </script>
     <title>RGB starter</title>
 {% endblock %}
@@ -36,18 +42,23 @@
                     <tr>
                         <td>
                             <div>{{image.label}}
-                                <!--thumbnail code 1 starts
                                 <meta name="viewport" content="width=device-width, initial-scale=1">
                                 <style>
-                                    img {
-                                        border: 1px solid #ddd;
+                                    .button1 {
+                                        border: 2px solid #463d3d;
                                         border-radius: 4px;
                                         padding: 5px;
                                         width: 150px;
+                                        color: antiquewhite;
+                                        font-size: 15px;
+                                        background-color: darkblue;
                                     }
 
-                                    img:hover {
-                                        box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+                                    /* hover over effect*/
+                                    .button1:hover {
+                                        box-shadow: 0 0 2px 2px rgba(0, 140, 186, 0.5);
+                                        transform:scale(2);
+                                        background-color: gray;
                                     }
                                 </style>
                                 </head>
@@ -56,50 +67,21 @@
                                 </body>
                             </div>
                                 <td>
-                                    <img class="img-responsive py-3" id=img{{loop.index}} alt="" width="225" height="Auto" src="{{image.base64}}" >
-                                    <div class="like p-2 cursor"><i class="fa fa-share"></i><span class="ml-1"><input type="submit" value="Greyscale!" button class="btn btn-primary btn-sm shadow-none" type="button" id="butt{{loop.index}}" onclick="setImg('img{{loop.index}}', 'img_orig{{loop.index}}', 'img_gray{{loop.index}}', 'butt{{loop.index}}')">{{ greyscale }} </span></div>
-                                    <p hidden id="img_orig{{loop.index}}">{{image.base64}}</p>
-                                    <p hidden id="img_gray{{loop.index}}">{{image.base64_GRAY}}</p>
-                                <a target="_blank" href="https://free-url-shortener.rb.gy/open-graph.png">
+                        <img class="img-responsive py-3" id=img{{loop.index}} alt="" width="225" height="Auto" src="{{image.base64}}" >
+                        <button class="button button1" onclick="makeGray()">Grayscale!</button>
+                        <p hidden id="img_orig{{loop.index}}">{{image.base64}}</p>
+                        <p hidden id="img_gray{{loop.index}}">{{image.base64_GRAY}}</p>
                                     <img src="https://free-url-shortener.rb.gy/open-graph.png" alt="{{image.base64}}" style="width:150px">
                                 </a>
                                 </td>
                                 </body>
-                                thumbnail 1 ends -->
+
                             </div>
                             <div>{{image.source}}</div>
                             <div>{{image.file}}</div>
                             <div>{{image.format}}</div>
                             <div>{{image.size}}</div>
                         </td>
-                        <td>
-                            <img class="img-responsive py-3" id=img{{loop.index}} alt="" width="225" height="Auto" src="{{image.base64}}" >
-                            <div class="like p-2 cursor"><i class="fa fa-share"></i><span class="ml-1"><input type="submit" value="Greyscale!" button class="btn btn-primary btn-sm shadow-none" type="button" id="butt{{loop.index}}" onclick="setImg('img{{loop.index}}', 'img_orig{{loop.index}}', 'img_gray{{loop.index}}', 'butt{{loop.index}}')">{{ greyscale }} </span></div>
-                            <p hidden id="img_orig{{loop.index}}">{{image.base64}}</p>
-                            <p hidden id="img_gray{{loop.index}}">{{image.base64_GRAY}}</p>
-                            <style>
-                                img {
-                                    border: 1px solid #ddd; /* Gray border */
-                                    border-radius: 4px;  /* Rounded border */
-                                    padding: 5px; /* Some padding */
-                                    width: 150px; /* Set a small width */
-                                }
-
-                                /* Add a hover effect (blue shadow) */
-                                img:hover {
-                                    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
-                                }
-                            </style>
-                            <body>
-
-                            <a target="_blank" href="static/assets/Darknature6.jpg">
-                                <img src="{{image.base64}}" alt="Forest">
-                            </a>
-
-                            </body>
-
-                        </td>
-
                         <td>
                             <div class="overflow-auto" style="height: 256px">
                                 <table class="table">

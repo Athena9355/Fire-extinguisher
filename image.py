@@ -31,19 +31,9 @@ def image_data(path=Path("static/assets/"), img_list=None):  # path of static im
             {'source': "iconsdb.com", 'label': "White square", 'file': "white-square-16.png"},
         ]
 
+
+
     # gather analysis data and meta data for each image, adding attributes to each row in table
-
-    def tnails():
-        try:
-            image = Image.open('file')
-            image.thumbnail((90, 90))
-            image.save('file')
-            image1 = Image.open('file')
-            image1.show()
-        except IOError:
-            pass
-
-    tnails()
 
     for img_dict in img_list:
         # File to open
