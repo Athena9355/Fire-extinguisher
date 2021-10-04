@@ -2,14 +2,14 @@
 {% extends "layouts/base.html" %}
 
 {% block meta %}
-    #We only need one function. If the image displayed is the orginal then clicking the button will make it grayscale. Otherwise, clicking the button wil make non orginial image back into the original image. getElementById is basically a very efficent way to refer to the id names we list later in the hidden p tags and names of the buttons.
     <script>
-        function makeGray(){
-            if(document.getElementById("img1").src == document.getElementById("img_orig1").innerHTML){
-                document.getElementById("img1").src = document.getElementById("img_gray1").innerHTML;
+        // n is the unique image number
+        function makeGray(n){
+            if(document.getElementById("img"+n).src == document.getElementById("img_orig"+n).innerHTML){
+                document.getElementById("img"+n).src = document.getElementById("img_gray"+n).innerHTML;
                 }
             else {
-                document.getElementById("img1").src = document.getElementById("img_orig1").innerHTML;
+                document.getElementById("img"+n).src = document.getElementById("img_orig"+n).innerHTML;
             }
         }
         /**function makeColor(){
@@ -21,7 +21,11 @@
                 document.getElementById("img").src = document.getElementById("img_gray").innerHTML;
           }
        **/
+        /* We only need one function. If the image displayed is the orginal then clicking the button will make it grayscale.
+    Otherwise, clicking the button wil make non orginial image back into the original image.
+    getElementById is basically a very efficent way to refer to the id names we list later in the hidden p tags and names of the buttons. */
     </script>
+
     <title>RGB starter</title>
 {% endblock %}
 
@@ -38,42 +42,65 @@
                 </tr>
                 </thead>
                 <tbody>
+                <style>
+                    .button1 {
+                        border: 2px solid #463d3d;
+                        border-radius: 4px;
+                        padding: 5px;
+                        width: 150px;
+                        color: antiquewhite;
+                        font-size: 15px;
+                        background-color: darkblue;
+                    }
+
+                    /* hover over effect*/
+                    .button1:hover {
+                        box-shadow: 0 0 2px 2px rgba(0, 140, 186, 0.5);
+                        transform:scale(2);
+                        background-color: gray;
+                    }
+                </style>
                 {% for image in images %}
                     <tr>
                         <td>
                             <div>{{image.label}}
                                 <meta name="viewport" content="width=device-width, initial-scale=1">
-                                <style>
-                                    .button1 {
-                                        border: 2px solid #463d3d;
-                                        border-radius: 4px;
-                                        padding: 5px;
-                                        width: 150px;
-                                        color: antiquewhite;
-                                        font-size: 15px;
-                                        background-color: darkblue;
-                                    }
 
-                                    /* hover over effect*/
-                                    .button1:hover {
-                                        box-shadow: 0 0 2px 2px rgba(0, 140, 186, 0.5);
-                                        transform:scale(2);
-                                        background-color: gray;
-                                    }
-                                </style>
                                 </head>
                                 <body>
                                 <p>Click on the image to enlarge it.</p>
                                 </body>
                             </div>
                                 <td>
-                        <img class="img-responsive py-3" id=img{{loop.index}} alt="" width="225" height="Auto" src="{{image.base64}}" >
-                        <button class="button button1" onclick="makeGray()">Grayscale!</button>
+                        <img class="img-responsive py-3" id="img{{loop.index}}" alt="" width="225" height="Auto" src="{{image.base64}}" >
+                        <!-- calls the makeGray function with the unique image id (loop.index) as a parameter-->
+                        <button class="button button1" onclick="makeGray({{ loop.index }})">Grayscale!</button>
                         <p hidden id="img_orig{{loop.index}}">{{image.base64}}</p>
                         <p hidden id="img_gray{{loop.index}}">{{image.base64_GRAY}}</p>
                                     <img src="https://free-url-shortener.rb.gy/open-graph.png" alt="{{image.base64}}" style="width:150px">
-                                </a>
+                        <!--<img class="img-responsive py-3" id=img{{loop.index}} alt="" width="225" height="Auto" src="{{image.base64}}" >
+                            <div class="like p-2 cursor"><i class="fa fa-share"></i><span class="ml-1"><input type="submit" value="Blur!" button class="btn btn-primary btn-sm shadow-none" type="button" id="butt{{loop.index}}" onclick="setImg('img{{loop.index}}', 'img_orig{{loop.index}}', 'img_gray{{loop.index}}', 'butt{{loop.index}}')">{{ blur }} </span></div>
+                            <p hidden id="img_blur{{ loop.index }}"> {{ image.base64_blur }}</p> -->
+                        <!--code for thumbnail -->
+
+                        </a>
                                 </td>
+                        </a> -->
+
+                        </body>
+
+                        <!--code for blurry image-->
+                        <meta name="viewport" content="width=device-width, initial-scale=8">
+                        <style>
+                            img {
+                                -webkit-filter: blur(1px);
+                                filter: blur(1px);
+                            }
+                        </style>
+                        </head>
+                        <body>
+
+                        <!--<img src="static/assets/Darknature6.jpg" alt="darknature"> -->
                                 </body>
 
                             </div>
