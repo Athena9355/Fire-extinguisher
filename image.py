@@ -25,10 +25,10 @@ def image_data(path=Path("static/assets/"), img_list=None):  # path of static im
             {'source': "lovethispic.com", 'label': "Light Bulbs with Fence",
              'file': "35108-Pretty-Halloween-Bokeh.jpg"},
             {'source': "google.com", 'label': "Dark Nature", 'file': "Darknature6.jpg"},
-            {'source': "google.com", 'label': "Rose", 'file': "rose.jpg"},
-            {'source': "nature.jpg", 'label': "Nature", 'file': "nature.jpg"},
-            {'source': "unsplash.com", 'label': "Flowers", 'file': "flowers.jpg"},
-            {'source': "iconsdb.com", 'label': "White square", 'file': "white-square-16.png"},
+             {'source': "google.com", 'label': "Rose", 'file': "rose.jpg"},
+             {'source': "nature.jpg", 'label': "Nature", 'file': "nature.jpg"},
+             {'source': "unsplash.com", 'label': "Flowers", 'file': "flowers.jpg"},
+             {'source': "iconsdb.com", 'label': "White square", 'file': "white-square-16.png"},
         ]
 
     # gather analysis data and meta data for each image, adding attributes to each row in table
@@ -40,8 +40,8 @@ def image_data(path=Path("static/assets/"), img_list=None):  # path of static im
         img_reference = Image.open(file)  # PIL
 
         draw_reference = ImageDraw.Draw(img_reference)
-        # font = ImageFont.truetype("times.ttf", 50)
-        # draw_reference.text((405, 300), "Well Done!", fill=(0, 0, 200), font=font) #making secret message more 'hidden'
+        font = ImageFont.truetype("times.ttf", 50)
+        draw_reference.text((200, 200), "Well Done!", fill=(0, 0, 200), font=font) #making secret message more 'hidden'
 
         img_data = img_reference.getdata()  # Reference https://www.geeksforgeeks.org/python-pil-image-getdata/
         img_dict['format'] = img_reference.format
