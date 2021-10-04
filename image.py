@@ -1,4 +1,4 @@
-from PIL import Image, ImageDraw, ImageFont
+from PIL import Image, ImageDraw, ImageFont, ImageFilter
 import numpy
 import base64
 from io import BytesIO
@@ -30,8 +30,6 @@ def image_data(path=Path("static/assets/"), img_list=None):  # path of static im
             {'source': "unsplash.com", 'label': "Flowers", 'file': "flowers.jpg"},
             {'source': "iconsdb.com", 'label': "White square", 'file': "white-square-16.png"},
         ]
-
-
 
     # gather analysis data and meta data for each image, adding attributes to each row in table
 
@@ -75,8 +73,18 @@ def image_data(path=Path("static/assets/"), img_list=None):  # path of static im
                 img_dict['gray_data'].append((average, average, average))
         img_reference.putdata(img_dict['gray_data'])
         img_dict['base64_GRAY'] = image_formatter(img_reference, img_dict['format'])
+
+
     return img_list  # list is returned with all the attributes for each image dictionary
 
+
+# code for blurry picture
+#OriImage = Image.open('static/assets/Darknature6.jpg')
+#OriImage.show()
+
+#blurImage = OriImage.filter(ImageFilter.BLUR)
+#blurImage.show()
+#blurImage.save('simBlurImage.jpg')
 
 # run this as standalone tester to see data printed in terminal
 if __name__ == "__main__":
