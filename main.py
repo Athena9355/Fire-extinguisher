@@ -2,6 +2,8 @@
 # import "packages" from flask
 from flask import Flask, render_template, request
 from image import image_data
+from pathlib import \
+    Path  # https://medium.com/@ageitgey/python-3-quick-tip-the-easy-way-to-deal-with-file-paths-on-windows-mac-and-linux-11a072b58d5f
 
 # create a Flask instance
 app = Flask(__name__)
@@ -12,7 +14,7 @@ def greet():
     # submit button has been pushed
     if request.form:
         name = request.form.get("name")
-        if name.__len__() !=0:
+        if name.__len__() != 0:
             if name == "athena":  # input field has content
                 return render_template("About Me/athena.html", name=name)
             if name == "Athena":  # input field has content
@@ -64,6 +66,7 @@ def greet_commentforum1():
             return render_template("Stubs/commentforum.html", comment1="World")
     else:
         return render_template("Stubs/commentforum.html")
+
 
 @app.route('/greet_commentforum3', methods=['GET', 'POST'])
 def greet_commentforum3():
@@ -153,15 +156,16 @@ def greet_aadya():
 # connects default URL to render index.html
 
 
-
-@app.route('/rgb')
-def rgb():
+@app.route('/rgb_render')
+def rgb_render():
+    #path = Path(app.root_path).joinpath("/static/assets")
     return render_template('Labs/RGB/rgb.html', images=image_data())
+
 
 # for input on binary
 @app.route('/bits', methods=['GET', 'POST'])
 def bits():
-    BITS=8
+    BITS = 8
     if request.method == 'POST':
         BITS = int(request.form['BITS'])
         print(BITS)
@@ -214,7 +218,7 @@ def aadya():
 
 @app.route('/binary')
 def binary():
-    BITS=8
+    BITS = 8
     if request.method == 'POST':
         BITS = int(request.form['BITS'])
         print(BITS)
@@ -249,7 +253,6 @@ def team():
 @app.route('/binarywithinput')
 def binarywithinput():
     return render_template("Labs/Binary/binarywithinput.html")
-
 
 
 # to display variable
