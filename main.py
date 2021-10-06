@@ -156,10 +156,10 @@ def greet_aadya():
 # connects default URL to render index.html
 
 
-@app.route('/rgb_render')
-def rgb_render():
+@app.route('/rgb')
+def rgb():
     #path = Path(app.root_path).joinpath("/static/assets")
-    return render_template('Labs/RGB/rgb.html', images=image_data())
+    return render_template('Labs/RGB/rgb.html')
 
 
 @app.route('/logicgate')
