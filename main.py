@@ -158,8 +158,13 @@ def greet_aadya():
 
 @app.route('/rgb_render')
 def rgb_render():
-    #path = Path(app.root_path).joinpath("/static/assets")
+    # path = Path(app.root_path).joinpath("/static/assets")
     return render_template('Labs/RGB/rgb.html', images=image_data())
+
+
+@app.route('/rgb')
+def rgb():
+    return render_template('Labs/RGB/rgb.html')
 
 
 @app.route('/logicgate')
