@@ -156,9 +156,14 @@ def greet_aadya():
 # connects default URL to render index.html
 
 
+@app.route('/rgb_render')
+def rgb_render():
+    # path = Path(app.root_path).joinpath("/static/assets")
+    return render_template('Labs/RGB/rgb.html', images=image_data())
+
+
 @app.route('/rgb')
 def rgb():
-    #path = Path(app.root_path).joinpath("/static/assets")
     return render_template('Labs/RGB/rgb.html')
 
 

@@ -6,22 +6,11 @@
 
     <html lang="en">
 
-    <!-- Search for all the Hack: below for hack-a-thon and mini-lab requirements -->
-    <!-- need to adjust Templates to start -->
-
-    <!-- Hack: Build form to drive bit size dynamic updates
-               use HTML Input Form in Frontend, ie toward top of Page
-               send initial value and updated values to form via Python render_template -->
-
-    <!--getting an input from user -->
-    <!-- Hack: use 8 as default -->
     {#% set BITS = 8%#}
     {% set MAX = ((2 ** BITS) - 1) %}
-    <!--get input from user and store as variable for # of bits-->
+
     </html>
-    <!-- Hack: Set bulbs and pass as variables via Python render_template
-               add new images (ie PNGs) to project.-->
-    <!-- use your PNGs as default -->
+
     {% set imgBulbOn = "https://freepngimg.com/thumb/bulb/35351-5-glowing-bulb-transparent.png" %}
     {% set imgBulbOff = "https://freepngimg.com/thumb/bulb/31669-1-bulb-off-transparent-image.png" %}
     {% set msgTurnOn = "Turn On" %}
@@ -69,10 +58,6 @@
             let Unicode = String.fromCharCode(parseInt(binary, 2))
             document.getElementById('Unicode').innerHTML = Unicode
 
-            /* Hack: show ASCII printable character(s) for each 8 bits
-             DOM assignment by converting decimal https://www.w3schools.com/jsref/jsref_fromcharcode.asp
-             below ASCII for more ideas of where to make changes
-             */
         }
 
 
@@ -82,11 +67,11 @@
             // loop to convert to base
             do {
                 let digit = decimal % base;
-                conversion = "" + digit + conversion; // what does this do?
-                decimal = ~~(decimal / base);         // what does this do?  what is ~~?
-            } while (decimal > 0);                  // why while at the end?
-            // loop to pad with zeros
-            if (base === 2) {                        // only pad for binary conversions
+                conversion = "" + digit + conversion;
+                decimal = ~~(decimal / base);
+            } while (decimal > 0);
+
+            if (base === 2) {
                 for (let i = 0; conversion.length < BITS; i++) {
                     conversion = "0" + conversion;
                 }
@@ -147,9 +132,6 @@
     <h1 class="text-center">Binary Math with Conversions</h1>
 
     <!--getting input: number of bits -->
-
-
-
     <div class="col-12">
         <form action="/bits" id="bits" method="POST" >
             <label for="number">Number of Bits!</label>
@@ -172,7 +154,6 @@
                         <th>Decimal</th>
                         <th>ASCII</th>
                         <th> Unicode </th>
-                        <!-- Hack: display ASCII label for printable character(s)  -->
                         <th>Minus</th>
                         <th>Shift Right (/2)</th>
                     </tr>
@@ -213,8 +194,15 @@
         </div>
     </div>
 
-    <!-- ASCII -->
-
 {% endblock %}
+
+<!--Unsigned addition -->
+<div class="center-block" style="margin: 2% 5% 2%; text-align:left; font-family: Times New Roman ,serif;font-size:25px;color: cyan;">
+    <div class="col-12">
+        <p>Unsigned Addition</p>
+        </p>
+    </div>
+</div>
+
 
 </html>
