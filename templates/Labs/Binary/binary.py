@@ -19,7 +19,7 @@ def binary():
 
 @starter_bp.route('/rgb', methods=["GET", "POST"])
 def rgb():
-    return render_template('starter/rgb.html', colors=color_data())
+    return render_template('starter/logicgate.html', colors=color_data())
 
 
 def color_data(path="starter/static/", color_dict=None):  # path of blueprint run is default

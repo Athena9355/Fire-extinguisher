@@ -162,6 +162,11 @@ def rgb_render():
     return render_template('Labs/RGB/rgb.html', images=image_data())
 
 
+@app.route('/logicgate')
+def logicgate():
+    return render_template('Labs/Logic Gate/logicgate.html')
+
+
 # for input on binary
 @app.route('/bits', methods=['GET', 'POST'])
 def bits():
