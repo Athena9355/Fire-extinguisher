@@ -169,7 +169,11 @@ def rgb():
 
 @app.route('/logicgate')
 def logicgate():
-    return render_template('Labs/Logic Gate/logicgate.html')
+    BITS = 8
+    if request.method == 'POST':
+        BITS = int(request.form['BITS'])
+        print(BITS)
+    return render_template("Labs/Logic Gate/logicgate.html", BITS=BITS)
 
 
 # for input on binary
@@ -179,7 +183,7 @@ def bits():
     if request.method == 'POST':
         BITS = int(request.form['BITS'])
         print(BITS)
-    return render_template("Labs/Binary/binary.html", BITS=BITS)
+    return render_template("Labs/Logic Gate/logicgate.html", BITS=BITS)
 
 
 # binary inputs end
