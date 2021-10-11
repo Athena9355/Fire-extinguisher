@@ -32,6 +32,15 @@ Prototyping: [Sprints 3, 4](https://github.com/Athena9355/Fire-extinguisher/proj
 To assist distressed students in their adventure into a new schedule with new classes and new teachers. <br>
 
 
+<h2>Week 7: 10/4 - 10/12</h2>
+Table of Contents <br>
+
+1. [Complete Logic Gates Lab](https://github.com/Athena9355/Fire-extinguisher/issues/70)<br>
+2. [Complete Pair Share Journal - Allison and Gaurish](https://docs.google.com/document/d/1aSwI7qBKnmvwyLkyffUaa-BpgM00lsl8RINiMVWxSHA/edit)<br>
+3. [Complete Pair Share Journal - Aadya and Athena](https://docs.google.com/document/d/12fsg1UKn_jaHmgELA5jITQyEVaJ7ZVFesGmUcsMG4zk/edit)<br>
+4. [TPT Activities (Unit 3.5-3.6 Notes and Quizzes)](https://github.com/Athena9355/Fire-extinguisher/issues/63)<br>
+5. [Edit readme](https://github.com/Athena9355/Fire-extinguisher#readme)<br>
+6. Overview Video<br>
 
 <h2>Week 5,6: 9/20 - 10/1</h2>
 Table of Contents <br>
@@ -41,7 +50,6 @@ Table of Contents <br>
 3. [Complete Pair Share Journal - Aadya and Athena](https://docs.google.com/document/d/12fsg1UKn_jaHmgELA5jITQyEVaJ7ZVFesGmUcsMG4zk/edit)<br>
 4. [TPT Activities (Unit 3.1-3.4 Notes)](https://github.com/Athena9355/Fire-extinguisher/issues/63)<br>
 5. [Edit readme](https://github.com/Athena9355/Fire-extinguisher#readme)<br>
-6. Overview Video<br>
 
 <h2>Week 3,4:</h2>
 Table of Contents <br>
