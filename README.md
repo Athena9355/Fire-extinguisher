@@ -41,7 +41,7 @@ Table of Contents <br>
 4. [Complete Pair Share Journal - Aadya and Athena](https://docs.google.com/document/d/12fsg1UKn_jaHmgELA5jITQyEVaJ7ZVFesGmUcsMG4zk/edit)<br>
 5. [TPT Activities (Unit 3.5-3.6 Notes and Quizzes)](https://github.com/Athena9355/Fire-extinguisher/issues/63)<br>
 6. [Edit readme](https://github.com/Athena9355/Fire-extinguisher#readme)<br>
-7. Overview Video<br>
+7. [Overview Video](https://youtu.be/PQRbqzDWXdo)<br>
 
 <h2>Week 5,6: 9/20 - 10/1</h2>
 Table of Contents <br>
