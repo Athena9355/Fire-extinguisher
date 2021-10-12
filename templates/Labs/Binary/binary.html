@@ -189,17 +189,6 @@
             console.log(accumulate2)
         }
 
-        function accumulate_row2() {
-            let temp = 0;
-            let accumulate2 = 0;
-            while (temp < BITS) {
-                if (document.getElementById('digit_2' + temp) === "1")
-                    accumulate2 = accumulate2 + (2 ** temp);
-            }
-            console.log(accumulate2)
-            return accumulate2;
-        }
-
         function _sum() {
             let accumulate_final = accumulate + accumulate2
             console.log("final is: " + accumulate_final)
@@ -277,11 +266,13 @@
 
 
                         {% for i in range(BITS) %}
-                            <td><img class="img-responsive py-3" id="bulb{{i}}" src="{{ imgBulbOff }}" alt="" width="40" height="Auto">
+                            <td>
+
+                                <img class="img-responsive py-3" id="bulb{{i}}" src="{{ imgBulbOff }}" alt="" width="40" height="Auto">
                                 <button type="button" id="butt{{i}}" onclick="toggleBit('{{i}}')">{{ msgTurnOn }}</button>
                             </td>
                         {% endfor %}
-                    </tr>
+
                     <tr>
                         {% for i in range(BITS) %}
                             <td><input type='text' id='digit{{i}}' Value="0" size="1" readonly></td>

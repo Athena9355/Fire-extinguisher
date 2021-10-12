@@ -183,7 +183,7 @@ def bits():
     if request.method == 'POST':
         BITS = int(request.form['BITS'])
         print(BITS)
-    return render_template("Labs/Logic Gate/logicgate.html", BITS=BITS)
+    return render_template("Labs/Binary/binary.html", BITS=BITS)
 
 
 # binary inputs end
