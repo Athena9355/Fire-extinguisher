@@ -179,7 +179,7 @@ def logicgate():
 # for input on binary
 @app.route('/bits', methods=['GET', 'POST'])
 def bits():
-    BITS = 8
+    BITS = 16
     if request.method == 'POST':
         BITS = int(request.form['BITS'])
         print(BITS)
@@ -232,7 +232,7 @@ def aadya():
 
 @app.route('/binary')
 def binary():
-    BITS = 8
+    BITS = 16
     if request.method == 'POST':
         BITS = int(request.form['BITS'])
         print(BITS)

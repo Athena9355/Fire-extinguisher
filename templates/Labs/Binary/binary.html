@@ -9,6 +9,7 @@
     {#% set BITS = 8%#}
     {% set MAX = ((2 ** BITS) - 1) %}
 
+
     </html>
 
     {% set imgBulbOn = "https://freepngimg.com/thumb/bulb/35351-5-glowing-bulb-transparent.png" %}
@@ -17,8 +18,22 @@
     {% set msgTurnOff = "Turn Off" %}
 
 
+    {% set imgBulbOn_2 = "https://freepngimg.com/thumb/bulb/35351-5-glowing-bulb-transparent.png" %}
+    {% set imgBulbOff_2 = "https://freepngimg.com/thumb/bulb/31669-1-bulb-off-transparent-image.png" %}
+    {% set msgTurnOn_2 = "Turn On" %}
+    {% set msgTurnOff_2 = "Turn Off" %}
+
+
+    {% set imgBulbOn_sum = "https://freepngimg.com/thumb/bulb/35351-5-glowing-bulb-transparent.png" %}
+    {% set imgBulbOff_sum = "https://freepngimg.com/thumb/bulb/31669-1-bulb-off-transparent-image.png" %}
+    {% set msgTurnOn_sum = "Turn On" %}
+    {% set msgTurnOff_sum = "Turn Off" %}
+
+
     <title>Binary page</title>
     <script>
+        var accumulate2 = 0;
+        var accumulate  = 0;
         const BITS = '{{ BITS }}'; let max = '{{ MAX }}'; let MAX = parseInt(max, 10);
         // return string with current value of each bit
         function getBits() {
@@ -35,7 +50,7 @@
                 document.getElementById('ASCII').innerHTML = final_number
             }
             else
-                document.getElementById('ASCII').innerHTML = "NPT"
+                document.getElementById('ASCII').innerHTML = "NPC"
 
 
         }
@@ -53,10 +68,9 @@
 
             character(parseInt(binary, 2))
 
+            let Unicode = String.fromCharCode(parseInt(binary,2));
+            document.getElementById('Unicode').innerHTML = Unicode;
 
-
-            let Unicode = String.fromCharCode(parseInt(binary, 2))
-            document.getElementById('Unicode').innerHTML = Unicode
 
         }
 
@@ -80,11 +94,13 @@
         }
 
         // toggle selected bit and recalculate
+
         function toggleBit(i) {
             //alert("Digit action: " + i );
             const dig = document.getElementById('digit' + i);
             const image = document.getElementById('bulb' + i);
             const butt = document.getElementById('butt' + i);
+
             // Change digit and visual
             if (image.src.match("{{ imgBulbOn }}")) {
                 dig.value = 0;
@@ -95,10 +111,25 @@
                 image.src = "{{ imgBulbOn }}";
                 butt.innerHTML = "{{ msgTurnOff }}";
             }
+
+            let temp = BITS - 1 - i;
+            if (image.src.match("{{ imgBulbOn }}")) {
+                accumulate = accumulate + (2**temp)
+            }
+            else if (image.src.match("{{ imgBulbOff }}")) {
+                if (accumulate >= 2**temp ){
+                  accumulate -=  2**temp
+                }
+            }
+            console.log(accumulate)
             // Binary numbers
             const binary = getBits();
             setConversions(binary);
+
         }
+
+
+
         // add is positive integer, subtract is negative integer
         function add(n) {
             let binary = getBits();
@@ -126,6 +157,72 @@
                 }
             }
         }
+
+
+
+        //---------------------------------------------------------------start bulbs for second row
+        function toggleBit_2(j) {
+            //alert("Digit action: " + j );
+            const dig_2 = document.getElementById('digit_2' + j);
+            const image_2 = document.getElementById('bulb_2' + j);
+            const butt_2 = document.getElementById('butt_2' + j);
+            // Change digit and visual
+            if (image_2.src.match("{{ imgBulbOn_2 }}")) {
+                dig_2.value = 0;
+                image_2.src = "{{ imgBulbOff_2 }}";
+                butt_2.innerHTML = "{{ msgTurnOn_2 }}";
+            } else {
+                dig_2.value = 1;
+                image_2.src = "{{ imgBulbOn_2 }}";
+                butt_2.innerHTML = "{{ msgTurnOff_2 }}";
+            }
+
+            let temp = BITS - 1 - j;
+            if (image_2.src.match("{{ imgBulbOn_2 }}")) {
+                accumulate2 = accumulate2 + (2**temp)
+            }
+            else if (image_2.src.match("{{ imgBulbOff_2 }}")) {
+                if (accumulate2 >= 2**temp ){
+                    accumulate2 -=  2**temp
+                }
+            }
+            console.log(accumulate2)
+        }
+
+        function accumulate_row2() {
+            let temp = 0;
+            let accumulate2 = 0;
+            while (temp < BITS) {
+                if (document.getElementById('digit_2' + temp) === "1")
+                    accumulate2 = accumulate2 + (2 ** temp);
+            }
+            console.log(accumulate2)
+            return accumulate2;
+        }
+
+        function _sum() {
+            let accumulate_final = accumulate + accumulate2
+            console.log("final is: " + accumulate_final)
+
+            if (accumulate_final >= 0) {
+                for (let index = 0; index < BITS; index++) {
+
+                    const image_sum = document.getElementById('bulb_3' + (BITS - 1 - index) );
+                    const digit_sum = document.getElementById("digit_3"+ (BITS - 1 - index) );
+
+                    if ( (accumulate_final & (0x0001 << index)) == 0) {
+                        image_sum.src = "{{ imgBulbOff_sum }}";
+                        digit_sum.value = 0;
+                    } else {
+                        image_sum.src = "{{ imgBulbOn_sum }}";
+                        digit_sum.value = 1
+                    }
+                }
+            }
+        }
+
+//string, get each element, loop
+
     </script>
 
 
@@ -177,6 +274,8 @@
             <div class="col-12">
                 <table class="table">
                     <tr>
+
+
                         {% for i in range(BITS) %}
                             <td><img class="img-responsive py-3" id="bulb{{i}}" src="{{ imgBulbOff }}" alt="" width="40" height="Auto">
                                 <button type="button" id="butt{{i}}" onclick="toggleBit('{{i}}')">{{ msgTurnOn }}</button>
@@ -188,16 +287,58 @@
                             <td><input type='text' id='digit{{i}}' Value="0" size="1" readonly></td>
                         {% endfor %}
                     </tr>
+
+
+
+
+
+
+
+
+
+
+<tr>
+
+                        {% for j in range(BITS) %}
+                            <td><img class="img-responsive py-3" id="bulb_2{{j}}" src="{{ imgBulbOff_2 }}" alt="" width="40" height="Auto">
+                                <button type="button" id="butt_2{{j}}" onclick="toggleBit_2('{{j}}')">{{ msgTurnOn_2 }}</button>
+                            </td>
+                            </td>
+                        {% endfor %}
+
+                    </tr>
+
+                <tr>
+                        {% for j in range(BITS) %}
+                            <td><input type='text' id='digit_2{{j}}' Value="0" size="1" readonly></td>
+                        {% endfor %}
+                </tr>
+
+    <tr>
+                        {% for k in range(BITS) %}
+                            <td><img class="img-responsive py-3" id="bulb_3{{k}}" src="{{ imgBulbOff_sum }}" alt="" width="40" height="Auto">
+
+                            </td>
+                        {% endfor %}
+    </tr>
+    <tr>
+        <button type="button" id="add" onclick="_sum()">ADD</button>
+
+        {% for k in range(BITS) %}
+                            <td><input type='text' id='digit_3{{k}}' Value="0" size="1" readonly></td>
+
+                        {% endfor %}
+    </tr>
+
+    <!--I have the binary string value stored in toggle_sum. It displays the ON image if the string element is 1, and the
+    OFF button if the string element is 0. Where do I call this toggle_sum function in HTML, so the bulbs of elements 1 turn ON?
+    -->
+
+
                 </table>
             </div>
 
         </div>
     </div>
 
-
-
-<!--Unsigned addition -->
-    <h1 class="text-center">Unsigned addition</h1>
-
 {% endblock %}
-</html>
