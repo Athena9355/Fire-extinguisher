@@ -1,199 +1,145 @@
 <!DOCTYPE html>
-
-<!-- Extending the predefined project layout -->
+<html lang="en">
 {% extends "layouts/base.html" %}
-{% block body %}
 
-    <html lang="en">
-
-    {#% set BITS = 8%#}
-    {% set MAX = ((2 ** BITS) - 1) %}
-
-    </html>
-
-    {% set imgBulbOn = "https://freepngimg.com/thumb/bulb/35351-5-glowing-bulb-transparent.png" %}
-    {% set imgBulbOff = "https://freepngimg.com/thumb/bulb/31669-1-bulb-off-transparent-image.png" %}
-    {% set msgTurnOn = "Turn On" %}
-    {% set msgTurnOff = "Turn Off" %}
-
-
-    <title>Binary page</title>
+{% block meta %}
     <script>
-        const BITS = '{{ BITS }}'; let max = '{{ MAX }}'; let MAX = parseInt(max, 10);
-        // return string with current value of each bit
-        function getBits() {
-            let bits = "";
-            for(let i = 0; i < BITS; i++) {
-                bits = bits + document.getElementById('digit' + i).value;
+
+        function myFxn() {
+            const x = document.getElementById("abox")
+            const y = document.getElementById("bbox")
+            if (x.checked && y.checked){
+                document.getElementById("and").innerHTML = "1";
             }
-            return bits;
+            else {
+                document.getElementById("and").innerHTML = "0";
+         }
+
+        if (!(x.checked && y.checked)){
+            document.getElementById("nand").innerHTML = "1";
         }
-
-        function character(number) {
-            if (number < 128) {
-                let final_number = String.fromCharCode(number)
-                document.getElementById('ASCII').innerHTML = final_number
-            }
-            else
-                document.getElementById('ASCII').innerHTML = "NPT"
-
-
+        else {
+            document.getElementById("nand").innerHTML = "0";
         }
-
-        // setter for DOM values
-        function setConversions(binary) {
-            document.getElementById('binary').innerHTML = binary;
-            // DOM assignment to Octal conversion
-            document.getElementById('octal').innerHTML = parseInt(binary, 2).toString(8);
-            // DOM assignment to Hexadecimal conversion
-            document.getElementById('hexadecimal').innerHTML = parseInt(binary, 2).toString(16);
-            // DOM assignment to Decimal conversion
-            document.getElementById('decimal').innerHTML = parseInt(binary, 2).toString(10);
-            // DOM assignment to Octal conversion
-
-            character(parseInt(binary, 2))
-
-
-
-            let Unicode = String.fromCharCode(parseInt(binary, 2))
-            document.getElementById('Unicode').innerHTML = Unicode
-
+        if (x.checked || y.checked){ // if x or y is checked
+            document.getElementById("or").innerHTML = "1";
         }
-
-
-        // algorithm to convert decimal to base using division and remainder
-        function decimal_2_base(decimal, base) {
-            let conversion = "";
-            // loop to convert to base
-            do {
-                let digit = decimal % base;
-                conversion = "" + digit + conversion;
-                decimal = ~~(decimal / base);
-            } while (decimal > 0);
-
-            if (base === 2) {
-                for (let i = 0; conversion.length < BITS; i++) {
-                    conversion = "0" + conversion;
-                }
-            }
-            return conversion;
+        else {
+            document.getElementById("or").innerHTML = "0";
         }
-
-        // toggle selected bit and recalculate
-        function toggleBit(i) {
-            //alert("Digit action: " + i );
-            const dig = document.getElementById('digit' + i);
-            const image = document.getElementById('bulb' + i);
-            const butt = document.getElementById('butt' + i);
-            // Change digit and visual
-            if (image.src.match("{{ imgBulbOn }}")) {
-                dig.value = 0;
-                image.src = "{{ imgBulbOff }}";
-                butt.innerHTML = "{{ msgTurnOn }}";
-            } else {
-                dig.value = 1;
-                image.src = "{{ imgBulbOn }}";
-                butt.innerHTML = "{{ msgTurnOff }}";
-            }
-            // Binary numbers
-            const binary = getBits();
-            setConversions(binary);
+        if (!(x.checked || y.checked)){
+            document.getElementById("nor").innerHTML = "1";
         }
-        // add is positive integer, subtract is negative integer
-        function add(n) {
-            let binary = getBits();
-            // convert to decimal and do math
-            let decimal = parseInt(binary, 2);
-            if (n > 0) {  // PLUS
-                decimal = MAX === decimal ? 0 : decimal += n; // OVERFLOW or PLUS
-            } else  {     // MINUS
-                decimal = 0 === decimal ? MAX : decimal += n; // OVERFLOW or MINUS
-            }
-            // convert the result back to binary
-            binary = decimal_2_base(decimal, 2);
-            // update conversions
-            setConversions(binary);
-            // update bits
-            for (let i = 0; i < binary.length; i++) {
-                let digit = binary.substr(i, 1);
-                document.getElementById('digit' + i).value = digit;
-                if (digit === "1") {
-                    document.getElementById('bulb' + i).src = "{{ imgBulbOn }}";
-                    document.getElementById('butt' + i).innerHTML = "{{ msgTurnOff }}";
-                } else {
-                    document.getElementById('bulb' + i).src = "{{ imgBulbOff }}";
-                    document.getElementById('butt' + i).innerHTML = "{{ msgTurnOn }}";
-                }
-            }
+        else {
+            document.getElementById("nor").innerHTML = "0";
+        }
+        if ( ( x.checked && !y.checked ) || ( !x.checked && y.checked ) ){
+            document.getElementById("xor").innerHTML = "1";
+        }
+        else {
+            document.getElementById("xor").innerHTML = "0";
+        }
         }
     </script>
+{% endblock %}
 
+<head>
+    <meta charset="UTF-8">
+    <title>Logic Gate</title>
+</head>
 
-    <h1 class="text-center">Binary Math with Conversions</h1>
+{% block body %}
+    <html>
+    <body>
 
-    <!--getting input: number of bits -->
-    <div class="col-12">
-        <form action="/bits" id="bits" method="POST" >
-            <label for="number">Number of Bits!</label>
-            <input type = "number" name="BITS" id="number" value={{ BITS }}>
-            <input type="submit" value="Submit">
+    <!--for the title of the page-->
+    <div class="center-block" style="margin: 2% 5% 5%; text-align:center; font-family: Courier New,serif;font-size:45px;">
+        <p> Logic Gate Lab!</p>
+    </div>
+    <!--For the rows-->
+    <div class="row">
+    <div class="col">
+        <h2 class="text-left" style="margin: 2% 5% 5%;; font-family: Courier New,serif;">Inputs </h2>
+        <style>
+            .button1 {
+                border: 2px solid #463d3d;
+                border-radius: 4px;
+                padding: 5px;
+                width: 50px;
+                color: antiquewhite;
+                font-size: 15px;
+                background-color: darkblue;
+            }
+
+            /* hover over effect*/
+            .button1:hover {
+                box-shadow: 0 0 2px 2px rgba(0, 140, 186, 0.5);
+                transform:scale(2);
+                background-color: gray;
+            }
+        </style>
+        <label>
+            <span>A</span>
+            <input type="checkbox" name="a" class="incline checkbox" id="abox" value="1">
+        </label>
+
+        <label>
+            <span>B</span>
+            <input type="checkbox" name="b" class="incline checkbox" id="bbox" value="1">
+        </label>
+        <input type="button" onclick="myFxn()" class="button button1" value="Woo">
         </form>
     </div>
+    <div class="col-9">
+    <h2 class="center-right" style="margin: 2% 5% 5%;; font-family: Courier New,serif;">Logic Gates </h2>
+    <style>
+        table, th, td {
+            border:1px solid black;
+        }
+    </style>
+    <body>
+    <table style="width:75%">
+        <tr>
+            <th>SYMBOL</th>
+            <th>LOGIC GATE</th>
+            <th>RESULT</th>
+        </tr>
 
-    <div class="container">
-        <div class="row justify-content-md-center">
+            <td><img src="static/assets/andweb.PNG" height=125 width=250></img></td>
+            <td>And</td>
+        <td><span id="and"></span></td>
+        </tr>
+        <tr>
+            <td><img src="static/assets/nandweb.PNG" height=125 width=250></img></td>
+            <td>Nand</td>
+            <td><span id="nand"></span></td>
+        </tr>
+        <tr>
+            <td><img src="static/assets/orweb.PNG" height=125 width=250></img></td>
+            <td>Or</td>
+            <td><span id="or"></span></td>
+        </tr>
+        <tr>
+            <td><img src="static/assets/norweb.PNG" height=125 width=250></img></td>
+            <td>Nor</td>
+            <td><span id="nor"></span></td>
+        </tr>
+        <tr>
+            <td><img src="static/assets/xorweb.PNG" height=125 width=250></img></td>
+            <td>Xor</td>
+            <td><span id="xor"></span></td>
+        </tr>
 
-            <div class="col-8">
-                <table class="table" style="color:white">
-                    <tr id="table">
-                        <th>Shift Left(*2)</th>
-                        <th>Plus</th>
-                        <th>Binary</th>
-                        <th>Octal</th>
-                        <th>Hexadecimal</th>
-                        <th>Decimal</th>
-                        <th>ASCII</th>
-                        <th> Unicode </th>
-                        <th>Minus</th>
-                        <th>Shift Right (/2)</th>
-                    </tr>
-                    <tr>
-                        <td><button type="button" id="add1" onclick="add(1)"><<</button></td>
-                        <td><button type="button" id="add1" onclick="add(1)">+1</button></td>
-                        <td id="binary">00000000</td>
-                        <td id="octal">0</td>
-                        <td id="hexadecimal">0</td>
-                        <td id="decimal">0</td>
-                        <td id="ASCII">0</td>
-                        <td id ="Unicode">0</td>
-                        <td><button type="button" id="sub1" onclick="add(-1)">-1</button></td>
-                        <td><button type="button" id="add1" onclick="add(1)">>></button></td>
-                        <!-- Hack: display ASCII printable character(s)  -->
-
-                    </tr>
-                </table>
-            </div>
-
-            <div class="col-12">
-                <table class="table">
-                    <tr>
-                        {% for i in range(BITS) %}
-                            <td><img class="img-responsive py-3" id="bulb{{i}}" src="{{ imgBulbOff }}" alt="" width="40" height="Auto">
-                                <button type="button" id="butt{{i}}" onclick="toggleBit('{{i}}')">{{ msgTurnOn }}</button>
-                            </td>
-                        {% endfor %}
-                    </tr>
-                    <tr>
-                        {% for i in range(BITS) %}
-                            <td><input type='text' id='digit{{i}}' Value="0" size="1" readonly></td>
-                        {% endfor %}
-                    </tr>
-                </table>
-            </div>
-
-        </div>
-    </div>
+    </table>
+    </body>
 
 
 {% endblock %}
+</div>
+
+
+
 </html>
+
+
+

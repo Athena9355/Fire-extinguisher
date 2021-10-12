@@ -166,7 +166,6 @@ def rgb_render():
 def rgb():
     return render_template('Labs/RGB/rgb.html')
 
-
 @app.route('/logicgate')
 def logicgate():
     BITS = 8
