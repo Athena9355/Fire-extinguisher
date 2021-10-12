@@ -267,6 +267,19 @@ def team():
 def binarywithinput():
     return render_template("Labs/Binary/binarywithinput.html")
 
+@app.route('/signedAddition')
+def signedAddition():
+    return render_template("Labs/Binary/signedAddition.html")
+
+
+
+@app.route('/bits2', methods=['GET', 'POST'])
+def bits2():
+    BITS = 16
+    if request.method == 'POST':
+        BITS = int(request.form['BITS'])
+        print(BITS)
+    return render_template("Labs/Binary/signedAddition.html", BITS=BITS)
 
 # to display variable
 
