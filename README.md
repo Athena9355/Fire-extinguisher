@@ -32,6 +32,15 @@ Prototyping: [Sprints 3, 4](https://github.com/Athena9355/Fire-extinguisher/proj
 To assist distressed students in their adventure into a new schedule with new classes and new teachers. <br>
 
 
+<h2>Week 8: 10/11 - 10/18</h2>
+Table of Contents <br>
+| Person      |  ID   | Tasks  | Scrum Board  | Commits  |  Profile  |
+| :---        |  :--- | :---   | :---         |  :---    | :---      |
+|Allison | | | | | |
+|Gaurish | | | | | |
+|Athena | | | | | |
+|Aadya | | | | | |
+
 <h2>Week 7: 10/4 - 10/12</h2>
 Table of Contents <br>
 
