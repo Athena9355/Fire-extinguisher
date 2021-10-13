@@ -34,9 +34,10 @@ To assist distressed students in their adventure into a new schedule with new cl
 
 <h2>Week 8: 10/11 - 10/18</h2>
 Table of Contents <br>
+
 | Person      |  ID   | Tasks  | Scrum Board  | Commits  |  Profile  |
 | :---        |  :--- | :---   | :---         |  :---    | :---      |
-|Allison | yo|yo |yo |yo |yo |
+|Allison | yo | yo | yo | yo | yo |
 |Gaurish | | | | | |
 |Athena | | | | | |
 |Aadya | | | | | |
