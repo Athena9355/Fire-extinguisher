@@ -36,7 +36,7 @@ To assist distressed students in their adventure into a new schedule with new cl
 Table of Contents <br>
 | Person      |  ID   | Tasks  | Scrum Board  | Commits  |  Profile  |
 | :---        |  :--- | :---   | :---         |  :---    | :---      |
-|Allison | | | | | |
+|Allison | yo|yo |yo |yo |yo |
 |Gaurish | | | | | |
 |Athena | | | | | |
 |Aadya | | | | | |
