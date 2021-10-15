@@ -185,6 +185,15 @@ def bits():
     return render_template("Labs/Binary/binary.html", BITS=BITS)
 
 
+@app.route('/star', methods=['GET', 'POST'])
+def star():
+    star = 5
+    if request.method == 'POST':
+        star = int(request.form['star'])
+        print(star)
+    return render_template("Stubs/ratingsystem.html", star=star)
+
+
 # binary inputs end
 
 # @app.route('/input_binary', methods=['GET', 'POST'])

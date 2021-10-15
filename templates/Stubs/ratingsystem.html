@@ -54,9 +54,32 @@
 
 <div class="center-block" style="margin: 2% 2% 2%; text-align:left; font-family: Times New Roman ,serif;font-size:30px;">
     <div class="col-12">
-        <p>  Rate a Class, </p>
+        <p>  Rate a Class </p>
     </div>
 </div>
+
+
+    <script>
+    var accumulate2 = 0;
+    var accumulate  = 0;
+    const BITS = '{{ BITS }}'; let max = '{{ MAX }}'; let MAX = parseInt(max, 10);
+    // return string with current value of each bit
+    function getBits() {
+        let bits = "";
+        for(let i = 0; i < BITS; i++) {
+            bits = bits + document.getElementById('digit' + i).value;
+        }
+        return bits;
+    }
+    </script>
+<div class="col-12">
+    <form action="/star" id="star" method="POST" >
+        <label for="number">Number of Stars!</label>
+        <input type = "number" name="star" id="star" value={{ star }}>
+        <input type="submit" value="Submit">
+    </form>
+</div>
+
 
 <div class="starsystem">
 
@@ -136,5 +159,5 @@
 </body>
 
 {% endblock %}
-
+</body>
 </html>
