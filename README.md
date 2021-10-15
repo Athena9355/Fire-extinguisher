@@ -35,6 +35,13 @@ To assist distressed students in their adventure into a new schedule with new cl
 <h2>Week 8: 10/11 - 10/18</h2>
 Table of Contents <br>
 
+1. [Updated README File](https://github.com/Athena9355/Fire-extinguisher#readme)<br>
+2. [TPT 3.7 and 3.8 work](https://github.com/Athena9355/Fire-extinguisher/issues/63)<br>
+2. [Class Recommendations/Comment Page](https://github.com/Athena9355/Fire-extinguisher/issues/77) - When you type in someone's name, it generates their page<br>
+3. [Rating System](https://github.com/Athena9355/Fire-extinguisher/issues/78) - Letting them change the number of stars<br>
+4. Random class/question generator<br>
+5. [Logic Gate Lab](https://github.com/Athena9355/Fire-extinguisher/issues/70)<br>
+
 | Person      |  Tasks |
 | :---        |  :--- |
 |Allison | Link |
