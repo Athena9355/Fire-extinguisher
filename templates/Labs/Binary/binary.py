@@ -16,6 +16,10 @@ starter_bp = Blueprint('starter', __name__,
 def binary():
     return render_template("Labs/Binary/binary.html")
 
+@starter_bp.route('/ratingsystem/')
+def ratingsystem():
+    return render_template("Stubs/ratingsystem.html")
+
 
 @starter_bp.route('/rgb', methods=["GET", "POST"])
 def rgb():
