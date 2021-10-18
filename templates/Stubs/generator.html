@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<!-- Extending the predefined project layout -->
+{% extends "layouts/base.html" %}
+
+{% block body %}
+
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <title>Comment Generator</title>
+</head>
+<body>
+
+<div class="center-block" style="margin: 10% 40% 10%; text-align:left; font-family: Times New Roman ,serif;font-size:30px;">
+    <div class="col-12">
+        <p>  Comment Generator </p>
+    </div>
+</div>
+
+<div class="center-block" style="margin: 5% 10% 0%; text-align:left; font-family: Times New Roman ,serif;font-size:20px;">
+    <form action="/generator1" id="generator1" method="GET" >
+        {{ random_comment1 }}
+        <br>
+        <input type="submit" value="Get Next Comment for Teacher 1">
+    </form>
+
+
+    <form action="/generator2" id="generator2" method="GET" >
+        {{ random_comment2 }}
+        <br>
+        <input type="submit" value="Get Next Comment for Teacher 2">
+    </form>
+
+
+</div>
+
+<!--specify diff actions in a form,
+specify action other than button -->
+
+</body>
+</html>
+
+{% endblock %}
