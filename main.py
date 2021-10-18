@@ -6,6 +6,9 @@ from pathlib import \
     Path  # https://medium.com/@ageitgey/python-3-quick-tip-the-easy-way-to-deal-with-file-paths-on-windows-mac-and-linux-11a072b58d5f
 
 # create a Flask instance
+from templates.Stubs.generator import get_comment1, get_comment2
+from multiprocessing import Process
+
 app = Flask(__name__)
 
 
@@ -166,6 +169,7 @@ def rgb_render():
 def rgb():
     return render_template('Labs/RGB/rgb.html')
 
+
 @app.route('/logicgate')
 def logicgate():
     BITS = 8
@@ -201,6 +205,15 @@ def star():
         STAR = int(request.form['STAR'])
         print(STAR)
     return render_template("Stubs/ratingsystem.html", STAR=STAR)
+
+
+@app.route('/generator1', methods=['GET'])
+def generator1():
+    return render_template("Stubs/generator.html", random_comment1=get_comment1())
+
+@app.route('/generator2', methods=['GET'])
+def generator2():
+    return render_template("Stubs/generator.html", random_comment2=get_comment2())
 
 
 # binary inputs end
@@ -289,10 +302,10 @@ def team():
 def binarywithinput():
     return render_template("Labs/Binary/binarywithinput.html")
 
+
 @app.route('/signedAddition')
 def signedAddition():
     return render_template("Labs/Binary/signedAddition.html")
-
 
 
 @app.route('/bits2', methods=['GET', 'POST'])
@@ -302,6 +315,7 @@ def bits2():
         BITS = int(request.form['BITS'])
         print(BITS)
     return render_template("Labs/Binary/signedAddition.html", BITS=BITS)
+
 
 # to display variable
 
