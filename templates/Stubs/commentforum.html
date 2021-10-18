@@ -11,6 +11,81 @@
 {% extends "layouts/base.html" %}
 {% block body %}
 
+    <style>
+        body {
+            background-image: url('https://www.teahub.io/photos/full/126-1262553_free-high-resolution-geometric-backgrounds-free-geometric-pattern.jpg');
+            height: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .image {
+            display: none;
+        }
+
+        .button:active ~ .image{
+            display: block;
+        }
+
+    </style>
+    </body>
+
+    <div class="center-block" style="margin: 2% 40% 2%; text-align:left; font-family: Helvetica ;font-size:30px;">
+        <div class="col-12">
+            <p> Have a discussion!! </p>
+        </div>
+    </div>
+    <div class="comment"> <!--saves as comment -->
+        <!--textarea: where text is inputted-->
+        <!-- the text inputted by the user is stored as "submission-->
+        <!--<textarea id="title" type="text "rows="10" cols="120" onkeyup="Allow()" placeholder="Hello! Comment your thoughts!"></textarea>-->
+        <textarea id="submission" type="text "rows="10" cols="120" placeholder="Hello! Comment your thoughts!"></textarea>
+        <input type="submit" value="Post" onclick="post()" style="width:100px;" /></form>
+        <!--runs the function "post" when the button is clicked-->
+    </div>
+    <div id="display"></div>
+    <!--we set up an id called display-->
+    <script type="text/javascript">
+        var initial = [];
+        //initial is set as a variable. at this point, it stores nothing.
+        var submission = document.getElementById("submission");
+        //the variable submission stores the value that we get from the html submission
+        //as a reminder, the html submission is the id that we gave to whatever the user inputs
+        var display = document.getElementById("display");
+        //here, we set up the variable display to store the html variable display we set up before
+        /*function Allow()
+        {
+            if (!user.title.value.match(/[a-zA-Z]$/) && user.title.value !="")
+            {
+                user.title.value="";
+                alert("Please Enter only alphabets");
+            }
+            window.location.reload()
+        }*/
+        //now posting our response
+        function post () { //the post function allows the program to post the input received
+            initial.push(submission.value);
+            //this line allows the variable initial to store the value from submission
+            //the variable initial was initially set to blank
+            //the value of submission is set to the submission we received from the user through html
+            clear(); //this runs the function clear, which is defined in the next block
+
+        }
+        //the code below defines the function clear
+        function clear ()
+        {
+            submission.value = "";
+            //here, we set the value of submission back to blank, allowing the variable to store
+            //new submissions
+            display.innerHTML = "";
+            //display is first set to blank
+            display.innerHTML += " " + initial.join("<br/> ") + "<br/>";
+            //next display is set as blank plus initial, which is the value we obatined before
+            // that equals original submission before we cleared it
+            //we then add a break to the line to make the comments appear as separate lines to make it clear
+        }
+    </script>
 
         <title>Binary page</title>
 
@@ -28,19 +103,14 @@
 
     <body>
     <!---Athena's title-->
-<div class="center-block" style="margin: 2% 2% 2%; text-align:left; font-family: Helvetica ;font-size:30px;">
-    <div class="col-12">
-        <p> Have a discussion!! </p>
-    </div>
-</div>
 
 <!---Athena's info-->
-<div class="center-block" style="margin: 2% 5% 2%; text-align:left; font-family: Helvetica ;font-size:20px;">
+<!--<div class="center-block" style="margin: 2% 5% 2%; text-align:left; font-family: Helvetica ;font-size:20px;">
     <div class="col-12">
         <p>Stub. In this page will go the comment forum features, where students can discuss any concerns. Below is our wireframing of our potential product on google slides. <br>
         </p>
     </div>
-</div>
+</div>-->
 
     <style>
         .image {
@@ -52,16 +122,16 @@
         }
     </style>
 
-    <div class="col-12">
+    <!--<div class="col-12">
         <form action="/greet_commentforum" id="greet_commentforum" method="POST" >
             <label for="comment">What's on your mind?</label>
             <input name="comment" id="comment">
             <input type="submit" value="Greetings!">
         </form>
-    </div>
+    </div> -->
 
 
-    <div class="d-flex justify-content-left">
+    <!--<div class="d-flex justify-content-left">
         <div class="col-md-8">
             <div class="d-flex flex-column comment-section">
                 <div class="bg-white p-2">
@@ -93,7 +163,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <script>
         var count = 0;
@@ -114,50 +184,10 @@
     <div class="col-12">
         <p>Hi, welcome to the comment forum page!</p>
     </div>
-
-
 </div>
 
 
 
 <!---this is for the background image -->
-<style>
-    body {
-        background-image: url('https://www.teahub.io/photos/full/126-1262553_free-high-resolution-geometric-backgrounds-free-geometric-pattern.jpg');
-        height: 100%;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-
-    .image {
-        display: none;
-    }
-
-    .button:active ~ .image{
-        display: block;
-    }
-
-</style>
-
-<!--
-<body>
-<!---Athena's title
-<div class="center-block" style="margin: 2% 2% 2%; text-align:left; font-family: Times New Roman ,serif;font-size:30px;">
-    <div class="col-12">
-        <p> Have a discussion!! </p>
-    </div>
-</div>
-
-<!---Athena's info
-<div class="center-block" style="margin: 2% 5% 2%; text-align:left; font-family: Times New Roman ,serif;font-size:20px;">
-    <div class="col-12">
-        <p>Stub. In this page will go the comment forum features, where students can discuss any concerns. Below is our wireframing of our potential product on google slides. <br>
-        </p>
-    </div>
-</div>
-
-<p><iframe width="850" height="1100" src="https://docs.google.com/presentation/d/1UJboee1Pooy2vpqJxhB5FvWtXuExaZHRhhywYRlrPYc/edit?usp=sharing"></iframe></p>
-
 </body>
 </html>
