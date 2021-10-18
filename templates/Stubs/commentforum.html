@@ -35,6 +35,16 @@
     </div>
 </div>
 
+    <style>
+        .image {
+            display: none;
+        }
+
+        .button:active ~ .image{
+            display: block;
+        }
+    </style>
+
     <div class="col-12">
         <form action="/greet_commentforum" id="greet_commentforum" method="POST" >
             <label for="comment">What's on your mind?</label>
@@ -42,6 +52,7 @@
             <input type="submit" value="Greetings!">
         </form>
     </div>
+
 
     <div class="d-flex justify-content-left">
         <div class="col-md-8">
@@ -59,7 +70,7 @@
                 <div class="bg-white">
                     <div class="d-flex flex-row fs-12">
 
-                        <div class="like p-2 cursor"><i class="fa fa-thumbs-o-up"></i><span class="ml-1"><input type="submit" value="Like!" button class="btn btn-primary btn-sm shadow-none" type="button"</button></span></div>
+                        <button button class="button" id="button">Liked 0 times!</button><img class="image" src="https://drive.google.com/thumbnail?id=18Q_fmYiKM9M5hqxpkFISApp3_xrinw3Y" />
                         <div class="like p-2 cursor"><i class="fa fa-commenting-o"></i><span class="ml-1"><input type="submit" value="Share!" button class="btn btn-primary btn-sm shadow-none" type="button"</button></span></div>
                         <div class="like p-2 cursor"><i class="fa fa-share"></i><span class="ml-1"><input type="submit" value="Save!" button class="btn btn-primary btn-sm shadow-none" type="button"</button></span></div>
                     </div>
@@ -77,6 +88,17 @@
         </div>
     </div>
 
+    <script>
+        var count = 0;
+        var button = document.getElementById('button');
+
+        button.onclick = updateStatus;
+
+        function updateStatus() {
+            button.textContent = 'Liked ' + ++count + ' times!';
+        }
+    </script>
+
 {% endblock %}
 
 
@@ -85,7 +107,11 @@
     <div class="col-12">
         <p>Hi, welcome to the comment forum page!</p>
     </div>
+
+
 </div>
+
+
 
 <!---this is for the background image -->
 <style>
@@ -96,6 +122,15 @@
         background-repeat: no-repeat;
         background-size: cover;
     }
+
+    .image {
+        display: none;
+    }
+
+    .button:active ~ .image{
+        display: block;
+    }
+
 </style>
 
 <!--
