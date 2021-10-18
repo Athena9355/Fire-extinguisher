@@ -10,6 +10,60 @@
 {% extends "layouts/base.html" %}
 {% block body %}
 
+    <style>
+        body {
+            background-image: url('https://www.teahub.io/photos/full/126-1262553_free-high-resolution-geometric-backgrounds-free-geometric-pattern.jpg');
+            height: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .image {
+            display: none;
+        }
+
+        .button:active ~ .image{
+            display: block;
+        }
+
+    </style>
+    </body>
+
+    <div class="center-block" style="margin: 2% 2% 2%; text-align:left; font-family: Helvetica ;font-size:30px;">
+        <div class="col-12">
+            <p> Have a discussion!! </p>
+        </div>
+    </div>
+    <div class="comment">
+        <textarea id="title" type="text "rows="2" cols="4" onkeyup="Allow()" placeholder="write a comment......"></textarea>
+        <input type="submit" value="Post" onclick="insert()" style="width:20px;" /></form>
+    </div>
+    <div id="display"></div>
+    <script type="text/javascript">
+        var titles = [];
+        var titleInput = document.getElementById("title");
+        var messageBox = document.getElementById("display");
+        function Allow()
+        {
+            if (!user.title.value.match(/[a-zA-Z]$/) && user.title.value !="")
+            {
+                user.title.value="";
+                alert("Please Enter only alphabets");
+            }
+            window.location.reload()
+        }
+        function insert () {
+            titles.push(titleInput.value);
+            clearAndShow();
+        }
+        function clearAndShow ()
+        {
+            titleInput.value = "";
+            messageBox.innerHTML = "";
+            messageBox.innerHTML += " " + titles.join("<br/> ") + "<br/>";
+        }
+    </script>
 
         <title>Binary page</title>
 
@@ -21,19 +75,14 @@
 
     <body>
     <!---Athena's title-->
-<div class="center-block" style="margin: 2% 2% 2%; text-align:left; font-family: Helvetica ;font-size:30px;">
-    <div class="col-12">
-        <p> Have a discussion!! </p>
-    </div>
-</div>
 
 <!---Athena's info-->
-<div class="center-block" style="margin: 2% 5% 2%; text-align:left; font-family: Helvetica ;font-size:20px;">
+<!--<div class="center-block" style="margin: 2% 5% 2%; text-align:left; font-family: Helvetica ;font-size:20px;">
     <div class="col-12">
         <p>Stub. In this page will go the comment forum features, where students can discuss any concerns. Below is our wireframing of our potential product on google slides. <br>
         </p>
     </div>
-</div>
+</div>-->
 
     <style>
         .image {
@@ -45,16 +94,16 @@
         }
     </style>
 
-    <div class="col-12">
+    <!--<div class="col-12">
         <form action="/greet_commentforum" id="greet_commentforum" method="POST" >
             <label for="comment">What's on your mind?</label>
             <input name="comment" id="comment">
             <input type="submit" value="Greetings!">
         </form>
-    </div>
+    </div> -->
 
 
-    <div class="d-flex justify-content-left">
+    <!--<div class="d-flex justify-content-left">
         <div class="col-md-8">
             <div class="d-flex flex-column comment-section">
                 <div class="bg-white p-2">
@@ -86,7 +135,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <script>
         var count = 0;
@@ -107,50 +156,10 @@
     <div class="col-12">
         <p>Hi, welcome to the comment forum page!</p>
     </div>
-
-
 </div>
 
 
 
 <!---this is for the background image -->
-<style>
-    body {
-        background-image: url('https://www.teahub.io/photos/full/126-1262553_free-high-resolution-geometric-backgrounds-free-geometric-pattern.jpg');
-        height: 100%;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-
-    .image {
-        display: none;
-    }
-
-    .button:active ~ .image{
-        display: block;
-    }
-
-</style>
-
-<!--
-<body>
-<!---Athena's title
-<div class="center-block" style="margin: 2% 2% 2%; text-align:left; font-family: Times New Roman ,serif;font-size:30px;">
-    <div class="col-12">
-        <p> Have a discussion!! </p>
-    </div>
-</div>
-
-<!---Athena's info
-<div class="center-block" style="margin: 2% 5% 2%; text-align:left; font-family: Times New Roman ,serif;font-size:20px;">
-    <div class="col-12">
-        <p>Stub. In this page will go the comment forum features, where students can discuss any concerns. Below is our wireframing of our potential product on google slides. <br>
-        </p>
-    </div>
-</div>
-
-<p><iframe width="850" height="1100" src="https://docs.google.com/presentation/d/1UJboee1Pooy2vpqJxhB5FvWtXuExaZHRhhywYRlrPYc/edit?usp=sharing"></iframe></p>
-
 </body>
 </html>
