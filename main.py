@@ -174,7 +174,13 @@ def logicgate():
         print(BITS)
     return render_template("Labs/Logic Gate/logicgate.html", BITS=BITS)
 
-
+@app.route('/feedback')
+def feedback():
+    BITS = 8
+    if request.method == 'POST':
+        BITS = int(request.form['BITS'])
+        print(BITS)
+    return render_template("stubs/feedback.html", BITS=BITS)
 # for input on binary
 @app.route('/bits', methods=['GET', 'POST'])
 def bits():

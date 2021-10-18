@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Comment Forum</title>
+
 </head>
 <!DOCTYPE html>
 
@@ -16,6 +17,12 @@
 
     <body style="font-family: Helvetica,serif; color: var(--gray);" >
 
+    <div class="col-12">
+            <label for="names">Name:</label>
+            <input name="names" id="names">
+            <input type="submit" value="Go!">
+        </form>
+    </div>
 
     <!-- CONTENT Block, utilize this block for page specific content  -->
 
@@ -59,7 +66,7 @@
             <div class="d-flex flex-column comment-section">
                 <div class="bg-white p-2">
                     <div class="d-flex flex-row user-info"><img class="rounded-circle" img src="https://drive.google.com/thumbnail?id=1JN7v_34trJhFAxzCaVsdssP0-CeTyj5g" width="40">
-                        <div class="d-flex flex-column justify-content-start ml-2"><span class="d-block font-weight-bold name">Allison Huang</span><span class="date text-black-50">Shared publicly - July 2021</span></div>
+                        <div class="d-flex flex-column justify-content-start ml-2"><span class="d-block font-weight-bold name"><p>"names"</p></span><span class="date text-black-50">Shared publicly - July 2021</span></div>
                     </div>
                     <div class="mt-2">
                         <p>{{ comment }}</p>

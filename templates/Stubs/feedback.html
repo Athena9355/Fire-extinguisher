@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends "layouts/base.html" %}
+
+{% block meta %}
+    <script>
+        function myFxn() {
+            const x = document.getElementById("abox")
+            const y = document.getElementById("bbox")
+
+            if (x.checked || y.checked) {
+                document.getElementById("uno").innerHTML = "<img src=static/assets/sortsort.PNG height=125 width=125></img>"
+            }
+            if (x.checked && y.checked) {
+                document.getElementById("uno").innerHTML = "<img src=static/assets/happyhappy.PNG height=125 width=125></img>"
+            }
+            if (!(x.checked || y.checked)) {
+                document.getElementById("uno").innerHTML = "<img src=static/assets/sadsad.PNG height=125 width=125></img>"
+
+            }
+        }
+    </script>
+    <script>
+        function myFxn2() {
+            const c = document.getElementById("cbox")
+            const d = document.getElementById("dbox")
+            if (c.checked || d.checked) {
+                document.getElementById("dos").innerHTML = "<img src=static/assets/sortsort.PNG height=125 width=125></img>"
+            }
+            if (c.checked && d.checked) {
+                document.getElementById("dos").innerHTML = "<img src=static/assets/happyhappy.PNG height=125 width=125></img>"
+            }
+            if (!(c.checked || d.checked)) {
+                document.getElementById("dos").innerHTML = "<img src=static/assets/sadsad.PNG height=125 width=125></img>"
+            }
+        }
+    </script>
+    <script>
+        function myFxn3() {
+            const c = document.getElementById("ebox")
+            const d = document.getElementById("fbox")
+            if (c.checked || d.checked) {
+                document.getElementById("tres").innerHTML = "<img src=static/assets/sortsort.PNG height=125 width=125></img>"
+            }
+            if (c.checked && d.checked) {
+                document.getElementById("tres").innerHTML = "<img src=static/assets/happyhappy.PNG height=125 width=125></img>"
+            }
+            if (!(c.checked || d.checked)) {
+                document.getElementById("tres").innerHTML = "<img src=static/assets/sadsad.PNG height=125 width=125></img>"
+            }
+        }
+    </script>
+{% endblock %}
+
+<head>
+    <meta charset="UTF-8">
+    <title>Logic Gate</title>
+</head>
+
+{% block body %}
+    <html>
+    <body>
+
+    <!--for the title of the page-->
+    <div class="center-block" style="margin: 2% 5% 5%; text-align:center; font-family: Courier New,serif;font-size:45px;">
+        <p> Feedback Page </p>
+    </div>
+    <!--For the rows-->
+    <div class="row">
+    <div class="col">
+        <style>
+            .button1 {
+                border: 2px solid #463d3d;
+                border-radius: 4px;
+                padding: 5px;
+                width: 50px;
+                color: antiquewhite;
+                font-size: 15px;
+                background-color: darkblue;
+            }
+
+            /* hover over effect*/
+            .button1:hover {
+                box-shadow: 0 0 2px 2px rgba(0, 140, 186, 0.5);
+                transform:scale(2);
+                background-color: gray;
+            }
+            .button2 {
+                border: 2px solid #463d3d;
+                border-radius: 4px;
+                padding: 5px;
+                width: 50px;
+                color: antiquewhite;
+                font-size: 15px;
+                background-color: darkblue;
+            }
+
+            /* hover over effect*/
+            .button2:hover {
+                box-shadow: 0 0 2px 2px rgba(0, 140, 186, 0.5);
+                transform:scale(2);
+                background-color: gray;
+            }
+        </style>
+
+        </form>
+    </div>
+    <div class="col-9">
+    <h2 class="center-right" style="margin: 2% 5% 5%;; font-family: Courier New,serif;">How are you feeling? </h2>
+    <style>
+        table, th, td {
+            border:1px solid black;
+        }
+    </style>
+    <body>
+    <table style="width:75%">
+        <tr>
+            <th>Question</th>
+            <th>Button</th>
+            <th>Result :) :/ :(</th>
+        </tr>
+
+        <td> <label>
+            <span>Are You Satisfied with the Teacher</span>
+            <input type="checkbox" name="A" class="incline checkbox" id="abox" value="1">
+        </label>
+
+            <label>
+                <span>Are You Satisfied with the Class</span>
+                <input type="checkbox" name="B" class="incline checkbox" id="bbox" value="1">
+            </label></td>
+        <td> <input type="button" onclick="myFxn()" class="button button1" value="Done"></td>
+        <td><span id="uno"></span></td>
+        </tr>
+        <tr>
+            <td><label>
+                <span>Did you have fun</span>
+                <input type="checkbox" name="C" class="incline checkbox" id="cbox" value="1">
+            </label>
+
+                <label>
+                    <span>Was the class easy</span>
+                    <input type="checkbox" name="D" class="incline checkbox" id="dbox" value="1">
+                </label></td>
+            <td><input type="button" onclick="myFxn2()" class="button button2" value="Done"></td>
+            <td><span id="dos"></span></td>
+        </tr>
+        <tr>
+            <td><label>
+                <span>Were the resources helpful</span>
+                <input type="checkbox" name="E" class="incline checkbox" id="ebox" value="1">
+            </label>
+
+                <label>
+                    <span>Did you learn</span>
+                    <input type="checkbox" name="F" class="incline checkbox" id="fbox" value="1">
+                </label></td>
+            <td><input type="button" onclick="myFxn3()" class="button button2" value="Done"></td>
+            <td><span id="tres"></span></td>
+        </tr>
+    </table>
+    </body>
+
+
+{% endblock %}
+</div>
+
+
+
+</html>
