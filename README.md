@@ -31,6 +31,14 @@ Prototyping: [Sprints 3, 4](https://github.com/Athena9355/Fire-extinguisher/proj
 <h2>Objectives</h2>
 To assist distressed students in their adventure into a new schedule with new classes and new teachers. <br>
 
+<h2>Week 9: 10/17 - 10/22</h2>
+
+| Person      |  Video Link   | Link to Indiv. Scores + Comments | Average Score |
+| :---        | :--- | :---   | :---  |
+| Allison     | Link  | Link to Issue | Insert AvgScore |
+| Gaurish     | Link  | Link to Issue | Insert AvgScore |
+| Athena      | Link  | Link to Issue | Insert AvgScore |
+| Aadya       | Link  | Link to Issue | Insert AvgScore |
 
 <h2>Week 8: 10/11 - 10/18</h2>
 Table of Contents <br>
@@ -42,12 +50,6 @@ Table of Contents <br>
 4. [Random class/question generator](https://github.com/Athena9355/Fire-extinguisher/issues/80)<br>
 5. [Logic Gate Lab](https://github.com/Athena9355/Fire-extinguisher/issues/70)<br>
 
-| Person      |  Tasks |
-| :---        |  :--- |
-|Allison | Link |
-|Gaurish | Link|
-|Athena | Link|
-|Aadya |Link |
 
 <h2>Week 7: 10/4 - 10/12</h2>
 Table of Contents <br>
