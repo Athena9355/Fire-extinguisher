@@ -35,7 +35,7 @@ To assist distressed students in their adventure into a new schedule with new cl
 
 | Person      |  Video Link   | Link to Indiv. Scores + Comments | Average Score |
 | :---        | :--- | :---   | :---  |
-| Allison     | Link  | [Link to Issue](https://github.com/Athena9355/Fire-extinguisher/issues/84) | Insert AvgScore |
+| Allison     | [Link](https://youtu.be/a7HgXSoNLRU)  | [Link to Issue](https://github.com/Athena9355/Fire-extinguisher/issues/84) | Insert AvgScore |
 | Gaurish     | [Link](https://www.loom.com/share/44c81f69e7a94b6696bd475cd96ca062)| [Link to Issue](https://github.com/Athena9355/Fire-extinguisher/issues/84) | Insert AvgScore |
 | Athena      | Link  | [Link to Issue](https://github.com/Athena9355/Fire-extinguisher/issues/84) | Insert AvgScore |
 | Aadya       | [Link](https://youtu.be/HqofgshDPww)  | [Link to Issue](https://github.com/Athena9355/Fire-extinguisher/issues/84) | Insert AvgScore |
