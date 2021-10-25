@@ -38,7 +38,7 @@ To assist distressed students in their adventure into a new schedule with new cl
 | Allison     | Link  | [Link to Issue](https://github.com/Athena9355/Fire-extinguisher/issues/84) | Insert AvgScore |
 | Gaurish     | Link  | [Link to Issue](https://github.com/Athena9355/Fire-extinguisher/issues/84) | Insert AvgScore |
 | Athena      | Link  | [Link to Issue](https://github.com/Athena9355/Fire-extinguisher/issues/84) | Insert AvgScore |
-| Aadya       | https://youtu.be/HqofgshDPww  | [Link to Issue](https://github.com/Athena9355/Fire-extinguisher/issues/84) | Insert AvgScore |
+| Aadya       | [Link](https://youtu.be/HqofgshDPww)  | [Link to Issue](https://github.com/Athena9355/Fire-extinguisher/issues/84) | Insert AvgScore |
 
 <h2>Week 8: 10/11 - 10/18</h2>
 Table of Contents <br>
