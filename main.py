@@ -7,7 +7,9 @@ from pathlib import \
 
 # create a Flask instance
 from templates.Stubs.generator import get_comment1, get_comment2
-from multiprocessing import Process
+# from templates.Stubs.translatorAPI import api_translator
+# from multiprocessing import Process
+from templates.Stubs.translatorAPI import get_numberfact
 
 app = Flask(__name__)
 
@@ -178,6 +180,7 @@ def logicgate():
         print(BITS)
     return render_template("Labs/Logic Gate/logicgate.html", BITS=BITS)
 
+
 @app.route('/feedback')
 def feedback():
     BITS = 8
@@ -185,6 +188,8 @@ def feedback():
         BITS = int(request.form['BITS'])
         print(BITS)
     return render_template("stubs/feedback.html", BITS=BITS)
+
+
 # for input on binary
 @app.route('/bits', methods=['GET', 'POST'])
 def bits():
@@ -193,6 +198,7 @@ def bits():
         BITS = int(request.form['BITS'])
         print(BITS)
     return render_template("Labs/Binary/binary.html", BITS=BITS)
+
 
 # for input on ratingsystem
 @app.route('/stars', methods=['GET', 'POST'])
@@ -216,6 +222,7 @@ def star():
 @app.route('/generator1', methods=['GET'])
 def generator1():
     return render_template("Stubs/generator.html", random_comment1=get_comment1())
+
 
 @app.route('/generator2', methods=['GET'])
 def generator2():
@@ -313,6 +320,21 @@ def binarywithinput():
 def signedAddition():
     return render_template("Labs/Binary/signedAddition.html")
 
+
+@app.route('/api_translator', methods=['GET', 'POST'])
+def api_translator():
+    number = " "
+    if request.form:
+        english_text = request.form.get("translate")
+        number = get_numberfact(english_text)
+        if number != 0:  # input field has content
+            print("Please enter an input")
+        print(number)
+
+    return render_template("Stubs/api-translator.html", fact=number)
+
+
+# translation=api_translator()
 
 @app.route('/bits2', methods=['GET', 'POST'])
 def bits2():

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+{% extends "layouts/base.html" %}
+{% block body %}
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>API Translator</title>
+</head>
+<body>
+
+
+<div class="center-block" style="margin: 10% 40% 10%; text-align:left; font-family: Times New Roman ,serif;font-size:30px;">
+    <div class="col-12">
+        <p>  API Translator For Numbers </p>
+    </div>
+</div>
+
+<!--
+<div class="col-12">
+    <form action="/api_translator" id="translation" method="POST" >
+        <label for="number">Enter something!</label>
+        <input type = "string" name="translation" id="string" translation={{ translation }}>
+        <input type="submit" value="Submit">
+    </form>
+</div>
+-->
+<div class="col-12">
+    <form action="/api_translator" id="translation" method="POST" >
+        <label for="translation">Enter a Number!</label>
+        <input name="translate" id="translate">
+        <input type="submit" value="Give Fact!">
+        <input name="number_button" id="number_button" value={{ fact }} >
+        {{ fact }}
+    </form>
+
+</div>
+
+
+
+
+</body>
+</html>
+
+
+{% endblock %}

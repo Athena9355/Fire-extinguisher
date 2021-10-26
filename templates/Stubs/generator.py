@@ -45,13 +45,13 @@ def _find_next_id():
 def _init_comment1():
     id = 1
     for comment3 in comment_list1:
-        comment1.append({"comment3": comment3})
+        comment1.append(comment3)
         id += 1
 
 
 def _init_comment2():
     for comment in comment_list2:
-        comment2.append({"comment": comment})
+        comment2.append(comment)
 
 def get_comment1():
     if len(comment1) == 0:
