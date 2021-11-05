@@ -31,6 +31,9 @@ Prototyping: [Sprints 3, 4](https://github.com/Athena9355/Fire-extinguisher/proj
 <h2>Objectives</h2>
 To assist distressed students in their adventure into a new schedule with new classes and new teachers. Thee wesbite providees a way for you to find assitance in your journey as a stressed students byt providing several features such as a way to determine your favorability of your teachers, write comments, and even use a spanish translators!<Nightwatch is your go-to place in times of panic. <br>
 
+<h2>How to use, run and how to contribute</h2>
+To use the website simply run the code and allow the UI to guide oyu to the various parts that you are looking for. Since we have no yet deployed online, this would require running to the code on your own device, which shouln't be too hard. If you neeed assistance pleae reach out to the contributers above via our Githubs or use the internet. If you would like to contribute tot he webiste, simply ask our scrum master, Athena, and she can add you as a contributer. We look forward t your usage/contributions.<br>
+
 <h2>Week 9: 10/17 - 10/22</h2>
 
 | Person      |  Video Link   | Link to Indiv. Scores + Comments | Average Score |
