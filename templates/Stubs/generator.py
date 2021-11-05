@@ -67,8 +67,3 @@ def get_comment2():
 
 
 
-if __name__ == "__main__":
-    print(random.choice(comment_list1))
-
-if __name__ == "__main__":
-    print(random.choice(comment_list2))

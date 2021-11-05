@@ -16,5 +16,12 @@ def get_numberfact(english_test):
     }
 
     responses = requests.request("GET", url, headers=headers, params=querystring)
-    return responses.text
+    jsonResponse = responses.json()
+    for key, value in jsonResponse.items():
+        return value
+
+
+
+
+
 

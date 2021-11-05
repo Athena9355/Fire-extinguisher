@@ -4,78 +4,24 @@
 
 {% block meta %}
     <script>
-        function myFxn() {
-            const x = document.getElementById("abox")
-            const y = document.getElementById("bbox")
+        function pageFxn() {
+            const one = document.getElementById("1box")
+            const two = document.getElementById("2box")
 
-            if (x.checked || y.checked) {
-                document.getElementById("uno").innerHTML = "<img src=static/assets/sortsort.PNG height=125 width=125></img>"
-back stub                 var i = 1
-
-
-            }
-            if (x.checked && y.checked) {
-                document.getElementById("uno").innerHTML = "<img src=static/assets/happyhappy.PNG height=125 width=125></img>"
-                var i = 2
-            }
-            if (!(x.checked || y.checked)) {
-                document.getElementById("uno").innerHTML = "<img src=static/assets/realsadsad.PNG height=125 width=125></img>"
-                var i = 0
-
-            }
-
-            const c = document.getElementById("cbox")
-            const d = document.getElementById("dbox")
-            if (c.checked || d.checked) {
-                document.getElementById("dos").innerHTML = "<img src=static/assets/sortsort.PNG height=125 width=125></img>"
-                var o = 1
-            }
-            if (c.checked && d.checked) {
-                document.getElementById("dos").innerHTML = "<img src=static/assets/happyhappy.PNG height=125 width=125></img>"
-                var o = 2
-            }
-            if (!(c.checked || d.checked)) {
-                document.getElementById("dos").innerHTML = "<img src=static/assets/realsadsad.PNG height=125 width=125></img>"
-                var o = 0
-            }
-
-            const e = document.getElementById("ebox")
-            const f = document.getElementById("fbox")
-            if (e.checked || f.checked) {
-                document.getElementById("tres").innerHTML = "<img src=static/assets/sortsort.PNG height=125 width=125></img>"
-                var p = 1
-            }
-            if (e.checked && f.checked) {
-                document.getElementById("tres").innerHTML = "<img src=static/assets/happyhappy.PNG height=125 width=125></img>"
-                var p = 2
-            }
-            if (!(e.checked || f.checked)) {
-                document.getElementById("tres").innerHTML = "<img src=static/assets/realsadsad.PNG height=125 width=125></img>"
-                var p = 0
-            }
-            const z = document.getElementById("zbox")
-            var decimals = (i + o + p) / 6
-            var decimalsper = decimals*100 + "%"
-            if (z.checked) {
-                document.getElementById("result").innerHTML = decimalsper;
-            }
-
-
-            if (decimals > .8) {
-                document.getElementById("pictureresult").innerHTML = "<img src=static/assets/happyhappy.PNG height=125 width=125></img>"
+            if (one.checked) {
+                location.replace("http://127.0.0.1:5000/feedbackbase")
             }
             else
             {
-                if (decimals < .5) {
-                    document.getElementById("pictureresult").innerHTML = "<img src=static/assets/realsadsad.PNG height=125 width=125></img>"
+                if (two.checked) {
+                    location.replace("http://127.0.0.1:5000/feedback2")
                 }
                 else {
-                    document.getElementById("pictureresult").innerHTML = "<img src=static/assets/sortsort.PNG height=125 width=125></img>"
+                    location.replace("http://127.0.0.1:5000/feedback3")
 
                 }
-            }
-        }
-        </script>
+            }}
+    </script>
 
 {% endblock %}
 
@@ -134,72 +80,17 @@ back stub                 var i = 1
     </div>
     <div class="col-9">
     <h2 class="center-right" style="margin: 2% 5% 5%;; font-family: Courier New,serif;">How are you feeling? </h2>
+    <h2 class="center-right" style="margin: 2% 5% 5%;; font-family: Courier New,serif;">How many classes would you like to be surveyed about? </h2>
     <style>
-        table, th, td {
-            border:1px solid black;
-        }
+
     </style>
     <body>
-    <table style="width:75%">
-        <tr>
-            <th>Question</th>
-            <th>Question #</th>
-            <th>Result :) :/ :(</th>
-        </tr>
+    <input type="checkbox" name="ab" class="incline checkbox" id="1box" value="1">   1
+    <input type="checkbox" name="cd" class="incline checkbox" id="2box" value="1">   2
+    <input type="checkbox" name="ef" class="incline checkbox" id="3box" value="1">   3
 
-        <td> <label>
-            <span>  &nbsp &nbsp &nbsp  Are You Satisfied with the Teacher?</span>
-            <input type="checkbox" name="A" class="incline checkbox" id="abox" value="1">
-        </label>
-
-            <label>
-                <span> &nbsp &nbsp &nbsp Are You Satisfied with the Class?</span>
-                <input type="checkbox" name="B" class="incline checkbox" id="bbox" value="1">
-            </label></td>
-        <td> #1 </td>
-        <td><span id="uno"></span></td>
-        </tr>
-        <tr>
-            <td><label>
-                <span> &nbsp &nbsp &nbsp Did you enjoy?</span>
-                <input type="checkbox" name="C" class="incline checkbox" id="cbox" value="1">
-            </label>
-
-                <label>
-                    <span> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Was the class easy?</span>
-                    <input type="checkbox" name="D" class="incline checkbox" id="dbox" value="1">
-                </label></td>
-            <td>#2</td>
-            <td><span id="dos"></span></td>
-        </tr>
-        <tr>
-            <td><label>
-                <span>&nbsp &nbsp &nbsp Were the resources helpful?</span>
-                <input type="checkbox" name="E" class="incline checkbox" id="ebox" value="1">
-            </label>
-
-                <label>
-                    <span>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp Did you learn?</span>
-                    <input type="checkbox" name="F" class="incline checkbox" id="fbox" value="1">
-                </label></td>
-            <td>#3</td>
-            <td><span id="tres"></span></td>
-        </tr>
-        <tr>
-            <td><label>
-                <span>&nbsp &nbsp &nbsp Are you ready for your result!</span>
-                <input type="checkbox" name="g" class="incline checkbox" id="zbox" value="1">
-            </label>
-            </td>
-            <td><input type="button" onclick="myFxn()" class="button button2" value="Done"></td>
-            <td><span id="result"> </span>
-                <span id="pictureresult"></span>
-            </td>
-        </tr>
-    </table>
+    <input type="button" onclick="pageFxn()" class="button button2" value="Done">
     </body>
-
-
 {% endblock %}
 </div>
 

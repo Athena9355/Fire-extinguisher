@@ -2,6 +2,7 @@
 # import "packages" from flask
 from flask import Flask, render_template, request
 from image import image_data
+import configparser
 from pathlib import \
     Path  # https://medium.com/@ageitgey/python-3-quick-tip-the-easy-way-to-deal-with-file-paths-on-windows-mac-and-linux-11a072b58d5f
 
@@ -20,21 +21,13 @@ def greet():
     if request.form:
         name = request.form.get("name")
         if name.__len__() != 0:
-            if name == "athena":  # input field has content
+            if name.lower() == "athena":  # input field has content
                 return render_template("About Me/athena.html", name=name)
-            if name == "Athena":  # input field has content
-                return render_template("About Me/athena.html", name=name)
-            if name == "allison":  # input field has content
+            if name.lower() == "allison":  # input field has content
                 return render_template("About Me/allison.html", name=name)
-            if name == "Allison":  # input field has content
-                return render_template("About Me/allison.html", name=name)
-            if name == "gaurish":  # input field has content
+            if name.lower() == "gaurish":  # input field has content
                 return render_template("About Me/gaurish.html", name=name)
-            if name == "Gaurish":  # input field has content
-                return render_template("About Me/gaurish.html", name=name)
-            if name == "aadya":  # input field has content
-                return render_template("About Me/aadya.html", name=name)
-            if name == "Aadya":  # input field has content
+            if name.lower() == "aadya":  # input field has content
                 return render_template("About Me/aadya.html", name=name)
             else:
                 return render_template("Labs/minilab.html", name=name)
@@ -181,13 +174,6 @@ def logicgate():
     return render_template("Labs/Logic Gate/logicgate.html", BITS=BITS)
 
 
-@app.route('/feedback')
-def feedback():
-    BITS = 8
-    if request.method == 'POST':
-        BITS = int(request.form['BITS'])
-        print(BITS)
-    return render_template("stubs/feedback.html", BITS=BITS)
 
 
 # for input on binary
@@ -344,7 +330,22 @@ def bits2():
         print(BITS)
     return render_template("Labs/Binary/signedAddition.html", BITS=BITS)
 
+@app.route('/feedbackbase')
+def feedbackbase():
+    return render_template("Stubs/feedbackbase.html")
 
+
+@app.route('/feedback')
+def feedback():
+    return render_template("Stubs/feedback.html")
+
+@app.route('/feedback2')
+def feedback2():
+    return render_template("Stubs/feedback2.html")
+
+@app.route('/feedback3')
+def feedback3():
+    return render_template("Stubs/feedback3.html")
 # to display variable
 
 
