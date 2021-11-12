@@ -36,10 +36,10 @@ To use the website simply run the code and allow the UI to guide oyu to the vari
 
 <h2>N@tM Presentation and Walk Abouts</h2>
 Reflections:
-1. Aadya
-2. Allison
-3. Athena: https://docs.google.com/document/d/12fsg1UKn_jaHmgELA5jITQyEVaJ7ZVFesGmUcsMG4zk/edit#bookmark=id.iscwbbhh4i7y
-4. Gaurish
+1. Aadya <br>
+2. Allison <br>
+3. [Athena] (https://docs.google.com/document/d/12fsg1UKn_jaHmgELA5jITQyEVaJ7ZVFesGmUcsMG4zk/edit#bookmark=id.iscwbbhh4i7y) <br>
+4. Gaurish <br>
 
 
 <h2>Week 9: 10/17 - 10/22</h2>
