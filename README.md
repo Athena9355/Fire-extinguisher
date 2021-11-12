@@ -34,6 +34,14 @@ To assist distressed students in their adventure into a new schedule with new cl
 <h2>How to use, run and how to contribute</h2>
 To use the website simply run the code and allow the UI to guide oyu to the various parts that you are looking for. Since we have no yet deployed online, this would require running to the code on your own device, which shouln't be too hard. If you neeed assistance pleae reach out to the contributers above via our Githubs or use the internet. If you would like to contribute tot he webiste, simply ask our scrum master, Athena, and she can add you as a contributer. We look forward t your usage/contributions.<br>
 
+<h2>N@tM Presentation and Walk Abouts</h2>
+Reflections:
+1. Aadya
+2. Allison
+3. Athena: https://docs.google.com/document/d/12fsg1UKn_jaHmgELA5jITQyEVaJ7ZVFesGmUcsMG4zk/edit#bookmark=id.iscwbbhh4i7y
+4. Gaurish
+
+
 <h2>Week 9: 10/17 - 10/22</h2>
 
 | Person      |  Video Link   | Link to Indiv. Scores + Comments | Average Score |
